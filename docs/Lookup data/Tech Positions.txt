@@ -1,0 +1,231 @@
+Skills,Information Technology (IT) 
+Analytics
+Analytical
+Applications
+Application Development
+Attention to Detail
+Architecture
+Big Data
+Business Analytics
+Business Intelligence
+Business Process Modeling
+Cloud Computing
+Coding
+Computer
+Communication
+Content Strategy
+Content Management
+Configuration
+Critical Thinking
+Customer Support
+Database
+Data Analysis
+Data Analytics
+Data Intelligence
+Data Mining
+Data Science
+Data Strategy
+Data Storage
+Database Administration
+Design
+Desktop Support
+Developer
+Development
+Documentation
+Emerging Technologies
+File Systems
+Flexibility
+Hardware
+Help Desk
+Implementation
+Internet
+Information Systems
+Integrated Technologies
+IT Manager
+IT Optimization
+IT Security
+IT Soft Skills
+IT Solutions
+IT Support
+IT Tools
+Languages
+Logical Thinking
+Leadership
+Linux
+Management
+Messaging
+Methodology
+Metrics
+Microsoft Office
+Mobile Applications
+Network Operations
+Networking
+Operating Systems
+Programming
+Problem Solving
+Product Development
+Product Support
+Product Management
+Product Training
+Project Management
+Repairs
+Reporting
+Search Engine Optimization (SEO)
+Security
+Self Motivated
+Self Starting
+Work with Servers
+Software Development
+Software Engineering
+Software Quality Assurance (QA)
+Storage and backup recovery
+Softare Installation
+Support
+Systems Software
+Teamwork
+Tech Skills Listed by Job
+Tech Support
+Technical
+Technology
+Technical Services
+Tech Skills Listed by Job
+Technical Support
+Technical Writing
+Testing
+Technical Writing
+Training
+Troubleshooting
+UI / UX
+User Experience Design
+Virtualization
+Web Development
+Web Design
+Work Independently
+END
+Skills,Database Administrator (DBA)
+Advise Management on Long-Term Capacity Plans and Growth
+Assign Passwords and Maintain Database Access
+Analyze and Recommend Database Improvements
+Analyze Impact of Database Changes to the Business
+Audit Database Access and Requests
+Backup and Restore Data 
+Communicate Requirements to System Administrator
+Comfortable Working With Production Servers 
+Configure Database Software
+Continually Review Processes for Improvement 
+Debug Database Issues on Live Data
+Deploy System Updates
+Design and Build Database Management System
+Develop and Test Methods to Synchronize Data 
+Develop and Secure Network Structures
+Ensure Data is Secure 
+Ensure Databases Run Efficiently
+Ensure Platform Availability
+Extract Live Data 
+Guarantee Database Setup Meets Industry Requirements
+Identify User Needs to Create and Administer Databases
+Implement Backup and Recovery Plan 
+Install Database Software
+Install Updates
+Maintain Database
+Merge Databases 
+Mine Data
+Modify Databases to Specific User Requirements
+Monitor Available Disk Space 
+Oversee Development of New Databases
+Optimize Queries on Live Data
+Plan Disk Storage Requirements
+Proactively Tune Database in Production 
+Prevent Data Loss
+Quickly Assess a Situation and Develop/Implement a Solution 
+Recover Lost Data
+Repair Program Bugs
+Research Emerging Technology
+Review Existing Solutions
+Set Security Permissions for Database
+Setup Safety Measures to Recover Data
+Solid Project Management Capabilities 
+Solid Understanding of Company�s Data Needs 
+Strong Technical and Interpersonal Communication
+Test Database to Ensure Everything Operates Efficiently Without Error 
+Test Recovery Plans
+Thorough Knowledge of SQL 
+Troubleshoot Database Errors
+Understanding of Popular Database Management Software (SQL and MySQL)
+Update Database Permissions
+END
+Skills,Computer Systems Analyst 
+Analyze, Collect, and Review Technology and Tools
+Analyze User Needs, Program Function
+Assess Existing Systems and Recommend Technical Improvements
+Assist in Determining the Role of IT Systems in an Organization
+Assist With System and Program Updates
+Calculate Memory and Speed Requirements 
+Choose and Configure New Hardware and Software
+Collaborate With Stakeholders to Define and Document Program Requirements
+Conduct Root Cause Analysis and Final Status Reports
+Expand and Modify Systems to Meet Technical and Business Specifications
+Experience Working With Relational Databases to Facilitate Systems Analysis 
+Familiar with MS WDS, Active Directory, Exchange, SCCM, WSUS, SharePoint, Lync, and DNS
+Help Add Functionality to Existing Computer Systems
+Increase System Performance and Efficiency Through In-Depth Tests and Analysis 
+Knowledgeable of Information Storage and Retrieval Methods
+Maintain and Monitor Programs and Systems
+Modify System Parameters in Terms of Capacity and Capability
+Monitor Network Activity
+Monitor Project Progress to Ensure Deadlines, Standards, and Costs are Met
+Oversee Installation and Configuration of Customized Systems
+Participate in Technical Research to Enable Continued Innovation Within Infrastructure
+Perform and Support Unit Tests
+Prepare Flowcharts to Help Programmers or Engineers Build Computer Systems
+Problem Solver
+Propose Program Modifications
+Research Emerging Technologies to Help Increase Efficiency and Effectiveness
+Serve as Subject Matter Expert
+Strong Analytical Thinking
+Strong Attention to Detail
+System Analysis and Development Experience
+Test and Troubleshoot Problems
+Train System Users
+Write Instruction Manuals
+END
+Skills,IT Manager
+Active Listener
+Analytically Minded
+Articulate Thoughts in a Clear and Concise Manner
+Budgeting
+Build and Maintain Hardware and Software Budgets
+Certifications
+Coach and Professionally Develop Staff
+Conflict Management
+Create and Maintain Vendor and Client Relationships
+Create Disaster Recovery and Back-Up Procedures
+Develop and Document Work Flow
+Deploying and Managing Web Based Applications
+Enable and Support Business Operations
+Evaluate and Review Periodic Staff Reviews
+Evangelize IT Best Practices
+Maintain Data Center
+Maintain Technical Data Reports
+Manage Internal and External Projects
+Manage Teams Workload
+Manage Time Efficiently
+Management
+Monitor and Test Fixes
+Operations Management
+Participate in Professional Organizations
+IT Planning
+Plan, Organize and Control Information Systems
+Prepare and Manage Disaster Recovery Plan
+Procurement
+]Recommend Technologies, Strategies, Policies, and Procedures
+Remain Calm and Patient During Difficult Technical Issues
+Reporting
+Review and Troubleshoot Software and Hardware Problems
+Security Monitoring
+Setup and Maintain Windows and Linux Servers
+Solve Problems Systematically and Effectively
+System Monitoring
+Team-Oriented
+Troubleshooting
+END

@@ -4,18 +4,20 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Home - CJO</title>
     <meta name="description" content="Compare Jobs Offers" />
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
-
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
 </head>
     
 <body>
 <!-- Header start from basicPageHeader.tpl -->
+
+
 
 <table border="0" width='1200' align='left' style="background-color: #990000">
 <div id="container">
@@ -35,7 +37,7 @@ and open the template in the editor.
         <td  width="300" align="top" align="left">
         </td>
         <td height="30" align="center" width="1000" 
-            style="font-family: Times New Roman; color: #990000; font-size: 22px;">
+            style="font-family: Times New Roman; color: darkblue; font-size: 22px;">
              &nbsp;&nbsp;
             <a href="" >Home&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="" >Compare Offers&nbsp;&nbsp;&nbsp;&nbsp;</a>
@@ -46,8 +48,13 @@ and open the template in the editor.
     </tr>  
 </table>
 
-        <?php
-        // put your code here
-        ?>
-    </body>
+<?php
+    $_SESSION['userID']=1000;
+    
+    echo "Successfully created offer.";
+    
+
+?>
+
+  </body>
 </html>
