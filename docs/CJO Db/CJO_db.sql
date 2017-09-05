@@ -25,7 +25,10 @@ CREATE TABLE IF NOT EXISTS `cjodb`.`User` (
   `Username` VARCHAR(40) NOT NULL,
   `Password` VARCHAR(30) NOT NULL,
   `Email`    VARCHAR(80) NOT NULL,
+  `City`     VARCHAR(45) NOT NULL,
+  `State`    VARCHAR(2) NOT NULL,
   `EmploymentStatus` VARCHAR(3) NULL,
+  `EduacationLevel` SMALLINT NOT NULL,   
   UNIQUE INDEX `UserID_UNIQUE` (`UserID` ASC),
   PRIMARY KEY (`UserID`),
   UNIQUE INDEX `Username_UNIQUE` (`Username` ASC))
