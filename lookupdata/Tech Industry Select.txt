@@ -1,0 +1,15 @@
+<select name="industry" style="width: 180px">
+	<option>Analysts</option>
+	<option>Database Development, Administration & Business Intelligence</option>
+	<option>Engineering</option>
+	<option>Enterprise Systems Analysis & Integration</option>
+	<option>Health IT</option>
+	<option>Management & Project Management</option>
+	<option>Mobile Development</option>
+	<option>Network/System Design & Administration</option>
+	<option>Programming/Software Engineering</option>
+	<option>Security</option>
+	<option>Technical Support</option>
+	<option>Technical Writing</option>
+	<option>Web Development & Administration</option>
+</select>

@@ -13,9 +13,9 @@ function db_connect() {
     return $connection;
 }
 
-function db_disconnent($connection) {
+function db_disconnect($connection) { 
     if(isset($connection)){
-        mtsqli_close($connection);
+        mysqli_close($connection);
     }
 }
 
