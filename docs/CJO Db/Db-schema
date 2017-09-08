@@ -38,54 +38,63 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `CJOdb`.`Offer`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `CJOdb`.`Offer` ;
+DROP TABLE IF EXISTS `CJOdb`.`offer` ;
 
 CREATE TABLE IF NOT EXISTS `CJOdb`.`Offer` (
-  `OfferID` INT NOT NULL AUTO_INCREMENT,
-  `UserID` INT NOT NULL,
-  `JobID` INT NULL,
-  `OfferType` VARCHAR(45) NOT NULL,
-  `OfferRank` INT NULL,
-  `Company` VARCHAR(45) NOT NULL,
-  `Salary` INT NULL,
-  `Hourly` INT NULL,
-  `WeeklyHours` INT NULL,
-  `IncreaseOffer` FLOAT NULL COMMENT 'Increase 5-100% -- Base on skills and nunber years at Job being offered',
-  `User_UserID` INT NOT NULL,
-  `User_UserID1` SMALLINT NOT NULL,
-  PRIMARY KEY (`OfferID`, `User_UserID`),
-  UNIQUE INDEX `OfferID_UNIQUE` (`OfferID` ASC),
-  UNIQUE INDEX `JobID_UNIQUE` (`JobID` ASC),
-  INDEX `fk_Offer_User1_idx` (`User_UserID1` ASC),
-  CONSTRAINT `fk_Offer_User1`
-    FOREIGN KEY (`User_UserID1`)
-    REFERENCES `CJOdb`.`User` (`UserID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  `OfferID` SMALLINT NOT NULL AUTO_INCREMENT,
+  `OfferType`  VARCHAR(10) NOT NULL,
+  `CityStateID`  SMALLINT NOT NULL 
+  `PositionTitle` VARCHAR(80) NOT NULL,
+  `Company` VARCHAR(80) NOT NULL,
+  `Hourly` DECIMAL(5,2) NULL,
+  `BaseSalary` DECIMAL(10,2) NULL,
+  `BonusCommissions` DECIMAL(3,2) NULL,
+  `Pension`  DECIMAL(3,2) NULL,
+  `ReimburseExp` DECIMAL(8,2) NULL,
+  `Relocate` VARCHAR(3) NOT NULL,
+  PRIMARY KEY (`OfferID`),
+  UNIQUE INDEX `OfferID_UNIQUE` (`OfferID` ASC)
+)ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- Table `CJOdb`.`Offer`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `CJOdb`.`offer` ;
+
+CREATE TABLE IF NOT EXISTS `CJOdb`.`Offer` (
+  `OfferID` SMALLINT NOT NULL AUTO_INCREMENT,
+  `UserID` SMALLINT NOT NULL,
+  `OfferType`  VARCHAR(3) NOT NULL,
+  `Relocate` VARCHAR(3) NOT NULL,
+  `PositionTitle` VARCHAR(80) NOT NULL,
+  `Company` VARCHAR(80) NOT NULL,
+  `Hourly`  DECIMAL(5,2) NULL,
+  `BaseSalary` DECIMAL(10,2) NULL,
+  `BonusCommissions` DECIMAL(3,2) NULL,
+  `Pension`  DECIMAL(3,2) NULL,
+  `ReimburseExp` DECIMAL(8,2) NULL,
+  `CostOfliving` DECIMAL(3,2) NULL,
+  PRIMARY KEY (`OfferID`),
+  UNIQUE INDEX `OfferID_UNIQUE` (`OfferID` ASC)
+)ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `CJOdb`.`Job`
+-- Table `CJOdb`.`benefits`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `CJOdb`.`Job` ;
+DROP TABLE IF EXISTS `CJOdb`.`benefits` ;
 
-CREATE TABLE IF NOT EXISTS `CJOdb`.`Job` (
-  `JobID` INT NOT NULL AUTO_INCREMENT,
-  `Position` VARCHAR(80) NULL,
-  `SectorID` INT NULL,
-  `Region` VARCHAR(45) NULL,
-  `CityStateID` INT NULL,
-  `Offer_OfferID` INT NOT NULL,
-  `Offer_User_UserID` INT NOT NULL,
-  PRIMARY KEY (`JobID`, `Offer_OfferID`, `Offer_User_UserID`),
-  INDEX `fk_Job_Offer1_idx` (`Offer_OfferID` ASC, `Offer_User_UserID` ASC),
-  CONSTRAINT `fk_Job_Offer1`
-    FOREIGN KEY (`Offer_OfferID` , `Offer_User_UserID`)
-    REFERENCES `CJOdb`.`Offer` (`OfferID` , `User_UserID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+CREATE TABLE IF NOT EXISTS `CJOdb`.`benefits` (
+  `BenefitsID` SMALLINT NOT NULL AUTO_INCREMENT,
+  `OfferID` SMALLINT NOT NULL,
+  `Medical` BOOLEAN DEFAULT NULL,
+  `Dental` BOOLEAN DEFAULT NULL,
+  `Vision` BOOLEAN DEFAULT NULL,
+  `Life Insurance` BOOLEAN DEFAULT NULL,
+  `StockOptions`  BOOLEAN DEFAULT NULL,
+  `WieghtValue` SMALLINT NULL, 
+  PRIMARY KEY (`BenefitsID`)
+)ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -94,7 +103,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `CJOdb`.`CityStateRatios` ;
 
 CREATE TABLE IF NOT EXISTS `CJOdb`.`CityStateRatios` (
-  `CityStateID` INT NOT NULL AUTO_INCREMENT,
+  `CityStateID` SMALLINT NOT NULL AUTO_INCREMENT,
   `City` VARCHAR(45) NOT NULL,
   `State` VARCHAR(2) NOT NULL,
   `CostLivingIndex` FLOAT NULL COMMENT 'Relation cheapest',
@@ -103,15 +112,8 @@ CREATE TABLE IF NOT EXISTS `CJOdb`.`CityStateRatios` (
   `High` FLOAT NULL,
   `Region` VARCHAR(45) NULL,
   `WageSalaryIndex` FLOAT NULL,
-  `Job_JobID` INT NOT NULL,
-  UNIQUE INDEX `iLivingCostID_UNIQUE` (`CityStateID` ASC),
-  PRIMARY KEY (`Job_JobID`),
-  CONSTRAINT `fk_CityState_Job1`
-    FOREIGN KEY (`Job_JobID`)
-    REFERENCES `CJOdb`.`Job` (`JobID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  PRIMARY KEY (`CityStateID`)
+)ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------

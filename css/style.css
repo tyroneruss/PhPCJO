@@ -37,10 +37,18 @@ and open the template in the editor.
   font-family: sans-serif;
 }
 
+#cojformtable 
+{
+   width: 800px;
+   height: 300px;
+   padding: 10px;
+   background-color: lightgrey;
+   font-family: sans-serif;
+}
 
 #loginformtable 
 {
-   width: 550px;
+   width: 700px;
    height: 300px;
    padding: 10px;
    background-color: lightgrey;
