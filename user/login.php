@@ -8,17 +8,12 @@
             <table border="0" width='290' height='500' valign="top">
                 <tr>
                      <td style="font-family: Times New Roman; font-size: 20px;" > 
-    <!--                     <a id="right_pane_a" href="http://www.indeed.com">Employment - Indeed Search</a>  
-                         <br>
-                         <br>
-                         <a id="right_pane_a" href="" >Add Link Employment/Career </a>  -->
                      </td>
                 </tr>   
              </table>
         </td>  
         <td align="left" valign='top' style="background-color: white;" >
             <br><br>
-
             <table border="0" id="loginformtable">
                <tbody>
                <tr>
@@ -32,24 +27,32 @@
                    </td>
                </tr>
                <tr>
-                   <td colspan="2" align="center" height="40" valign="center" style="font-family: Times New Roman; font-size: 20px;"  >
+                   <td colspan="2" align="center" height="50" valign="center" style="font-family: Times New Roman; font-size: 20px;"  >
                        <font color="black">
                             Fields marked with a red asterisk (<font color="red">*</font>) are required
                        </font>
                    </td>
                 </tr>
-                   <tr>
-                       <td width="40%" align="right" height="30" valign="center" style="font-family: Times New Roman; font-size: 18px">
-                           <font color="red">*</font>Enter email:&nbsp;
-                       </td>
-                       <td><input type="text" name='username' size="30" /></td>
-                   </tr>
-                 <tr>
-                       <td width="40%" align="right" height="30" valign="center" style="font-family: Times New Roman; font-size: 18px">
-                           <font color="red">*</font>Enter password:&nbsp;
-                       </td>
-                       <td><input type="password" name="password" size="30"  /></td>
-                   </tr>                    
+                <tr>
+                    <td width="30%" align="right" height="30" valign="center" style="font-family: Times New Roman; font-size: 20px">
+                        Username<font color="red">*</font>&nbsp;
+                    </td>
+                    <td  width="70%" >
+                        <input type="text" name='username' size="26"  style="font-family: Times New Roman; font-size: 20px"  Required />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" height="10" >
+                    </td>
+                </tr>
+                <tr>
+                    <td  width="30%" align="right" height="30" valign="center" style="font-family: Times New Roman; font-size: 20px">
+                        Password<font color="red">*</font>&nbsp;
+                    </td>
+                    <td  width="70%" >
+                        <input type="password" name="password" size="26"   style="font-family: Times New Roman; font-size: 20px" Required />
+                    </td>
+                </tr>                    
            </tbody>
            <br>
            <tr>
@@ -60,9 +63,9 @@
                    style="color: white; height: 35px; width: 125px; 
                    background-color:  DodgerBlue" />
 
-                   <input type="button" value="REGISTER USER" 
-                   onclick="window.location.href='registeruser.php'"                          
-                   style="color: white; height: 35px; width: 150px; 
+                   <input type="button" value="REGISTER" 
+                   onclick="window.location.href='register.php'"                          
+                   style="color: white; height: 35px; width: 125px; 
                    background-color:  DodgerBlue" />
                    <br>
                    <br>

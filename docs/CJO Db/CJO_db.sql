@@ -26,11 +26,10 @@ CREATE TABLE IF NOT EXISTS `CJOdb`.`profile` (
   `UserID` SMALLINT NOT NULL,
   `LocationID` SMALLINT NOT NULL,
   `Age` SMALLINT NULL,
-  `Gender` VARCHAR(10) NOT NULL, 
+  `Gender` VARCHAR(10) NOT NULL,
   `DateOfBirth` DATE NOT NULL,
   `EmploymentStatus` VARCHAR(3) NULL,
   `EduacationLevel` SMALLINT NOT NULL,   
-  `LastUpdate` TIMESTAMP NOT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`ProfileID`)
 )ENGINE = InnoDB;
 ALTER TABLE profile AUTO_INCREMENT=1;
@@ -40,10 +39,11 @@ ALTER TABLE profile AUTO_INCREMENT=1;
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `CJOdb`.`offer` ;
 
-CREATE TABLE IF NOT EXISTS `CJOdb`.`Offer` (
+CREATE TABLE IF NOT EXISTS `CJOdb`.`O=offer` (
   `OfferID` SMALLINT NOT NULL AUTO_INCREMENT,
+  `LocationID`  SMALLINT NOT NULL,
   `OfferType`  VARCHAR(10) NOT NULL,
-  `CityStateID`  SMALLINT NOT NULL 
+  `SectorID` SMALLINT NOT NULL,
   `PositionTitle` VARCHAR(80) NOT NULL,
   `Company` VARCHAR(80) NOT NULL,
   `Hourly` DECIMAL(5,2) NULL,

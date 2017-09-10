@@ -39,7 +39,7 @@ and open the template in the editor.
 
 #cojformtable 
 {
-   width: 800px;
+   width: 700px;
    height: 300px;
    padding: 10px;
    background-color: lightgrey;
@@ -48,8 +48,8 @@ and open the template in the editor.
 
 #loginformtable 
 {
-   width: 700px;
-   height: 300px;
+   width: 600px;
+   height: 260px;
    padding: 10px;
    background-color: lightgrey;
    font-family: sans-serif;
