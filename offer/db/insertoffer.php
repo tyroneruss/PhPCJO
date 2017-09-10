@@ -1,18 +1,4 @@
-
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-
 <?php
 
 /* 
@@ -38,7 +24,7 @@ and open the template in the editor.
             exit();
         } 
         
-        $query  = "SELECT * FROM user ";
+        $query  = "Insert into offer () ";
         $query .= "Where Username='" .  $users_username; 
         $query .= "' and Password='" . $users_password . "'"; 
         
@@ -51,11 +37,9 @@ and open the template in the editor.
         } else {
             $result->free();
             header('Location: ../login_error.php?message=Password or Username is invalid, please try again...'); 
+            echo " Failed";
         }
         /* close connection */
         $mysqli->close();   
    }
   ?>
-  </body>
-</html>
- 

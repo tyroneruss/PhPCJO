@@ -7,7 +7,8 @@
                         <div id="sitename">
                                 <font color="white" >
                                       <br>
-                                      &nbsp;&nbsp;In Business since 2009  
+                                      <footer>&copy; Copyright 2011</footer>
+
                                       <br>
                                       &nbsp;&nbsp;Created by RussWare,Inc 
                                       <br>
