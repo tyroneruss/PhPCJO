@@ -45,8 +45,9 @@ and open the template in the editor.
         $result = $mysqli->query($query);
         if ($result->num_rows != 0){
             /* fetch associative array */
+            
             $result->free();
-            echo 'Passed';
+            
             header('Location: ../../main/home.php'); 
         } else {
             $result->free();

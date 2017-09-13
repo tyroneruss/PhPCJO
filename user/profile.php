@@ -1,26 +1,11 @@
 
-<?php include '../includes/header.php'; 
+<?php 
 
-    if ('$_POST') {   
-        session_start();
-        /*session created*/
-            $_SESSION["users_fullname"]  = $_POST['fullname'];           
-            $_SESSION["users_username"]  = $_POST['username'];           
-            $_SESSION["users_email"]     = $_POST['email'];
+    include '../includes/header.php'; 
 
-        if ($_POST["password"] === $_POST["password1"]) {
-           // success!            /*session is started if you don't write this line can't use $_Session  global variable*/
-            $_SESSION["users_password"] = $_POST['password'];
-            header('Location: ./profile.php');                         
-        }
-        else {
-            header('Location: ./register_error.php?message=Passwords does not match, please re-enter...');             
-        }
-           // failed :(
-    }   
 ?>
       
-    <form action="./db/insertuser.php" method="POST">
+    <form action="./db/insertprofileDb.php" method="POST">
     <table border="0" width="1200" style="background-color: #ffffff;">
         <tr>
         <td width='350'  valign="top">
@@ -70,7 +55,7 @@
                         Birthdate&nbsp;&nbsp;&nbsp;
                     </td>
                     <td  width="65%" >
-                        <input type="date" name='dob' size="12"  style="font-family: Times New Roman; font-size: 18px"/>
+                        <input type="date" name='birthdate' size="12"  style="font-family: Times New Roman; font-size: 18px"/>
                     </td>
                 </tr>
                 <tr>
@@ -83,8 +68,8 @@
                     </td>
                     <td  width="65%">                       
                         <select name="employed" style="font-size: 15px; font-family:  Times New Roman;width: 100px" >
-                            <option style="font-size: 15px; font-family:  Times New Roman; width: 100px">Yes</option>
-                            <option style="font-size: 15px; font-family:  Times New Roman; width: 100px">No</option>
+                            <option value="Yes" style="font-size: 15px; font-family:  Times New Roman; width: 100px">Yes</option>
+                            <option value="No"  style="font-size: 15px; font-family:  Times New Roman; width: 100px">No</option>
                         </select>
                     </td>
                 </tr>                    

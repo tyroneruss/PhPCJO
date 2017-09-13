@@ -1,10 +1,16 @@
 
-    <?php include '../includes/header.php'; ?>
+    <?php include '../includes/header.php'; 
+        session_start();
+    
+        $fullname = $_SESSION["users_fullname"];                  
+        $email    = $_SESSION["users_email"];
+       
+    ?>
       
-    <form action="./db/insertuserDb.php" method="POST">
+<form action="./db/insertuserDb.php" method="POST">
     <table border="0" width="1200" style="background-color: #ffffff;">
         <tr>
-        <td w.dth='350'  valign="top">
+        <td width='350'  valign="top">
             <table border="0" width='350' height='500' valign="top">
                 <tr>
                      <td style="font-family: Times New Roman; font-size: 20px;" > 
@@ -33,12 +39,19 @@
                        </font>
                    </td>
                 </tr>
+                <?php
+                    echo '<tr><td align="center" colspan="2" style="color: red; font-family: Times New Roman; font-size: 20px;">&nbsp;';                      
+                    if(!empty($_GET['message'])) {
+                        $message = $_GET['message'];
+                    }                       
+                    echo '<font color="red">'; echo $message; echo '</font><br></td></tr>';
+                ?>                   
                 <tr>
                     <td width="35%" align="right" height="30" valign="center" style="font-family: Times New Roman; font-size: 20px">
                         Fullname<font color="red">*</font>&nbsp;
                     </td>
                     <td  width="65%" >
-                        <input type="text" name='fullname' size="25"  style="font-family: Times New Roman; font-size: 20px" Required />
+                        <input type="text" name='fullName'  value="<?php echo $fullname; ?>" size="25"  style="font-family: Times New Roman; font-size: 20px"/>
                     </td>
                 </tr>
                 <tr>
@@ -50,7 +63,7 @@
                         Username<font color="red">*</font>&nbsp;
                     </td>
                     <td  width="65%" >
-                        <input type="text" name='username' size="25"  style="font-family: Times New Roman; font-size: 20px" Required />
+                        <input type="text" name='username' value="" size="25"  style="font-family: Times New Roman; font-size: 20px" Required />
                     </td>
                 </tr>
                 <tr>
@@ -62,7 +75,7 @@
                         Email<font color="red">*</font>&nbsp;
                     </td>
                     <td  width="70%" >
-                        <input type="text" name='email' size="25"  style="font-family: Times New Roman; font-size: 20px" Required />
+                        <input type="text" name='fullName' value="<?php echo $email; ?>" size="25"  style="font-family: Times New Roman; font-size: 20px"/>
                     </td>
                 </tr>
                 <tr>
@@ -86,7 +99,7 @@
                         Confirm Password<font color="red">*</font>&nbsp;
                     </td>
                     <td  width="65%" >
-                        <input type="password" name="password1" size="20"   style="font-family: Times New Roman; font-size: 20px"/>
+                        <input type="password" name="password" size="20"   style="font-family: Times New Roman; font-size: 20px"/>
                     </td>
                 </tr>                    
            </tbody>

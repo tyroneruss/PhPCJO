@@ -8,7 +8,7 @@
        
     ?>
       
-    <form action="profile.php" method="POST">
+<form action="./db/insertuserDb.php" method="POST">
     <table border="0" width="1200" style="background-color: #ffffff;">
         <tr>
         <td width='350'  valign="top">
@@ -40,6 +40,13 @@
                        </font>
                    </td>
                 </tr>
+                <?php
+                    echo '<tr><td align="center" colspan="2" style="color: red; font-family: Times New Roman; font-size: 20px;">&nbsp;';                      
+                    if(!empty($_GET['message'])) {
+                        $message = $_GET['message'];
+                    }                       
+                    echo '<font color="red">'; echo $message; echo '</font><br></td></tr>';
+                ?>                   
                 <tr>
                     <td width="35%" align="right" height="30" valign="center" style="font-family: Times New Roman; font-size: 20px">
                         Fullname<font color="red">*</font>&nbsp;
@@ -76,18 +83,6 @@
                     <td colspan="2" height="10" >
                     </td>
                 </tr>
-               <tr>
-                   <td align="center" colspan="2" style="color: red; font-family: Times New Roman; font-size: 20px;">
-                       &nbsp;
-                        <?php
-                            if(!empty($_GET['message'])) {
-                                $message = $_GET['message'];
-                            }                       
-                        ?>
-                       <font color="red"><?php echo $message; ?></font>
-                       <br>
-                   </td>
-               </tr>                    
                 <tr>
                     <td  width="35%" align="right" height="30" valign="center" style="font-family: Times New Roman; font-size: 20px">
                         Password<font color="red">*</font>&nbsp;
@@ -105,7 +100,7 @@
                         Confirm Password<font color="red">*</font>&nbsp;
                     </td>
                     <td  width="65%" >
-                        <input type="password" name="password" size="20"   style="font-family: Times New Roman; font-size: 20px"/>
+                        <input type="password" name="password1" size="20"   style="font-family: Times New Roman; font-size: 20px"/>
                     </td>
                 </tr>                    
            </tbody>
