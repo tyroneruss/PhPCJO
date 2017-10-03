@@ -7,7 +7,7 @@
                         <div id="sitename">
                                 <font color="white" >
                                       <br>
-                                      <footer>&copy; Copyright 2011</footer>
+                                      <footer>Copyright&nbsp;&copy;2011</footer>
 
                                       <br>
                                       &nbsp;&nbsp;Created by RussWare,Inc 

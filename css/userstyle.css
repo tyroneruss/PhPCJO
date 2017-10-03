@@ -1,0 +1,88 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 3, 2017, 3:46:23 AM
+    Author     : tyron
+*/
+
+body{
+    margin:0;
+    padding:0;
+    background-color:#FFF;
+}
+
+#user_h1
+{
+font-size: 45px;
+color: #90c6ed;
+margin: 0;
+padding-top: 20px;
+padding-bottom: 10px;
+font: bold Helvetica, Arial, sans-serif;
+letter-spacing: -1px;
+text-shadow: 0 2px 0 #510000;
+}
+
+#wrapper{
+    width: 500px;
+    margin:0px auto;
+    min-height: 400px;
+    padding-top:60px;
+}
+
+#userform_bg
+{
+    width: 510px;
+    margin:10px auto;
+    border:1px solid #eee;
+    background-color:#E0E0E0;
+    min-height:300px;
+}
+#profileform_bg{
+    width: 540px;
+    margin:10px auto;
+    border:1px solid #eee;
+    background-color:#E0E0E0;
+    min-height:450px;    
+}
+#regform_bg
+{
+    width: 540px;
+    margin:10px auto;
+    border:1px solid #eee;
+    background-color:#E0E0E0;
+    min-height:380px;
+}
+
+#inputwrapper
+{
+    width: 500px;
+    margin:0px auto;
+}
+#login_input {
+    font-size: 18px;
+    font-family: Times New Roman;   
+    margin-left: 30px;
+}
+
+#user_input {
+    font-size: 18px;
+    font-family: Times New Roman;  
+    width: 250;
+    margin-right: 10px;    
+}
+
+#inputbutton
+{
+    width: 140px; 
+    color: white; 
+    height: 30px; 
+    font-weight: bold;
+    font-size: 16px;
+    background-color:  DodgerBlue;    
+    font-family: Times New Roman;
+    border:1px solid #FFF;  
+}

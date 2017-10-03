@@ -71,6 +71,7 @@ and open the template in the editor.
              }
              /* close connection */
         } else {
+                
                 $mysqli->close();  
                 header('Location: ../login.php?message=Password or Username is invalid, please try again...'); 
         }

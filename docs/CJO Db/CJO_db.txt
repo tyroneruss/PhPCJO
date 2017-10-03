@@ -42,8 +42,7 @@ CREATE TABLE IF NOT EXISTS `cjodb`.`location` (
   `HealthCare` FLOAT NULL DEFAULT NULL,
   `MiscGoodServices` VARCHAR(45) NULL DEFAULT NULL,
   PRIMARY KEY (`LocationID`))
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8;
+ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------

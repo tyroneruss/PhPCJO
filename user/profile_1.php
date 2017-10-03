@@ -31,7 +31,7 @@
                 <div id="inputwrapper">  
                     <br>
                    <input id="inputbutton" onclick="window.location.href='javascript:history.back()'" type="submit" value="CANCEL" />
-                   &nbsp;&nbsp;&nbsp;<input id="inputbutton" type="submit" value="CONTINUE" />
+                   <input id="inputbutton" type="submit" value="CONTINUE" />
                     
                 </div>
             </div>

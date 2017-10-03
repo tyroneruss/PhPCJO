@@ -16,23 +16,25 @@
         die("Connection failed: " . $mysqli->connect_error);
     } 
 
-    $handle = fopen("data/AbbrState.csv", "r");
+    $handle = fopen("data/CostofLiving.csv", "r");
+    
+    $i = 0;
     if ($handle) {
         while (($line = fgets($handle)) !== false) {
             $list = explode(",", $line);
-            $StateAbbr  = $list[0];
-            $State      = $list[1];
-            $sql = "INSERT INTO state_old (Name,NameAbbr) VALUES ('" . $State . "','" . $StateAbbr . "')";
+            $CS  = $list[0] . ',' . $list[1];
+            $sql = "INSERT INTO location (Name) VALUES ('" . $CS . "')";
 
             if ($mysqli->query($sql) === TRUE) {
-                 echo 'Successfull inserts: ' . $list[1] . "<br>";
+                $i = $i + 1;
+                 echo $i . " <option value=" . $CS . ">" . $CS . "</option><br>";
              } else {
                  echo "Error: " . $sql . "<br>" . $conn->error;
              }
         }
     }
-    
-    $mysqli->close();
+ 
     fclose($handle);      
+    $mysqli->close();
 
 ?>

@@ -1,22 +1,30 @@
 <!DOCTYPE html>
 <!--
-
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
 -->
+
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
 <?php
 
-    $servername = "localhost:3306";
-    $username = "root";
-    $password = "rhouse11";
-    $dbname = "CJOdb";
-
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
+    require_once('../includes/database.php');   
+    $mysqli = db_connect();
+    /* check connection */
+    $i = 0;
+    
+    if ($mysqli->connect_errno) {
+        printf("Connect failed: %s\n", $mysqli->connect_error);
+        exit();
     } 
-            
+       
     $handle = fopen("data/CostofLiving.csv", "r");
     // Load cost of living data
     if ($handle) {
@@ -24,30 +32,35 @@
             $list = explode(",", $line);
             $City       = $list[0];
             $State      = $list[1];
-            $ColIndex   = $list[2];
-            $Grocery    = $list[3];
-            $Housing    = $list[4];
-            $Utilities  = $list[5];
-            $Transport  = $list[6];                
-            $HealthCare = $list[7];
-            $MiscGoodServices  = $list[7];
+            $StateTax   = $list[2];
+            $ColIndex   = $list[3];
+            $Grocery    = $list[4];
+            $Housing    = $list[5];
+            $Utilities  = $list[6];
+            $Transport  = $list[7];                
+            $HealthCare = $list[8];
+            $MiscGoodServices  = $list[9];
             
-            $sqlstatement = " ('" . $City . "','" . $State . "'," . $ColIndex . "," . $Grocery . "," . $Housing . ",";
+            $sqlstatement = " ('" . $City . "','" . $State . "','" . $StateTax . "'," . $ColIndex . "," . $Grocery . "," . $Housing . ",";
             $sqlstatement = $sqlstatement . $Utilities . "," . $Transport . "," . $HealthCare . "," . $MiscGoodServices . ")";
 
-            $sql = "INSERT INTO citystate (City,State,ColIndex,Grocery,Housing,Utilities,Transport,HealthCare,MiscGoodServices) 
-                    VALUES" . $sqlstatement;
+            $sql = "INSERT INTO col (City,State,StateTax,ColIndex,Grocery,Housing,Utilities,Transport,HealthCare,MiscGoodServices) 
+                    VALUES " . $sqlstatement;
             
-        echo $sqlstatement;
-        echo "<br>";
-        if ($conn->query($sql) === TRUE) {
-            // echo '<script>window.location.href = "the-target-page.php";</script>';
-        } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
+        // echo $sqlstatement;
+        // echo "<br>";
+        if ($mysqli->query($sql) === TRUE) {
+            $i++;
+            # echo $i . ": " . $sql . "<br>" . $mysqli->error;
         }
-        }
+        
+      }
+      echo '  ';
+      echo 'Total number of records = ' . $i;     
     }
-
-$conn->close();
+  $mysqli->close();
 
 ?>
+
+   </body>
+</html>

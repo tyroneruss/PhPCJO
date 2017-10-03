@@ -24,150 +24,50 @@
     $result = $mysqli->query($query);
 
 ?>
-    
+    <link rel="stylesheet" type="text/css" href="../css/userstyle.css">   
     <form action="./db/insertprofileDb.php" method="POST">
-    <table border="0" width="1200" style="background-color: #ffffff;">
-        <tr>
-        <td width='350'  valign="top">
-            <table border="0" width='350' height='500' valign="top">
-                <tr>
-                     <td style="font-family: Times New Roman; font-size: 20px;" > 
-                     </td>
-                </tr>   
-             </table>
-        </td>  
-        <td align="left" valign='top' style="background-color: white;" >
-            <br><br>
-            <table border="0" id="loginformtable">
-               <tbody>
-               <tr>
-                   <td colspan="2">
-                       &nbsp;
-                   </td>
-               </tr>                    
-               <tr>
-                   <td colspan="2" align="center">            
-                       <h1 id="login_h1">Create profile</h1>
-                   </td>
-               </tr>
-               <tr>
-                   <td colspan="2" align="center" height="30" valign="center" style="font-family: Times New Roman; font-size: 18px;"  >
-                       <font color="black">
+        <div id="wrapper"> 
+            
+            <div id="profileform_bg" align="center">
+                <h1 id="user_h1">Create profile</h1>
+                <span> 
+                       <div id="login_input" >
                             Fields marked with a red asterisk (<font color="red">*</font>) are required
-                       </font>
-                   </td>
-                </tr>
-               <tr>
-                    <td id="user_td" width="30%" align="right" height="30" valign="center" >
-                     
-                    </td>
-                    <td id="user_td"  width="70%">
-                        <input type="radio" name="gender" value="Male"   style="height: 15px; width: 15px"/>
-                        Male
-                        <input type="radio" name="gender" value="Female" style="height: 15px; width: 15px"/>
-                        Female
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" height="8" >
-                    </td>
-                </tr>
-                <tr>
-                    <td id="user_td" width="30%" align="right" height="30" valign="center" >
-                        First name<font color="red">*</font>&nbsp;
-                    </td>
-                    <td  width="70%" >
-                        <input id="user_input" type="text" name='firstname' placeholder="First name" size="20"  Required />
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" height="8" >
-                    </td
-                </tr>
-               <tr>
-                    <td id="user_td" width="30%" align="right" height="30" valign="center" >
-                        Last name<font color="red">*</font>&nbsp;
-                    </td>
-                    <td  width="70%" >
-                        <input id="user_input" type="text" name='lastname' size="20" placeholder="Last name" Required />
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" height="8" >
-                    </td
-                </tr>
-                <tr>
-                    <td id="user_td" width="30%" align="right" height="30" valign="center" >
-                        Education <font color="red">*</font>&nbsp;
-                    </td>
-                    <td  width="70%" >
-                        <select name="education" placeholder="Education" style="font-family: Times New Roman; font-size: 15px; height: 20px; width: 150px" >
-                            <option value="1">Diploma/GED</option>
-                            <option value="2">BA/BS Degree</option>
-                            <option value="3">MA/MS/MBA</option>              
-                            <option value="4">PhD</option>
-                            <option value="4">JD</option>
-                        </select>     
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" height="8" >
-                    </td
-                </tr>
-                <tr>
-                    <td id="user_td" width="30%" align="right" height="30" valign="center" >
-                        Location<font color="red">*</font>&nbsp;
-                    </td>
-                    <td  width="70%" >                      
-                        <select name="citystateID" style="font-family: Times New Roman; font-size: 15px; height: 20px; width: 150px" >
-                            <?php while($row = mysqli_fetch_array($result)) { ?>
-                            <option value="<?php echo $row['LocationID']; ?>"><?php echo $row['Name']; ?>  </option>
-                            <?php } ?>
-                        </select>     
-                   </td>
-                </tr>
-                <tr>
-                    <td colspan="2" height="8" >
-                    </td
-                </tr>
-                <tr>
-                    <td id="user_td" width="30%" align="right" height="30" valign="center" >
-                        Employed<font color="red">*</font>&nbsp;
-                    </td>
-                    <td  width="70%" >
-                        <select id="location" name="employed" style="font-family: Times New Roman; font-size: 15px; height: 20px; width: 100px" >
-                            <option value="Yes">Yes</option>
-                            <option value="No">Mo</option>
-                        </select>     
-                    </td>
-                </tr>
-           <br>
-           <tr>
-                <td colspan='2' height="60" align="center" valign="top" 
-                  style="font-family: Times New Roman; font-size: 20px;" >
-                   <br>
-                   <input type="button" value="BACK" 
-                   onclick="window.location.href='javascript:history.back()'"                          
-                   style="color: white; height: 35px; width: 125px; 
-                   background-color:  DodgerBlue" />
-                   &nbsp;&nbsp;
-                   <input type="submit" value="CONTINUE"  
-                   style="color: white; height: 35px; width: 125px; 
-                   background-color:  DodgerBlue" />
-
-                   <br>
-                   <br>
-                </td>
-            </tr>
-        </table>
-       <br><br><br>
-    </td>
-    </tr>
-    </table> 
-    </form>
-    &nbsp;&nbsp;
-
-   <?php include '../includes/footer.php'; ?>
-        
+                            <br><br><input type="radio" name="gender" value="Male" />
+                            <label>Male</label>
+                            <input type="radio" name="gender" value="Female" style="height: 15px; width: 15px"/>
+                            <label>Female</label>
+                            
+                            <br><br><label>First name<font color="red">*</font></label>
+                            <input id="user_input" type="text" name='firstname' Required />
+                            <br><br><label>Last name<font color="red">*</font></label>&nbsp;&nbsp;
+                            <input id="user_input" type="text" name='lastname' Required />
+                            <br><br><label>Education <font color="red">*</font></label>
+                            <select id="user_input" name="education" style="width: 150px; margin-right: 105px" >
+                                <option value="1">Diploma/GED</option>
+                                <option value="2">BA/BS Degree</option>
+                                <option value="3">MA/MS/MBA</option>              
+                                <option value="4">PhD</option>
+                                <option value="4">JD</option>
+                            </select><br><br>
+                            <label>Location<font color="red">*</font></label>
+                            <select id="user_input" name="citystateID" style="width: 150px; margin-right: 95px" >
+                                <?php while($row = mysqli_fetch_array($result)) { ?>
+                                <option value="<?php echo $row['LocationID']; ?>"><?php echo $row['Name']; ?>  </option>
+                                <?php } ?>
+                            </select><br><br>
+                            <label>Employed<font color="red">*</font>&nbsp;</label>
+                            <select id="user_input" name="employed" style="width: 100px; margin-right: 155px" >
+                                <option value="Yes">Yes</option>
+                                <option value="No">Mo</option>
+                            </select>     
+                       </div>
+                </span>
+                <div id="inputwrapper">  
+                    <br>
+                   <input id="inputbutton"  type="button" onclick="window.location.href='javascript:history.back()'"value="CANCEL" />
+                   &nbsp;&nbsp;&nbsp;<input id="inputbutton" type="submit" value="SUBMIT" />                    
+                </div>
+    </form>        
     </body>
 </html>

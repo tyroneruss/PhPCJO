@@ -42,26 +42,52 @@ and open the template in the editor.
    width: 700px;
    height: 300px;
    padding: 10px;
-   background-color: lightgrey;
+   background-color: windowframe;
+   font-family: Times New Roman;
+}
+
+#listformtable 
+{
+   width: 800px;
+   height: 260px;
+   padding: 10px;
+   background-color: windowframe;
    font-family: sans-serif;
 }
 
 #loginformtable 
 {
-   width: 600px;
-   height: 260px;
+   width: 500px;
+   height: 20px;
    padding: 10px;
-   background-color: lightgrey;
-   font-family: sans-serif;
+   background-color: windowframe;
+   font-family: Times New Roman;
 }
 
 #login_h1
 {
-   letter-spacing: 6px;
-   font-size: 1.6em;
-   color: #be7429;
-   font-weight: bold;
+   letter-spacing: 2px;
+   font-size: 35px;
+   color: grey;
+   font-family: Times New Roman;;
 }
+
+#user_name {
+    font-family: Times New Roman; 
+    font-size: 15px;
+    align-content: right;
+}
+
+#user_td {
+    font-family: Times New Roman; 
+    font-size: 15px;
+    align: right;
+}
+#user_input {
+    font-family: Times New Roman; 
+    font-size: 15px; 
+ }
+ 
 #container
 {
 width: 100%;
@@ -171,25 +197,10 @@ background-color: lightgrey;
 text-decoration: none;
 }
 
-a:link
-{
-color: #660000;
-text-decoration: none;
+
+a {
+    text-decoration: none;
 }
-a:visited
-{
-color: #990000;
-text-decoration: none;
+a:link, a:visited {
+    color: blue;
 }
-a:hover
-{
-border-bottom: none;
-color: #fff;
-background-color: #660000;
-text-decoration: none;
-}
-
-
-
-
-

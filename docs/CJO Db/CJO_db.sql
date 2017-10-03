@@ -1,15 +1,69 @@
+-- Db statements 
+INSERT INTO profile (UserID,LocationID,Age,Gender,DateOfBirth,EmploymentStatus,EduacationLevel)
+VALUES (1008,1,63,'Female','1954-10-23','Yes',3);
+
+insert into state (Name,NameAbbr) 
+select distinct(NameAbbr), name from state_old
+
+-- -----------------------------------------------------
+-- Table `cjodb`.`Location`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `cjodb`.`col` ;
+
+-- -----------------------------------------------------
+-- Table `cjodb`.`col`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `cjodb`.`col` (
+  `ColID` SMALLINT(6) NOT NULL AUTO_INCREMENT,
+  `City` VARCHAR(45) NOT NULL,
+  `State` VARCHAR(2) NOT NULL,
+  `StateTax` VARCHAR(3) NOT NULL,
+  `ColIndex` FLOAT NULL DEFAULT NULL,
+  `Grocery` FLOAT NULL DEFAULT NULL,
+  `Housing` FLOAT NULL DEFAULT NULL,
+  `Utilities` FLOAT NULL DEFAULT NULL,
+  `Transport` FLOAT NULL DEFAULT NULL,
+  `HealthCare` FLOAT NULL DEFAULT NULL,
+  `MiscGoodServices` VARCHAR(45) NULL DEFAULT NULL,
+  PRIMARY KEY (`ColID`))
+ENGINE = InnoDB;
+ALTER TABLE location AUTO_INCREMENT=1;
+
+-- -----------------------------------------------------
+-- Table `cjodb`.`Location`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `cjodb`.`location` ;
+
+CREATE TABLE IF NOT EXISTS `cjodb`.`location` (
+  `LocationID` SMALLINT NOT NULL AUTO_INCREMENT,
+  `Name`  VARCHAR(64) NOT NULL,
+  PRIMARY KEY (`LocationID`))
+ENGINE = InnoDB;
+ALTER TABLE location AUTO_INCREMENT=1;
+
+-- -----------------------------------------------------
+-- Table `cjodb`.`role`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `cjodb`.`role` ;
+
+CREATE TABLE IF NOT EXISTS `cjodb`.`role` (
+  `RoleID` SMALLINT NOT NULL AUTO_INCREMENT,
+  `Title`  VARCHAR(64) NOT NULL,
+  PRIMARY KEY (`RoleID`))
+ENGINE = InnoDB;
+
 -- -----------------------------------------------------
 -- Table `cjodb`.`User`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `cjodb`.`User` ;
+DROP TABLE IF EXISTS `cjodb`.`user` ;
 
-CREATE TABLE IF NOT EXISTS `cjodb`.`User` (
+CREATE TABLE IF NOT EXISTS `cjodb`.`user` (
   `UserID` SMALLINT NOT NULL AUTO_INCREMENT,
-  `LocationID` SMALLINT NULL,
-  `Fullname` VARCHAR(80) NOT NULL,
+  `RoleID` SMALLINT NOT NULL,
   `Username` VARCHAR(40) NOT NULL,
   `Password` VARCHAR(30) NOT NULL,
   `Email`    VARCHAR(80) NOT NULL,
+  `Active` SMALLINT NOT NULL,
   UNIQUE INDEX `UserID_UNIQUE` (`UserID` ASC),
   PRIMARY KEY (`UserID`),
   UNIQUE INDEX `Username_UNIQUE` (`Username` ASC))
@@ -17,21 +71,22 @@ ENGINE = InnoDB;
 ALTER TABLE user AUTO_INCREMENT=1000;
 
 -- -----------------------------------------------------
--- Table `pbsdb`.`Profile`
+-- Table `cjodb`.`profile`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `CJOdb`.`profile` ;
+DROP TABLE IF EXISTS `cjodb`.`profile`;
 
-CREATE TABLE IF NOT EXISTS `CJOdb`.`profile` (
+CREATE TABLE IF NOT EXISTS `cjodb`.`profile` (
   `ProfileID` SMALLINT NOT NULL AUTO_INCREMENT,
   `UserID` SMALLINT NOT NULL,
   `LocationID` SMALLINT NOT NULL,
-  `Age` SMALLINT NULL,
-  `Gender` VARCHAR(10) NOT NULL,
-  `DateOfBirth` DATE NOT NULL,
-  `EmploymentStatus` VARCHAR(3) NULL,
-  `EduacationLevel` SMALLINT NOT NULL,   
-  PRIMARY KEY (`ProfileID`)
-)ENGINE = InnoDB;
+  `Firstname` VARCHAR(45) NOT NULL,
+  `Initial` VARCHAR(3) NULL,
+  `Lastname` VARCHAR(45) NOT NULL,
+  `Gender` VARCHAR(10) NULL,
+  `Employed` VARCHAR(3) NOT NULL,
+  `EduLevel` SMALLINT NOT NULL,
+  PRIMARY KEY (`ProfileID`))
+ENGINE = InnoDB;
 ALTER TABLE profile AUTO_INCREMENT=1;
 
 -- -----------------------------------------------------
@@ -39,7 +94,7 @@ ALTER TABLE profile AUTO_INCREMENT=1;
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `CJOdb`.`offer` ;
 
-CREATE TABLE IF NOT EXISTS `CJOdb`.`O=offer` (
+CREATE TABLE IF NOT EXISTS `CJOdb`.`offer` (
   `OfferID` SMALLINT NOT NULL AUTO_INCREMENT,
   `LocationID`  SMALLINT NOT NULL,
   `OfferType`  VARCHAR(10) NOT NULL,
@@ -58,12 +113,12 @@ ENGINE = InnoDB;
 ALTER TABLE offer AUTO_INCREMENT=1;
 
 -- -----------------------------------------------------
--- Table `cjodb`.`location`
+-- Table `cjodb`.`col`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `cjodb`.`location` ;
+DROP TABLE IF EXISTS `cjodb`.`col` ;
 
-CREATE TABLE IF NOT EXISTS `cjodb`.`location` (
-  `LocationID` SMALLINT NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `cjodb`.`col` (
+  `ColID` SMALLINT NOT NULL AUTO_INCREMENT,
   `City` VARCHAR(45) NOT NULL,
   `State` VARCHAR(2) NOT NULL,
   `StateTax` VARCHAR(3) NOT NULL,
@@ -74,10 +129,9 @@ CREATE TABLE IF NOT EXISTS `cjodb`.`location` (
   `Transport` FLOAT NULL,
   `HealthCare` FLOAT NULL,
   `MiscGoodServices` VARCHAR(45) NULL,
-  PRIMARY KEY (`LocationID`))
+  PRIMARY KEY (`ColID`))
 ENGINE = InnoDB;
-ALTER TABLE location AUTO_INCREMENT=1;
-
+ALTER TABLE col AUTO_INCREMENT=1;
 -- -----------------------------------------------------
 -- Table `cjodb`.`Sector`
 -- -----------------------------------------------------
