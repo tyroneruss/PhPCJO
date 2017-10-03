@@ -1,6 +1,30 @@
 
     <?php include '../includes/header.php'; ?>
 
+    <script>
+      function replaceText() {
+          var target = document.getElementById("main");
+          var xhr = new XMLHttpRequest(); 
+          
+          xhr.open('POST','register.php',true);             
+          xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
+          
+          xhr.onreadystatechange = function() {
+            console.log("ReadyState: " + xhr.readyState);
+            if(xhr.readyState == 2) {
+                target.innerHTML = 'Loading...';
+            }
+            if (xhr.readyState == 4 && xhr.status == 200) {               
+                target.innerHTML = xhr.responseText;
+            }           
+          }
+          xhr.send();
+      }
+
+      var button = document.getElementById ("ajax-button");
+      button.addEventListener("click", replaceText);
+    </script>
+
     <form action="./db/checkloginDb.php" method="POST">
     <table border="0" width="1200" style="background-color: #ffffff;">
         <tr>
@@ -67,25 +91,23 @@
                 <td colspan='2' height="60" align="center" valign="top">
                    <br>
                    <input type="submit" value="LOGIN"  
-                   style="color: white; height: 35px; width: 300px; 
+                   style="color: white; height: 35px; width: 150px; 
                    background-color:  DodgerBlue" />
+                   &nbsp;&nbsp;&nbsp;
+                   <button id="ajax-button" type="button"
+                   style="color: white; height: 35px; width: 150px; 
+                   background-color:  DodgerBlue" />REGISTER</button>
                 </td> 
            </tr>
-           <tr>  
-               <td colspan="2" align="center">
-                   <font color="black" size="3">New to CompareJobOffers? 
-                   <a href="register.php" style="color: darkblue" />
-                   Create an account or <br><a href="process.php" style="color: darkblue" />
-                   you forgot your password</font></a>
-                   <br>
-                </td>
-            </tr>
         </table>
        <br><br><br>
     </td>
     </tr>
     </table> 
     </form>
+    &nbsp;&nbsp;
+
+   <?php include '../includes/footer.php'; ?>
         
     </body>
 </html>

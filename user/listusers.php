@@ -31,15 +31,15 @@
             exit();
         } 
         
-        $query  = "select * from user ";       
+        $query  = "select * from user u, profile p Where u.UserID=p.UserID";       
         $result = $mysqli->query($query);
      ?>
 
-    <form action="" method="POST">
+    <form action="" method="GET">
     <table border="0" width="1200"  height='450'  style="background-color: #ffffff;">
         <tr>
-        <td width='290'  valign="top">
-            <table border="0" width='290' height='500' valign="top">
+        <td width='300'  valign="top">
+            <table border="0" width='300' height='500' valign="top">
                 <tr>
                      <td style="font-family: Times New Roman; font-size: 20px;" > 
 
@@ -50,7 +50,7 @@
         <td align="left" valign='top' style="background-color: white;" >
             <br><br>
 
-            <table border="0" id="loginformtable">
+            <table border="0" id="listformtable">
                <tbody>
                <tr>
                    <td colspan="5">
@@ -64,7 +64,10 @@
                </tr>
                 <tr>
                     <td align="left" height="30" valign="center" style="color: #660000; font-family: Times New Roman; font-size: 18px">
-                        <b>Fullname</b>
+                        <b>First name</b>
+                    </td>
+                    <td align="left" height="30" valign="center" style="color: #660000; font-family: Times New Roman; font-size: 18px">
+                        <b>Last name</b>
                     </td>
                     <td align="left" height="30" valign="center" style="color: #660000; font-family: Times New Roman; font-size: 18px">
                         <b>Username</b>
@@ -79,7 +82,12 @@
                         <td width="20%" height="27px" align="left" valign="center" 
                             style="background-color: white; font-family: Times New Roman; font-size: 18px">
                             <input type="hidden" name="ID" value="<?php echo $row['UserID']; ?>" />
-                           <?php echo $row['Fullname']; ?>
+                           <?php echo $row['Firstname']; ?>
+                        </td>
+                        <td width="20%" height="27px" align="left" valign="center" 
+                            style="background-color: white; font-family: Times New Roman; font-size: 18px">
+                            <input type="hidden" name="ID" value="<?php echo $row['UserID']; ?>" />
+                           <?php echo $row['Lastname']; ?>
                         </td>
                         <td width="20%" height="27px"  align="left" valign="center" 
                             style="background-color: white; font-family: Times New Roman; font-size: 18px">

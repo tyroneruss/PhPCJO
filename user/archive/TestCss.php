@@ -1,25 +1,22 @@
 
     <?php include '../includes/header.php'; ?>
-
+      
     <form action="./db/checkloginDb.php" method="POST">
     <table border="0" width="1200" style="background-color: #ffffff;">
         <tr>
-        <td width='300'  valign="top">
-            <table border="0" width='300' height='500' valign="top">
-                <tr>
-                     <td style="font-family: Times New Roman; font-size: 20px;" > 
-                     </td>
-                </tr>   
-             </table>
+        <td id="right_pane_td" width='300'  valign="top">
+            <div>
+                Test section
+            </div>
+
         </td>  
         <td align="left" valign='top' style="background-color: white;" >
             <br><br>
 
             <table border="0" id="loginformtable">
-               <tbody>
                <tr>
                    <td colspan="2"  align="center">            
-                       <h1 id="login_h1">Please Login</h1>
+                       <h1 id="login_h1">Please - Login</h1>
                    </td>
                </tr>
                <tr>
@@ -61,8 +58,6 @@
                         <input id="user_input" type="password" name="password" size="20"  Required />
                     </td>
                 </tr>                    
-           </tbody>
-           <br>
            <tr>
                 <td colspan='2' height="60" align="center" valign="top">
                    <br>
@@ -71,21 +66,27 @@
                    background-color:  DodgerBlue" />
                 </td> 
            </tr>
-           <tr>  
-               <td colspan="2" align="center">
-                   <font color="black" size="3">New to CompareJobOffers? 
+           <tr>               
+               <td colspan="2" align="center" >
+                   <font color="black" size="2">New to CompareJobOffers? 
                    <a href="register.php" style="color: darkblue" />
-                   Create an account or <br><a href="process.php" style="color: darkblue" />
-                   you forgot your password</font></a>
+                   Create an account. I forgot my password</font>
                    <br>
                 </td>
             </tr>
+                <tr>
+                    <td colspan="2" height="10" >
+                    </td>
+                </tr>
         </table>
        <br><br><br>
     </td>
     </tr>
     </table> 
     </form>
+    &nbsp;&nbsp;
+
+   <?php include '../includes/footer.php'; ?>
         
     </body>
 </html>

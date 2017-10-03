@@ -10,8 +10,7 @@
 
     if ('$_POST') {   
         session_start();
-               /*session created*/
-        $_SESSION["users_fullname"]  = $_POST['fullname'];           
+               /*session created*/         
         $_SESSION["users_username"]  = $_POST['username'];           
         $_SESSION["users_email"]     = $_POST['email']; 
                
@@ -20,7 +19,7 @@
         $Username    = $_POST['username'];
         
         if (db_findusername($Table,$Where,$Username)) {
-            header('Location: ../register_error.php?message=Username already exist, please try another...<br>');                         
+            header('Location: ../register.php?message=Username already exist, please try another...<br>');                         
         }
 
         if ($_POST["password"] === $_POST["password1"]) {
@@ -33,11 +32,12 @@
                 exit();
             } 
 
-            $query  = "insert into user (Fullname,Username,Password,Email) ";
-            $query .= "Values ('" . $_POST['fullname']; 
-            $query .= "','" . $_POST['username']; 
+            $query  = "insert into user (RoleID,Username,Password,Email,Active) ";
+            $query .= "Values (1000";
+            $query .= ",'" . $_POST['username']; 
             $query .= "','" . $_POST["password"]; 
-            $query .= "','" . $_POST['email'] . "')"; 
+            $query .= "','" . $_POST['email'] . "',"; 
+            $query .= "1)"; 
 
             if ($mysqli->query($query) === TRUE) {
                // success!            /*session is[ started if you don't write this line can't use $_Session  global variable*/
@@ -52,7 +52,7 @@
         }
         else 
         {
-            header('Location: ../register_error.php?message=Passwords does not match, please re-enter...');             
+            header('Location: ../register.php?message=Passwords does not match, please re-enter...');             
         }
       // failed :(
 

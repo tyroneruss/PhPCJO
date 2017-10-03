@@ -24,6 +24,7 @@ and open the template in the editor.
     require_once('../../includes/database.php');
 
     if ('$_POST') {   
+        session_start();
  
         $users_username = $_POST['username'];
         $users_password = $_POST['password'];
@@ -40,22 +41,41 @@ and open the template in the editor.
         
         $query  = "SELECT * FROM user ";
         $query .= "Where Username='" .  $users_username; 
-        $query .= "' and Password='" . $users_password . "'"; 
-        
+        $query .= "' and Password='" . $users_password . "'";        
+               
         $result = $mysqli->query($query);
-        if ($result->num_rows != 0){
-            /* fetch associative array */
+        if ($result->num_rows != 0) {
             
+             // printf("%d - %s",$result->num_rows, $query);
+           
+            $row = $result->fetch_assoc();
+           
+            $_SESSION["firstname"] = $row['Firstname'];           
+            $_SESSION["userID"]    = $row['UserID'];            
+            
+            // printf("%s - ",$userID);
+
             $result->free();
             
-            header('Location: ../../main/home.php'); 
+            $query  = "SELECT * FROM profile ";
+            $query .= " Where UserID=" . $row['UserID'];
+            
+            printf($query);
+            $result = $mysqli->query($query);
+           
+            if ($result->num_rows != 0) {
+                header('Location: ../../main/home.php'); 
+             } else {
+               $mysqli->close();  
+                header('Location: ../profile.php'); 
+             }
+             /* close connection */
         } else {
-            $result->free();
-            header('Location: ../login_error.php?message=Password or Username is invalid, please try again...'); 
+                $mysqli->close();  
+                header('Location: ../login.php?message=Password or Username is invalid, please try again...'); 
         }
-        /* close connection */
-        $mysqli->close();   
    }
+   
   ?>
   </body>
 </html>

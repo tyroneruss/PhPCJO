@@ -41,11 +41,11 @@
                    </td>
                 </tr>
                 <?php
-                    echo '<tr><td align="center" colspan="2" style="color: red; font-family: Times New Roman; font-size: 20px;">&nbsp;';                      
                     if(!empty($_GET['message'])) {
+                        echo '<tr><td align="center" colspan="2" style="color: red; font-family: Times New Roman; font-size: 20px;">&nbsp;';                      
                         $message = $_GET['message'];
-                    }                       
                     echo '<font color="red">'; echo $message; echo '</font><br></td></tr>';
+                    }                       
                 ?>                   
                 <tr>
                     <td width="35%" align="right" height="30" valign="center" style="font-family: Times New Roman; font-size: 20px">

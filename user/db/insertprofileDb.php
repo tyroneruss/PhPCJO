@@ -11,11 +11,14 @@
     if ('$_POST') {   
         session_start();
                /*session created*/
-        $_SESSION["users_gender"]   = $_POST['gender'];           
-        $_SESSION["users_dob"]      = $_POST['birthdate'];           
-        $_SESSION["users_employed"] = $_POST['birthdate']; 
-        $_SESSION["users_eduleve"]  = $_POST['birthdate']; 
-        
+        $Gender         = $_POST['gender'];           
+        $Firstname      = $_POST['firstname'];
+        $Lastname       = $_POST['lastname'];
+        $Employed       = $_POST['employed']; 
+        $Educatelevel   = $_POST['education']; 
+        $CityStateID    = $_POST['citystateID']; 
+            
+            
         //Check connection       
         $mysqli = db_connect();
         /* check connection */
@@ -24,17 +27,18 @@
             exit();
         } 
 
-        $query  = "Select UserID user where Username='" . $_POST['username'] . "'";
-
+        $query   = "Insert into profile (UserID,LocationID,Firstname,Lastname,Gender,Employed,EduLevel)";
+        $query  .= " Values(" . $_SESSION["userID"]  . "," . $CityStateID . ",'" . $Firstname . "','";
+        $query  .= $Lastname . "','";
+        $query  .= $Gender . "','";
+        $query  .= $Employed . "',";
+        $query  .= $Educatelevel . ")";
+        
+        // echo "Gender: " . $Gender;
         if ($mysqli->query($query) === TRUE) {
-            $obj = $result->fetch_object();
-            $userID = $obj->UseriD;
-            echo $userID;
-            
-            // $date = date('Y-m-d', strtotime(str_replace('-', '/', $date)));
-            
+           // echo $Username . " " . $CityStateID;                      
             $mysqli->close(); 
-            // header('Location: ../profile.home');                         
+            header('Location: ../../main/home.php');                         
         }
         else {
                echo 'Error inserting registration record into database, please try again later..';   

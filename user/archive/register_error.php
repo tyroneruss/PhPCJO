@@ -2,12 +2,13 @@
     <?php include '../includes/header.php'; 
         session_start();
     
-        $fullname = $_SESSION["users_fullname"];                  
+        $fullname = $_SESSION["users_fullname"];         
+        $username = $_SESSION["users_username"];           
         $email    = $_SESSION["users_email"];
        
     ?>
       
-<form action="./db/insertuserDb.php" method="POST">
+    <form action="profile.php" method="POST">
     <table border="0" width="1200" style="background-color: #ffffff;">
         <tr>
         <td width='350'  valign="top">
@@ -63,7 +64,7 @@
                         Username<font color="red">*</font>&nbsp;
                     </td>
                     <td  width="65%" >
-                        <input type="text" name='username' value="" size="25"  style="font-family: Times New Roman; font-size: 20px" Required />
+                        <input type="text" name='username' value="<?php echo $username; ?>" size="25"  style="font-family: Times New Roman; font-size: 20px" Required />
                     </td>
                 </tr>
                 <tr>
