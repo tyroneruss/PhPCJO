@@ -19,7 +19,7 @@ and open the template in the editor.
  * Program: Db access Code
  * Author: Tyrone Russ
  * Description: Verify username and password exist in db
- * Last modified: 11/1/2017
+ * Last modified: 9/3/2017
  */
     require_once('../../includes/database.php');
 
@@ -64,7 +64,7 @@ and open the template in the editor.
             $result = $mysqli->query($query);
            
             if ($result->num_rows != 0) {
-                header('Location: ../../main/home.php'); 
+                header('Location: ../../offer/createoffer.php'); 
              } else {
                $mysqli->close();  
                 header('Location: ../profile.php'); 

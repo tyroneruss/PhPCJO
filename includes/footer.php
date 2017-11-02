@@ -7,11 +7,11 @@
                         <div id="sitename">
                                 <font color="white" >
                                       <br>
-                                      <footer>Copyright&nbsp;&copy;2011</footer>
-
+                                      <footer>
+                                        &nbsp;Copyright&nbsp;&copy;2011
                                       <br>
-                                      &nbsp;&nbsp;Created by RussWare,Inc 
-                                      <br>
+                                        &nbsp;Created by RussWare,Inc                                                                             
+                                      </footer>
                                 </font>                            
                         </div>
                 </div>

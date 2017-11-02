@@ -62,11 +62,11 @@ and open the template in the editor.
    font-family: Times New Roman;
 }
 
-#login_h1
+#title_h1
 {
    letter-spacing: 2px;
-   font-size: 35px;
-   color: grey;
+   font-size: 28px;
+   color: black;
    font-family: Times New Roman;;
 }
 
@@ -98,6 +98,7 @@ background: #fff;
 {
 position: relative;
 }
+
 #mainContent
 {
 /* margin: 0 50px 15px 50px; */
@@ -105,16 +106,19 @@ padding-bottom: 5px;
 border-bottom: solid 1px #CCCCCC;
 text-align: left;
 }
+
 #mainContent, #footer {
  max-width: 960px;
  min-width: 350px;
  margin: 0 auto;
 }
+
 #footer
 {
 text-align: center;
 font-size: small;
 }
+
 #mainContent, #footer, .wrapper {
  max-width: 960px;
  min-width: 350px;

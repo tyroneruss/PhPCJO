@@ -1,7 +1,7 @@
 <!-- Header end from BasicPageHeader.tpl -->
 <html>
     <head>
-        <title>CJOs title</title>
+        <title>CJOs </title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="description" content="Compare Jobs Offers" />
         <link rel="stylesheet" type="text/css" href="../css/style.css">
@@ -9,7 +9,7 @@
     
     <body>
 
-    <div id="container">
+    <div id="container">    2
        <div id="intro">
            <div id="pageHeader">
                    <div id="sitename">
@@ -29,10 +29,11 @@
         if ($mysqli->connect_errno) {
             printf("Connect failed: %s\n", $mysqli->connect_error);
             exit();
-        } 
+        }       
         
-        
-        $query  = "select * from user u, profile p Where u.UserID=p.UserID";       
+        $query   = "select * from profle p, company c, col cl ";
+        $query  .= " where p.location=l.locatiom and p.ColID=cl.ColId and "; 
+        $query  .= " p.UserID =" . $_SESSION['UserID'];       
         $result = $mysqli->query($query);
      ?>
 
@@ -64,30 +65,30 @@
                    </td>
                </tr>
                 <tr>
-                    <td align="left" height="30" valign="center" style="color: #660000; font-family: Times New Roman; font-size: 18px">
-                        <b>First name</b>
+                   <td align="left" height="30" valign="center" style="color: #660000; font-family: Times New Roman; font-size: 18px">
+                        <b>Company</b>
                     </td>
                     <td align="left" height="30" valign="center" style="color: #660000; font-family: Times New Roman; font-size: 18px">
-                        <b>Last name</b>
+                        <b>Position</b>
                     </td>
                     <td align="left" height="30" valign="center" style="color: #660000; font-family: Times New Roman; font-size: 18px">
-                        <b>Username</b>
+                        <b>Salary/Wage</b>
                     </td>
                     <td align="left" height="30" valign="center" style="color: #660000; font-family: Times New Roman; font-size: 18px">
-                        <b>Email Address</b>
+                        <b>Location</b>
                     </td>
-                </tr>
+                 </tr>
                
                <?php while($row = mysqli_fetch_array($result)) { ?>
                     <tr>
                         <td width="17%" height="27px" align="left" valign="center" 
                             style="background-color: white; font-family: Times New Roman; font-size: 18px">
                             <input type="hidden" name="userID" value="<?php echo $row['UserID']; ?>" />
-                           <?php echo $row['Firstname']; ?>
+                           <?php echo $row['Company']; ?>
                         </td>
                         <td width="17%" height="27px" align="left" valign="center" 
                             style="background-color: white; font-family: Times New Roman; font-size: 18px">
-                           <?php echo $row['Lastname']; ?>
+                           <?php echo $row['Posiiton']; ?>
                         </td>
                         <td width="17%" height="27px"  align="left" valign="center" 
                             style="background-color: white; font-family: Times New Roman; font-size: 18px">
@@ -132,7 +133,6 @@
     </tr>
     </table> 
     </form>
-    &nbsp;&nbsp;
 
    <?php    
         include '../includes/footer.php'; 

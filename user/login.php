@@ -20,20 +20,27 @@
                             <br><br><label>Password</label>&nbsp;&nbsp;
                             <input id="user_input" type="password" name='password' Required />
                             <br>
+                            <a href="login.php"></a>
                        </div>
   
                 </span>
                 <div id="inputwrapper">  
                     <br>
                    <input id="inputbutton" type="submit" value="LOGIN" />
-                   &nbsp;&nbsp;&nbsp;<input id="inputbutton" onclick="window.location.href='register.php'"  
+                   &nbsp;&nbsp;&nbsp;
+                   <input id="inputbutton" onclick="window.location.href='register.php'"  
                           type="button" value="REGISTER" />
                     
                 </div>
             </div>
             
         </div>
-    </form>          
+    </form>  
+   <?php    
+        include '../includes/footer.php'; 
+       
+   ?>  
+
     </body>
 </html>
 

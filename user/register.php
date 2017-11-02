@@ -37,7 +37,14 @@
             </div>
             
         </div>
-    </form>          
+    </form>     
+    <div height="200">
+        <br><br><br><br>
+        <?php    
+             include '../includes/footer.php';       
+        ?>  
+    </div>
+
     </body>
 </html>
 

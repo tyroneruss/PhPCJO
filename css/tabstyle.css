@@ -1,0 +1,44 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 6, 2016, 12:22:44 AM
+    Author     : tyron
+*/
+
+#bodytype {
+    background: white;
+} 
+
+.tabbable .tabs {
+    list-style: none; 
+    margin: 0 10px; 
+    padding: 0;
+}
+
+.tabbable .tabs li {
+    list-style: none; 
+    margin: 0; padding: 0; 
+    display: inline-block; 
+    position: relative; z-index: 1;
+}
+
+.tabbable .tabs li a {
+    border-radius: 0px 0px 0 0; 
+    padding: 10px 20px;
+    display:inline-block;
+    background:#f2f2f2;
+    color:#000000;
+    text-decoration:none;
+}
+.tabbable .tabs li a.active {
+    border-bottom-color: #fff; 
+    background: DodgerBlue;
+    color: #ffffff;
+}
+
+.tabcontent {
+   display: none;   
+}

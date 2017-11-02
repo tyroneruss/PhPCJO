@@ -1,67 +1,10 @@
-
-<!-- Header end from BasicPageHeader.tpl -->
-<html>
-    <head>
-        <title>Compare Job Offers </title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="description" content="Compare Jobs Offers" />
-        <link rel="stylesheet" type="text/css" href="../css/style.css">
-        <link rel="stylesheet" type="text/css" href="../css/tabstyle.css">
-        <link rel="stylesheet" type="text/css" href="../css/userstyle.css">
-
-    </head>
     
-    <body>
-
-    <div id="container">
-       <div id="intro">
-           <div id="pageHeader">
-                   <div id="sitename">
-                       <h1>&nbsp;&nbsp;CompareJobOffers</h1>
-                   </div>          
-           </div>
-       </div>
-    </div>
-
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  
-   <script>
-        $(document).ready(function(){
-            $(".tabbable").find(".tab").hide();
-            $(".tabbable").find(".tab").first().show();
-            $(".tabbable").find(".tabs li").first().find("a").addClass("active");
-            $(".tabbable").find(".tabs").find("a").click(function(){
-            tab = $(this).attr("href");
-            $(".tabbable").find(".tab").hide();
-            $(".tabbable").find(".tabs").find("a").removeClass("active");
-            $(tab).show();
-            $(this).addClass("active");
-          return false;
-          });
-      });     
-   </script>
-    
-    <div align="center">
-        <div class="tabbable">
-            <ul class="tabs">
-                <li class=""><a href="#tab-1">Home</a></li>
-                <li class=""><a href="#tab-2">Create an Offer</a></li>
-                <li class=""><a href="#tab-5">Compare Offers</a></li>
-                <li class=""><a href="#tab-4">Evaluate Offer</a></li>
-                <li class=""><a href="#tab-5">View or Print Offer(s)</a></li>
-            </ul>           
-
-    <div id='tab-1' class="tab" >  
-
-    </div>
-
-    <div id='tab-2' class="tab">  
-    <?php
+    <?php include '../includes/header.php';
 
         require_once('../includes/database.php');  
-
+        
         session_start();
-
+                
         $_SESSION['offer_count'] = 1;
 
         $mysqli = db_connect();
@@ -72,20 +15,20 @@
             exit();
         } 
 
-        // $user_id = $_SESSION["userID"];
-        $query   = "select * from profile Where UserID=1";             
-        $result  = $mysqli->query($query);
-
+        $user_id = $_SESSION["userID"];
+        $query   = "select * from profile Where UserID=" . $user_id;             
+        
         $row = $result->fetch_assoc();
-
+           
         $employed = $row['Employed'];            
 
         $result->free();
-
+        
         $query   = "select * from location ";             
         $result  = $mysqli->query($query);
 
-    ?>
+   ?>
+
     <form action="./db/checkpage.php" method="POST">
     <table border="0" width="1100" style="background-color: #ffffff;">
         <tr>
@@ -193,7 +136,7 @@
                    onclick="window.location.href=''"                          
                    style="color: white; height: 32px; width: 135px; 
                    background-color:  DodgerBlue" />
-
+                   
                    <input type="submit" value="CONTINUE"  
                    style="color: white; height: 32px; width: 135px; 
                    background-color:  DodgerBlue" />
@@ -206,23 +149,8 @@
     </tr>
     </table> 
     </form>
-    </div>
-    </div>
-  
-    <div id='tab-3' class="tab">  
 
-
-    </div>
-
-    <div id='tab-4' class="tab">  
-
-    </div>
-
-    <div id='tab-5' class="tab">  
-
-    </div>
-    
-</div>
-</div>
-   </body>
+   <?php include '../includes/footer.php'; ?>
+        
+    </body>
 </html>

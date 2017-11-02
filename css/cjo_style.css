@@ -2,13 +2,25 @@
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
-*/
-/* 
-    Created on : Jun 11, 2017, 6:24:55 AM
+
+    Created on : Oct 19, 2017
     Author     : Tyrone
 */
 
-/* -- page structure -- */
+#nav_tr {
+    background-color:  #660000;    
+}
+
+#nav_td {
+    color: #ffffff; 
+    font-family: Times New Roman; 
+    font-size: 18px;
+}
+
+#frmButton{
+    background-color:  #660000;    
+}
+
 #login_td 
 {   
     font-family: Times New Roman; 
@@ -16,6 +28,15 @@ and open the template in the editor.
     padding: 100px;
     color: #555;
     width: 550px;
+}
+
+#right_pane_title
+{
+   letter-spacing: 2px;
+   font-size: 20px;
+   color: #660000;
+   font-family: Times New Roman;
+   height: 40px;
 }
 
 #right_pane_td
@@ -51,7 +72,7 @@ and open the template in the editor.
    width: 800px;
    height: 260px;
    padding: 10px;
-   background-color: windowframe;
+   background-color: lightgray;
    font-family: sans-serif;
 }
 
@@ -60,14 +81,14 @@ and open the template in the editor.
    width: 500px;
    height: 20px;
    padding: 10px;
-   background-color: windowframe;
+   background-color: #E0E0E0;
    font-family: Times New Roman;
 }
 
 #login_h1
 {
    letter-spacing: 2px;
-   font-size: 35px;
+   font-size: 30px;
    color: grey;
    font-family: Times New Roman;;
 }
@@ -152,7 +173,7 @@ overflow: auto;
 {
 width: 100%;
 height: 90px;
-background: DodgerBlue;
+background: #660000;
 }
 
 #pageHeader h1

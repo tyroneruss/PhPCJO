@@ -96,54 +96,51 @@ DROP TABLE IF EXISTS `CJOdb`.`offer` ;
 
 CREATE TABLE IF NOT EXISTS `CJOdb`.`offer` (
   `OfferID` SMALLINT NOT NULL AUTO_INCREMENT,
-  `LocationID`  SMALLINT NOT NULL,
+  `UserID` SMALLINT NOT NULL,
+  `ColID`  SMALLINT NOT NULL,
   `OfferType`  VARCHAR(10) NOT NULL,
-  `SectorID` SMALLINT NOT NULL,
-  `PositionTitle` VARCHAR(80) NOT NULL,
   `Company` VARCHAR(80) NOT NULL,
-  `Hourly` DECIMAL(5,2) NULL,
+  `Position` VARCHAR(80) NOT NULL,
+  `Sector` SMALLINT NOT NULL,
   `BaseSalary` DECIMAL(10,2) NULL,
-  `BonusCommissions` DECIMAL(3,2) NULL,
+  `Hourly` DECIMAL(5,2) NULL,
+  `BonusCommission` DECIMAL(3,2) NULL,
+  `PersonalTimeOff` SMALLINT NOT NULL,
   `Pension`  DECIMAL(3,2) NULL,
   `ReimburseExp` DECIMAL(8,2) NULL,
   `Relocate` VARCHAR(3) NOT NULL,
+  `PaidRelocate` DECIMAL(10,2) NULL,
+  `StockOptions` DECIMAL(3,2) NULL,
+  `Active` SMALLINT NOT NULL,
   PRIMARY KEY (`OfferID`),
   UNIQUE INDEX `OfferID_UNIQUE` (`OfferID` ASC))
 ENGINE = InnoDB;
 ALTER TABLE offer AUTO_INCREMENT=1;
 
 -- -----------------------------------------------------
--- Table `cjodb`.`col`
+-- Table `cjodb`.`Industry`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `cjodb`.`col` ;
+DROP TABLE IF EXISTS `cjodb`.`Industry` ;
 
-CREATE TABLE IF NOT EXISTS `cjodb`.`col` (
-  `ColID` SMALLINT NOT NULL AUTO_INCREMENT,
-  `City` VARCHAR(45) NOT NULL,
-  `State` VARCHAR(2) NOT NULL,
-  `StateTax` VARCHAR(3) NOT NULL,
-  `ColIndex` FLOAT NULL,
-  `Grocery` FLOAT NULL,
-  `Housing` FLOAT NULL,
-  `Utilities` FLOAT NULL,
-  `Transport` FLOAT NULL,
-  `HealthCare` FLOAT NULL,
-  `MiscGoodServices` VARCHAR(45) NULL,
-  PRIMARY KEY (`ColID`))
+CREATE TABLE IF NOT EXISTS `cjodb`.`Industry` (
+  `IndustryID` SMALLINT NOT NULL AUTO_INCREMENT,
+  `Industry` VARCHAR(80) NULL,
+  `SectorID` VARCHAR(80) NULL, PRIMARY KEY (`IndustryID`))
 ENGINE = InnoDB;
-ALTER TABLE col AUTO_INCREMENT=1;
--- -----------------------------------------------------
--- Table `cjodb`.`Sector`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `cjodb`.`Sector` ;
+ALTER TABLE Industry AUTO_INCREMENT=1;
 
-CREATE TABLE IF NOT EXISTS `cjodb`.`Sector` (
-  `SectorID` INT NOT NULL,
-  `SectorName` VARCHAR(80) NULL,
-  `SkillID` INT NULL,
-  PRIMARY KEY (`SectorID`))
+-- -----------------------------------------------------
+-- Table `cjodb`.`Company`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `cjodb`.`Company` ;
+
+CREATE TABLE IF NOT EXISTS `cjodb`.`Company` (
+  `CompanyID` SMALLINT NOT NULL AUTO_INCREMENT,
+  `CompanyName` VARCHAR(80) NULL,
+  `IndustryID` VARCHAR(80) NULL,
+  PRIMARY KEY (`CompanyID`))
 ENGINE = InnoDB;
-
+ALTER TABLE Company AUTO_INCREMENT=1;
 
 -- -----------------------------------------------------
 -- Table `cjodb`.`Skill`
@@ -151,13 +148,14 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `cjodb`.`Skill` ;
 
 CREATE TABLE IF NOT EXISTS `cjodb`.`Skill`(
-  `SkillID` INT NOT NULL,
+  `SkillID` SMALLINT NOT NULL AUTO_INCREMENT,
   `SectorID` INT NOT NULL,
   `SkillName` VARCHAR(64) NOT NULL,
   `Sector_SectorID` INT NOT NULL,
   `User_UserID` INT NOT NULL,
   PRIMARY KEY (`SkillID`))
 ENGINE = InnoDB;
+ALTER TABLE Skill AUTO_INCREMENT=1;
 
 -- -----------------------------------------------------
 -- Table `cjodb`.`Education`
@@ -166,14 +164,15 @@ DROP TABLE IF EXISTS `cjodb`.`Education` ;
 
 CREATE TABLE IF NOT EXISTS `cjodb`.`Education` (
   `EducationID` INT NOT NULL,
+  `UserID` 
   `EducationType` VARCHAR(45) NOT NULL,
-  `DegreeType` VARCHAR(10) NOT NULL COMMENT 'AA,AS,BA,BS,PhD,JD,MS,MBA',
+  `DegreeType` VARCHAR(10)NOT NULL COMMENT 'AA,AS,BA,BS,MS,PhD,JD,MS,MBA',
   `MajorID` INT NULL,
   `SchoolName` VARCHAR(80) NULL,
-  `SchoolRanked` INT NOT NULL,
-  `User_UserID` INT NOT NULL,
+  `SchoolRanked` INT NULL,
   PRIMARY KEY (`EducationID`))
 ENGINE = InnoDB;
+ALTER TABLE Education AUTO_INCREMENT=1;
 
 -- -----------------------------------------------------
 -- Table `cjodb`.`Major`

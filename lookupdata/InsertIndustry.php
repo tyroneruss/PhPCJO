@@ -3,15 +3,8 @@
 
 -->
 <?php
-    $servername = "localhost:3306";
-    $username = "root";
-    $password = "rhouse11";
-    $dbname = "CJOdb";
 
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // Check connection
+// Check connection
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     } 
@@ -25,7 +18,7 @@
                 // $sql = "INSERT INTO CityState (City,State,ColIndex,Grocery,Housing,Utilities,Transport,HealthCare,MiscGoodServices)
                 // VALUES ('')";
             }
-         fclose($handle);
+        fclose($handle);
          
         if ($conn->query($sql) === TRUE) {
              echo '<script>window.location.href = "the-target-page.php";</script>';

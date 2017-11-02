@@ -1,7 +1,7 @@
 <!-- Header end from BasicPageHeader.tpl -->
 <html>
     <head>
-        <title>CJOs title</title>
+        <title>Ass title</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="description" content="Compare Jobs Offers" />
         <link rel="stylesheet" type="text/css" href="../css/style.css">
@@ -30,7 +30,6 @@
             printf("Connect failed: %s\n", $mysqli->connect_error);
             exit();
         } 
-        
         
         $query  = "select * from user u, profile p Where u.UserID=p.UserID";       
         $result = $mysqli->query($query);
@@ -67,6 +66,7 @@
                     <td align="left" height="30" valign="center" style="color: #660000; font-family: Times New Roman; font-size: 18px">
                         <b>First name</b>
                     </td>
+        
                     <td align="left" height="30" valign="center" style="color: #660000; font-family: Times New Roman; font-size: 18px">
                         <b>Last name</b>
                     </td>
@@ -80,33 +80,41 @@
                
                <?php while($row = mysqli_fetch_array($result)) { ?>
                     <tr>
-                        <td width="17%" height="27px" align="left" valign="center" 
+                        <td width="20%" height="27px" align="left" valign="center" 
                             style="background-color: white; font-family: Times New Roman; font-size: 18px">
-                            <input type="hidden" name="userID" value="<?php echo $row['UserID']; ?>" />
                            <?php echo $row['Firstname']; ?>
                         </td>
-                        <td width="17%" height="27px" align="left" valign="center" 
+                        <td width="20%" height="27px" align="left" valign="center" 
                             style="background-color: white; font-family: Times New Roman; font-size: 18px">
+                            <input type="hidden" name="ID" value="<?php echo $row['UserID']; ?>" />
                            <?php echo $row['Lastname']; ?>
                         </td>
-                        <td width="17%" height="27px"  align="left" valign="center" 
+                        <td width="20%" height="27px"  align="left" valign="center" 
                             style="background-color: white; font-family: Times New Roman; font-size: 18px">
                            <?php echo $row['Username']; ?>
                         </td>
-                        <td width="29%"  height="27px" align="left" valign="center" 
+                        <td width="30%"  height="27px" align="left" valign="center" 
                             style="background-color: white; font-family: Times New Roman; font-size: 18px">
                            <?php echo $row['Email']; ?>
                         </td>
-                        <td width="10%"  height="27px" align="center" valign="center" 
-                            style="background-color: white; font-family: Times New Roman; font-size: 18px">
-                           <?php echo '<a href="edituserprofile.php?valueID=' . $row['UserID'] . '">Edit</a>'; ?>
-                        </td>
-                        <td width="10%"  height="27px" align="center" valign="center" 
-                            style="background-color: white; font-family: Times New Roman; font-size: 18px">
-                           <?php echo '<a href="./db/TestDb.php?valueID=' . $row['UserID'] . '">Delete</a>'; ?>
-                        </td>
                     </tr>
                 <?php } ?>                
+                    <tr>
+                        <td width="20%" height="27px" align="left" valign="center" 
+                            style="background-color: white; font-family: Times New Roman; font-size: 18px">
+                            <input type="text" value="" placeholder="First name"/>                
+                        </td>
+                        <td width="20%" height="27px" align="left" valign="center" 
+                            style="background-color: white; font-family: Times New Roman; font-size: 18px">
+                            <input type="text" value="" placeholder="Last name"/>                                          
+                        </td>
+                        <td width="20%" height="27px"  align="left" valign="center" 
+                            style="background-color: white; font-family: Times New Roman; font-size: 18px">
+                            <input type="text" value="" placeholder="Username" />                                        </td>
+                        <td width="30%"  height="27px" align="left" valign="center" 
+                            style="background-color: white; font-family: Times New Roman; font-size: 18px">
+                            <input type="text" value="" placeholder="Email address" size="30"/>                                        </td>
+                    </tr>
            </tbody>
            <br>
            <tr>
@@ -118,7 +126,7 @@
                    style="color: white; height: 35px; width: 90px; 
                    background-color:  DodgerBlue" />
                    &nbsp; &nbsp;
-                   <input type="submit" value="CONTINUE" style="color: white; height: 35px; width: 90px; 
+                   <input type="submit" value="ADD USER" style="color: white; height: 35px; width: 90px; 
                    background-color:  DodgerBlue" />
 
                    <br>

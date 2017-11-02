@@ -10,12 +10,16 @@
     require_once('../../includes/database.php');
 
     if ('$_POST') {   
- 
-        $users_username = $_POST['username'];
-        $users_password = $_POST['password'];
-
-        // echo $users_username . " " . $users_password;
         
+        session_start();
+
+        $_SESSION['offer_count'] = $_SESSION['offer_count'] + 1;
+        
+        echo $_SESSION['offer_count'];
+        
+ 
+        // $user_id = $_SESSION['UserID'];
+
         //Check connection       
         $mysqli = db_connect();
         /* check connection */
@@ -24,22 +28,18 @@
             exit();
         } 
         
-        $query  = "Insert into offer () ";
-        $query .= "Where Username='" .  $users_username; 
-        $query .= "' and Password='" . $users_password . "'"; 
-        
+        $query  = "select * from  user";
+
         $result = $mysqli->query($query);
         if ($result->num_rows != 0){
             /* fetch associative array */
-            $result->free();
-            echo 'Passed';
-            header('Location: ../../main/home.php'); 
+            $mysqli->close();   
+            header('Location: ../addnewoffer.php'); 
         } else {
-            $result->free();
-            header('Location: ../login_error.php?message=Password or Username is invalid, please try again...'); 
+            $mysqli->close();   
+            header('Location: ../createoffer_error.php?message=Invalid information enter please correct...'); 
             echo " Failed";
         }
         /* close connection */
-        $mysqli->close();   
    }
   ?>
