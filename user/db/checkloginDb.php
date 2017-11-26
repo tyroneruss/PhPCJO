@@ -50,8 +50,7 @@ and open the template in the editor.
            
             $row = $result->fetch_assoc();
            
-            $_SESSION["firstname"] = $row['Firstname'];           
-            $_SESSION["userID"]    = $row['UserID'];            
+            $_SESSION["userID"] = $row['UserID'];            
             
             // printf("%s - ",$userID);
 
@@ -63,15 +62,17 @@ and open the template in the editor.
             printf($query);
             $result = $mysqli->query($query);
            
-            if ($result->num_rows != 0) {
-                header('Location: ../../main/home.php'); 
+            if ($result->num_rows != 0) {               
+                $row = $result->fetch_assoc();
+                $_SESSION["firstname"] = $row['Firstname'];                          
+                echo '<br>' . $_SESSION["firstname"];
+                header('Location: ../../offer/home.php'); 
              } else {
                $mysqli->close();  
                 header('Location: ../profile.php'); 
              }
              /* close connection */
-        } else {
-                
+        } else {               
                 $mysqli->close();  
                 header('Location: ../login.php?message=Password or Username is invalid, please try again...'); 
         }

@@ -35,26 +35,26 @@
                 </a>
             </li>
             <li><a href="./createoffers.php"><b>Create Job Offers</b></a></li>
-            <li><a class="active"><b>Compare Job Offers</b></a></li>
+            <li><a href="./compareoffers.php"><b>Compare Job Offers</b></a></li>
             <li><a href="./evaloffer.php"><b>Evaluate Offer</b></a></li>
             <li><a href="./convertoffers.php"><b>Convert to Hourly Wages</b></a></li>
-            <li><a href="./viewprintoffers.php"><b>View or Print Offer(s)</b></a></li>
+            <li><a class="active"><b>View or Print Offer(s)</b></a></li>
         </ul>           
 
     <table width="1200"> 
         <tr> 
             <td width="20%"> 
-               <br><br><br>          
+                <br><br><br>          
                <?php include '../includes/nav_links.php'; ?>            
             </td>
-            <td width="80%" align="left"  valign="top" >
-                <br><br>          
-                <h1 id="caption_h1">Compare Job Offers</h1>
+            <td width="80%" align="left"  valign="top" >    
+        <br><br>
+            <h1 id="caption_h1">View or Print Offer(s)</h1>
             <form action="buildMailer.php" method="POST">
             <table border="0" id="cmpformtable">                
               <tr>
                    <td colspan="4" align="center">            
-                       <h1 id="title_h1"><B>Select Job Offers to Compare</B></h1>
+                        <h1 id="title_h1">Select Offer to View/Print</h1>  
                    </td>
                </tr>
                 <tr>
@@ -71,10 +71,9 @@
                         <b>Position</b>
                     </td>
                </tr>               
-                <tr>
+               <tr>
                     <td width="5%" height="27px" align="center" style="background-color: white;"> 
-                        <input type="checkbox" name="offer
-                            <?php echo ''; ?>" value="ON" style="height: 22px; width: 22px"/>
+                        <input type="radio" name="offer<?php echo ''; ?>" value="ON" style="height: 22px; width: 22px"/>
                     </td>
                     <td width="10%" height="27px" align="left" valign="center" 
                         style="background-color: white; font-family: Times New Roman; font-size: 18px">
@@ -99,7 +98,7 @@
                    style="color: white; height: 32px; width: 125px; 
                    background-color:  DodgerBlue" />
                    
-                   <input type="submit" value="COMPARE"  
+                   <input type="submit" value="VIEW"  
                    style="color: white; height: 32px; width: 125px; 
                    background-color:  DodgerBlue" />
                    <br><br>
@@ -110,8 +109,8 @@
             </td>
         </tr>
     </table>
-</div>     
-   
+    
+    </div>
 </div>
 </body>
 </html>

@@ -7,6 +7,39 @@ and open the template in the editor.
     Created on : Jun 11, 2017, 6:24:55 AM
     Author     : Tyrone
 */
+
+#inputbutton
+{
+    width: 100px; 
+    color: white; 
+    height:25px; 
+    font-weight: bold;
+    font-size: 15px;
+    background-color:  DodgerBlue;    
+    font-family: Times New Roman;
+    border:1px solid #FFF;  
+}
+
+#sign-in_h1
+{
+   letter-spacing: 2px;
+   font-size: 25px;
+   color: #90c6ed;
+   font-family: Times New Roman;;
+}
+
+#caption_h1
+{
+font-size: 35px;
+color: #90c6ed;
+margin: 0;
+padding-top: 20px;
+padding-bottom: 10px;
+font: bold Helvetica, Arial, sans-serif;
+letter-spacing: -1px;
+text-shadow: 0 2px 0 #510000;
+}
+
 #login_td 
 {   
     font-family: Times New Roman; 
@@ -62,10 +95,19 @@ and open the template in the editor.
    font-family: Times New Roman;
 }
 
+#cmpformtable
+{
+   width: 700px;
+   height: 20px;
+   padding: 10px;
+   background-color: #E0E0E0;
+   font-family: Times New Roman;
+}
+
 #title_h1
 {
    letter-spacing: 2px;
-   font-size: 28px;
+   font-size: 25px;
    color: black;
    font-family: Times New Roman;;
 }
@@ -191,6 +233,7 @@ font-size: 100%;
 color: #be7429;
 text-decoration: none;
 }
+
 #right_pane_a:hover
 {
 border-bottom: none;

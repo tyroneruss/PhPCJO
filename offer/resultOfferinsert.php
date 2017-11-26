@@ -45,7 +45,7 @@
                 <tr>
                     <td>
                         <div id="userform_bg" align="center">
-                            <h1 id="user_h1">Please Login</h1>
+                            <h1 id="user_h1">Database error found</h1>
                             <span> 
                                    <div id="login_input" >
                                         Fields marked with a red asterisk (<font color="red">*</font>) are required
@@ -54,22 +54,14 @@
                                                 $message = $_GET['message'];
                                                 echo '<br><font color="red" size="4">' . $message . '</font>';
                                             }                       
-                                        ?>
-                                        <br><br><label>Username</label>&nbsp;&nbsp;
-                                        <input id="user_input" type="text" name='username' Required />&nbsp;
-                                        <br><br><label>Password</label>&nbsp;&nbsp;
-                                        <input id="user_input" type="password" name='password' Required />
-                                        <br>
-                                        <a href="login.php"></a>
-                                   </div>
+                                    ?>
+                                    </div>
 
                             </span>
                             <div id="inputwrapper">  
-                                <br>
-                               <input id="inputbutton" type="submit" value="LOGIN" />
-                               &nbsp;&nbsp;&nbsp;
-                               <input id="inputbutton" onclick="window.location.href='register.php'"  
-                                      type="button" value="REGISTER" />                   
+                                <br> Click back button to try again!
+                               <input id="inputbutton" onclick="window.location.href='./home.php'"  
+                                      type="button" value="BACK" />                   
                             </div>
                         </div>                                  
                     </td>

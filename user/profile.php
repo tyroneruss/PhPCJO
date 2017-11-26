@@ -59,7 +59,7 @@
                             <label>Employed<font color="red">*</font>&nbsp;</label>
                             <select id="user_input" name="employed" style="width: 100px; margin-right: 155px" >
                                 <option value="Yes">Yes</option>
-                                <option value="No">Mo</option>
+                                <option value="No">No</option>
                             </select>     
                        </div>
                 </span>
