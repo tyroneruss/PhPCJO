@@ -19,11 +19,12 @@ and open the template in the editor.
  * Program: Db access Code
  * Author: Tyrone Russ
  * Description: Verify username and password exist in db
- * Last modified: 9/3/2017
+ * Last modified: 11/1/2017
  */
     require_once('../../includes/database.php');
 
     if ('$_POST') {   
+        session_start();
  
         $users_username = $_POST['username'];
         $users_password = $_POST['password'];
@@ -40,21 +41,43 @@ and open the template in the editor.
         
         $query  = "SELECT * FROM user ";
         $query .= "Where Username='" .  $users_username; 
-        $query .= "' and Password='" . $users_password . "'"; 
-        
+        $query .= "' and Password='" . $users_password . "'";        
+               
         $result = $mysqli->query($query);
-        if ($result->num_rows != 0){
-            /* fetch associative array */
+        if ($result->num_rows != 0) {
+            
+             // printf("%d - %s",$result->num_rows, $query);
+           
+            $row = $result->fetch_assoc();
+           
+            $_SESSION["userID"] = $row['UserID'];            
+            
+            // printf("%s - ",$userID);
+
             $result->free();
-            echo 'Passed';
-            header('Location: ../../main/home.php'); 
-        } else {
-            $result->free();
-            header('Location: ../login_error.php?message=Password or Username is invalid, please try again...'); 
+            
+            $query  = "SELECT * FROM profile ";
+            $query .= " Where UserID=" . $row['UserID'];
+            
+            printf($query);
+            $result = $mysqli->query($query);
+           
+            if ($result->num_rows != 0) {               
+                $row = $result->fetch_assoc();
+                $_SESSION["firstname"] = $row['Firstname'];                          
+                echo '<br>' . $_SESSION["firstname"];
+                header('Location: ../../offer/home.php'); 
+             } else {
+               $mysqli->close();  
+                header('Location: ../profile.php'); 
+             }
+             /* close connection */
+        } else {               
+                $mysqli->close();  
+                header('Location: ../login.php?message=Password or Username is invalid, please try again...'); 
         }
-        /* close connection */
-        $mysqli->close();   
    }
+   
   ?>
   </body>
 </html>

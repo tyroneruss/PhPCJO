@@ -1,7 +1,7 @@
 <!-- Header end from BasicPageHeader.tpl -->
 <html>
     <head>
-        <title>CJOs title</title>
+        <title>Ass title</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="description" content="Compare Jobs Offers" />
         <link rel="stylesheet" type="text/css" href="../css/style.css">
@@ -30,7 +30,6 @@
             printf("Connect failed: %s\n", $mysqli->connect_error);
             exit();
         } 
-        
         
         $query  = "select * from user u, profile p Where u.UserID=p.UserID";       
         $result = $mysqli->query($query);
@@ -80,20 +79,20 @@
                
                <?php while($row = mysqli_fetch_array($result)) { ?>
                     <tr>
-                        <td width="17%" height="27px" align="left" valign="center" 
+                        <td width="20%" height="27px" align="left" valign="center" 
                             style="background-color: white; font-family: Times New Roman; font-size: 18px">
                             <input type="hidden" name="userID" value="<?php echo $row['UserID']; ?>" />
                            <?php echo $row['Firstname']; ?>
                         </td>
-                        <td width="17%" height="27px" align="left" valign="center" 
+                        <td width="20%" height="27px" align="left" valign="center" 
                             style="background-color: white; font-family: Times New Roman; font-size: 18px">
                            <?php echo $row['Lastname']; ?>
                         </td>
-                        <td width="17%" height="27px"  align="left" valign="center" 
+                        <td width="20%" height="27px"  align="left" valign="center" 
                             style="background-color: white; font-family: Times New Roman; font-size: 18px">
                            <?php echo $row['Username']; ?>
                         </td>
-                        <td width="29%"  height="27px" align="left" valign="center" 
+                        <td width="30%"  height="27px" align="left" valign="center" 
                             style="background-color: white; font-family: Times New Roman; font-size: 18px">
                            <?php echo $row['Email']; ?>
                         </td>
@@ -103,7 +102,8 @@
                         </td>
                         <td width="10%"  height="27px" align="center" valign="center" 
                             style="background-color: white; font-family: Times New Roman; font-size: 18px">
-                           <?php echo '<a href="./db/TestDb.php?valueID=' . $row['UserID'] . '">Delete</a>'; ?>
+                           <input type="button" value="Delete" onclick="window.location.href='deleteUserDb.php'"                   
+                                  style="height: 25px; width: 50px;" />
                         </td>
                     </tr>
                 <?php } ?>                
