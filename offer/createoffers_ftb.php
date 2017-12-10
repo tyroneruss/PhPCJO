@@ -11,7 +11,25 @@
     </head>
    
 <body>
+    
+<?php
 
+    session_start();
+    
+    $_SESSION['Salary']    = $_POST['salary'];
+    $_SESSION['Pto']       = $_POST['pto'];
+    $_SESSION['Promotion'] = $_POST['promotion'];
+    $_SESSION['Signbonus'] = $_POST['signbonus'];
+    $_SESSION['Stocks']    = $_POST['stocks'];
+    $_SESSION['Pension']   = $_POST['pension'];
+    $_SESSION['Relocating'] = $_POST['relocating'];
+
+    if ($_POST['relocating'] == 'No'){
+        header('Location: ./db/insertFTofferDb.php');                         
+      }
+
+?>
+    
 <div id="container">
    <div id="intro">
        <div id="pageHeader">
@@ -22,17 +40,8 @@
    </div>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-<?php
-
-    session_start();
-
-    $_SESSION['Company']  = $_POST['company'];
-    $_SESSION['Position'] = $_POST['position'];
-    $_SESSION['Industry'] = $_POST['industry'];
-    
-?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+</script>
   
 <div align="center">
     <div class="tabbable">
@@ -60,62 +69,52 @@
                 <table border="0" id="cojformtable">                  
                 <tr>                       
                     <td colspan="2" align="center">                    
-                        <h1 id="title_h1">Enter Job Compensation</h1>'                                   
-                        <form action="./createoffers_2.php" method="POST" >
+                        <h1 id="title_h1">Job Relocation</h1>'                                   
+                        <form action="" method="POST" >
                         <table border="0" width="600" style="background-color: white">
                             <tr >
                               <td colspan="3" height="20">
                               </td>
                             </tr>                             
                             <tr height="30">
-                                <td width="10%" style="font-family: Times New Roman; font-size: 14px">
+                                <td width="10%" >
                                 </td>
-                                <td width="20%" style="font-family: Times New Roman; font-size: 15px">
-                                    Base Salary<font color="red">*</font>
+                                <td width="30%" style="font-family: Times New Roman; font-size: 15px">
+                                  Relocating to<font color="red">*</font> 
                                 </td>
-                                <td width="70%" style="font-family: Times New Roman; font-size: 15px">
-                                   <input type="text" name="basesalary" value="" size="7" />
-                                    &nbsp;&nbsp;&nbsp;&nbsp;
-                                    Personal time off<font color="red">*&nbsp;</font>
-                                   <input type="text" name="pto" value="" size="3" /> (Weeks)
-                                </td>
-                            </tr>
-                            <tr height="30">
-                                <td width="10%" style="font-family: Times New Roman; font-size: 14px">
-                                </td>
-                                <td width="20%" style="font-family: Times New Roman; font-size: 15px">
-                                    Signing Bonus  
-                                </td>
-                                <td width="70%" style="font-family: Times New Roman; font-size: 15px">
-                                   <input type="text" name="signbonus" value="" size="7" />
-                                    &nbsp;&nbsp;&nbsp;&nbsp;
-                                    Pension (401k)                                 
-                                    &nbsp;&nbsp;
-                                    &nbsp;&nbsp;
-                                   <input type="text" name="pension" value="" size="3" /> % Matching
-                                </td>
-                            </tr>
+                                <td width="60%" style="font-family: Times New Roman; font-size: 15px">
+                                    <select name="locationID" style="width: 180px; height: 25px" >
+                                        <option value="">--- Choose ---</option>
+                                       <?php while($row = mysqli_fetch_array($result)) { ?>
+                                        <option value="<?php echo $row['LocationID']; ?>">
+                                                       <?php echo $row['Name']; ?>  
+                                        </option>
+                                        <?php } ?>
+                                    </select>
+                               </td>
+                            </tr>                          
                            <tr height="30">
                                 <td width="10%" >
                                 </td>
                                 <td width="20%" style="font-family: Times New Roman; font-size: 15px">
-                                  Stock Options
+                                  Paid reimbursement<font color="red">*</font>
                                 </td>
                                 <td width="70%" style="font-family: Times New Roman; font-size: 15px">
-                                    <select name="stocks" style="width: 52px; height: 25px" >
+                                    <select name="reimbursed" style="width: 52px; height: 25px" >
                                         <option value="No">No</option>
                                         <option value="Yes">Yes</option>
                                     </select>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    Relocating<font color="red">*</font>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <select name="relocation" style="width: 52px; height: 25px" >
-                                        <option value="No">No</option>
-                                        <option value="Yes">Yes</option>
-                                    </select>
+                               </td>
+                            </tr>                          
+                            <tr height="30">
+                                <td width="10%" >
                                 </td>
+                                <td width="30%" style="font-family: Times New Roman; font-size: 15px">
+                                    Reimbursement amount<font color="red">*</font>
+                                </td>
+                                <td width="60%" style="font-family: Times New Roman; font-size: 15px">
+                                   <input type="text" name="paidreimburse" value="" size="8" />
+                               </td>
                             </tr>                          
                             <tr height="20">
                                 <td colspan="3" >
@@ -127,7 +126,6 @@
                 <tr>
                      <td colspan='2' height="60" align="center" valign="top" 
                        style="font-family: Times New Roman; font-size: 20px;" >
-                        <br>
                         <input type="button" value="BACK" 
                         onclick="window.location.href='javascript:history.back()'"                          
                         style="color: white; height: 32px; width: 135px; 

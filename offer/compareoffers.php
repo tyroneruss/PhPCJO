@@ -7,6 +7,11 @@
         <meta name="description" content="Compare Jobs Offers" />
         <link rel="stylesheet" type="text/css" href="../css/style.css">
         <link rel="stylesheet" type="text/css" href="../css/tabstyle.css">
+        <?php 
+
+            require_once('../includes/database.php');
+            session_start();
+        ?>
     </head>
    
 <body>
@@ -57,45 +62,70 @@
                        <h1 id="title_h1"><B>Select Job Offers to Compare</B></h1>
                    </td>
                </tr>
+            <?php 
+                          
+                $ID = $_SESSION['userID'];
+
+                //Check connection       
+                $mysqli = db_connect();
+                /* check connection */
+                if ($mysqli->connect_errno) {
+                    printf("Connect failed: %s\n", $mysqli->connect_error);
+                    exit();
+                } 
+
+                $query = 'select * from offer where UserID=' . $ID;
+                $result = $mysqli->query($query);
+                
+            ?>
+                    <tr>
+                        <td align="left" height="30" valign="center" style="color: #660000; font-family: Times New Roman; font-size: 18px">
+                            <b>Select</b>
+                        </td>
+                        <td align="left" height="30" valign="center" style="color: #660000; font-family: Times New Roman; font-size: 18px">
+                            <b>&nbsp;&nbsp;Item#</b>
+                        </td>
+                        <td align="left" height="30" valign="center" style="color: #660000; font-family: Times New Roman; font-size: 18px">
+                            <b>Company</b>
+                        </td>
+                        <td align="left" height="30" valign="center" style="color: #660000; font-family: Times New Roman; font-size: 18px">
+                            <b>Position</b>
+                        </td>
+                   </tr>               
+            <?php 
+                $i = 0;
+                while ($row = mysqli_fetch_array($result)) {
+                    $i = $i + 1;
+            ?>
+                   <tr>
+                        <td width="5%" height="27px" align="center" style="background-color: white;"> 
+                            <input type="checkbox" name="offer<?php echo $i; ?>"
+                             value="ON" style="height: 20px; width: 20px"/> 
+                        </td>
+                        <td width="10%" height="27px" align="center" valign="center" 
+                            style="background-color: white; font-family: Times New Roman; font-size: 18px">
+                            &nbsp;&nbsp;<a href="<?php echo ''; ?>" style="color: #660000"><?php echo $i; ?></a>
+                        </td>
+                        <td width="40%" height="27px" align="left" valign="center" 
+                            style="background-color: white; font-family: Times New Roman; font-size: 18px">
+                           <?php echo $row['Company']; ?>
+                        </td>
+                        <td width="40%" height="27px" align="left" valign="center" 
+                            style="background-color: white; font-family: Times New Roman; font-size: 18px">
+                           <?php echo $row['Position']; ?> &nbsp;
+                        </td>
+                    </tr>
+                <?php } 
+                    $mysqli->close();
+                  ?> 
+                    <br>
+             
                 <tr>
-                    <td align="left" height="30" valign="center" style="color: #660000; font-family: Times New Roman; font-size: 18px">
-                        <b>Select</b>
-                    </td>
-                    <td align="left" height="30" valign="center" style="color: #660000; font-family: Times New Roman; font-size: 18px">
-                        <b>&nbsp;&nbsp;ID#</b>
-                    </td>
-                    <td align="left" height="30" valign="center" style="color: #660000; font-family: Times New Roman; font-size: 18px">
-                        <b>Company</b>
-                    </td>
-                    <td align="left" height="30" valign="center" style="color: #660000; font-family: Times New Roman; font-size: 18px">
-                        <b>Position</b>
-                    </td>
-               </tr>               
-                <tr>
-                    <td width="5%" height="27px" align="center" style="background-color: white;"> 
-                        <input type="checkbox" name="offer
-                            <?php echo ''; ?>" value="ON" style="height: 22px; width: 22px"/>
-                    </td>
-                    <td width="10%" height="27px" align="left" valign="center" 
-                        style="background-color: white; font-family: Times New Roman; font-size: 18px">
-                        &nbsp;&nbsp;<a href="<?php echo ''; ?>" style="color: #660000"><?php echo ''; ?></a>
-                    </td>
-                    <td width="40%" height="27px" align="left" valign="center" 
-                        style="background-color: white; font-family: Times New Roman; font-size: 18px">
-                       <?php echo ''; ?>
-                    </td>
-                    <td width="40%" height="27px" align="right" valign="center" 
-                        style="background-color: white; font-family: Times New Roman; font-size: 18px">
-                       <?php echo ''; ?> &nbsp;
-                    </td>
-                </tr>
-                <br>
-           <tr>
                 <td colspan='4' height="60" align="center" valign="top" 
                   style="font-family: Times New Roman; font-size: 20px;" >
                    <br>
                    <input type="button" value="BACK" 
-                   onclick="window.location.href=''"                          
+                   onclick="window.location.href='javascript:history.back()'"                          
                    style="color: white; height: 32px; width: 125px; 
                    background-color:  DodgerBlue" />
                    

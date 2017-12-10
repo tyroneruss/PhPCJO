@@ -16,10 +16,10 @@
         <td height="40"></td>
     </tr>    
     <tr style="background-color: dodgerblue">
-        <td width="10%">
+        <td width="10%"> 
         </td>                  
         <td  width="90%" style="background-color: white">
-            <font size="4" color="#353333"><b>Cost of Living</b></font>
+            <font size="4" color="#353333"><b>Cost of Living Info</b></font>
             <br>&nbsp;<a href="test-1" style="color: #5F707A"><b>By State</b></a>
             <br>&nbsp;<a href="test-2" style="color: #5F707A"><b>Housing Cost</b></a>
             <br>&nbsp;<a href="test-3" style="color: #5F707A"><b>Cost of Activities</b></a>
@@ -34,7 +34,7 @@
         <td width="10%">
         </td>                  
         <td  width="90%" style="background-color: white">
-            <font size="4" color="#353333"><b>Add new title link</b></font>
+            <font size="4" color="#353333"><b>Title of section</b></font>
             <br>&nbsp;<a href="test-1" style="color: #5F707A"><b>Indeed</b></a>
             <br>&nbsp;<a href="test-2" style="color: #5F707A"><b>ZipRecruiter</b></a>
             <br>&nbsp;<a href="test-3" style="color: #5F707A"><b>Evaluate Offer</b></a>

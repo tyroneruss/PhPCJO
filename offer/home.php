@@ -48,7 +48,7 @@
                 <table width="650"> 
                     <tr>
                         <td>
-                            <br><h1 id="caption_h1">Get   Started with Compare Offers</h1>
+                            <br><h1 id="caption_h1">Get   Started with Comparing Offers</h1>
                         </td>
                     </tr>
                     <tr>
@@ -56,37 +56,43 @@
                             <br>
                             <font size="4" color="darkgrey"><b>Comparing Job Offers</b></font>
                             <br>             
-                               When comparing job offers, there are so many factors that determine which offer to choose.. Just think about it. Culture. Benefits. Work-life balance. Salary. Salary. Did I mention salary? 
-                               While it might sound like I’m repeating myself, I find that most people are hyper focused on a number without looking at the full picture.                         
+                               Discuss the purpose of the site and how the evaluation and comparing of offers work.  A lot 
+                               content will added here.
                         </td>
                     </tr>
                     <tr>
-                        <td  style="font-family: Times New Roman; font-size: 16px">
+                        <td  height='50' style="font-family: Times New Roman; font-size: 16px">
                             <br><br>
-                            <font size="4" color="darkgrey"><b>Evaluating Job Offers</b></font>
-                            <br>             
-                               When evaluating job offers, there are so many factors that determine whether or not you’ll accept. Just think about it. Culture. Benefits. Work-life balance. Salary. Salary. Did I mention salary? 
-                               While it might sound like I’m repeating myself, I find that most people are hyper focused on a number without looking at the full picture.                         
+                            <font size="4" color="darkgrey"><b>ADD CONTENT</b></font>
+                            <br>              
                         </td>
                     </tr>
                     <tr>
-                        <td  style="font-family: Times New Roman; font-size: 16px">
+                        <td  height='50' style="font-family: Times New Roman; font-size: 16px">
                             <br><br>
-                            <font size="4" color="darkgrey"><b>Accepting a Job Offer</b></font>
-                            <br>             
-                               When accepting a job offer, there are so many factors that determine whether or not you’ll accept. Just think about it. Culture. Benefits. Work-life balance. Salary. Salary. Did I mention salary? 
-                               While it might sound like I’m repeating myself, I find that most people are hyper focused on a number without looking at the full picture.                         
+                            <font size="4" color="darkgrey"><b>ADD CONTENT</b></font>
+                            <br>              
                         </td>
                     </tr>
                     <tr>
-                        <td  style="font-family: Times New Roman; font-size: 16px">
+                        <td  height='50' style="font-family: Times New Roman; font-size: 16px">
                             <br><br>
-                            <font size="4" color="darkgrey"><b>Converting Full Time Pay to Hourly Contract Rate</b></font>
-                            <br>             
-                            Multiple people asked me this week how much they should charge for an hourly 
-                            development engagement, trying to figure out what’s fair. They all know their 
-                            full time salary range, but didn’t know how to translate that into self-employed 
-                            hourly rate.   
+                            <font size="4" color="darkgrey"><b>ADD CONTENT</b></font>
+                            <br>              
+                        </td>
+                    </tr>
+                    <tr>
+                        <td  height='50' style="font-family: Times New Roman; font-size: 16px">
+                            <br><br>
+                            <font size="4" color="darkgrey"><b>ADD CONTENT</b></font>
+                            <br>              
+                        </td>
+                    </tr>
+                    <tr>
+                        <td  height='50' style="font-family: Times New Roman; font-size: 16px">
+                            <br><br>
+                            <font size="4" color="darkgrey"><b>ADD CONTENT</b></font>
+                            <br>              
                         </td>
                     </tr>
                 </table>

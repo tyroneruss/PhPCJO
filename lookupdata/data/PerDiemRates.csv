@@ -1,0 +1,674 @@
+ID,STATE,DESTINATION,Lodging Rate,M&IE
+1,AL,Birmingham,$101,$59
+2,AL,Gulf Shores,$106,$64
+2,AL,Gulf Shores,$125,$64
+2,AL,Gulf Shores,$160,$64
+2,AL,Gulf Shores,$106,$64
+460,AL,Mobile,$93,$59
+460,AL,Mobile,$98,$59
+460,AL,Mobile,$93,$59
+6,AR,Hot Springs,$104,$59
+7,AR,Little Rock,$96,$59
+9,AZ,Grand Canyon / Flagstaff,$142,$64
+9,AZ,Grand Canyon / Flagstaff,$93,$64
+9,AZ,Grand Canyon / Flagstaff,$110,$64
+9,AZ,Grand Canyon / Flagstaff,$142,$64
+8,AZ,Kayenta,$126,$59
+8,AZ,Kayenta,$104,$59
+8,AZ,Kayenta,$126,$59
+10,AZ,Phoenix / Scottsdale,$124,$59
+10,AZ,Phoenix / Scottsdale,$174,$59
+10,AZ,Phoenix / Scottsdale,$133,$59
+10,AZ,Phoenix / Scottsdale,$93,$59
+10,AZ,Phoenix / Scottsdale,$124,$59
+11,AZ,Sedona,$162,$74
+12,AZ,Tucson,$93,$59
+12,AZ,Tucson,$118,$59
+12,AZ,Tucson,$93,$59
+14,CA,Antioch / Brentwood / Concord,$154,$64
+481,CA,Bakersfield / Ridgecrest,$100,$59
+16,CA,Barstow / Ontario / Victorville,$95,$54
+20,CA,Death Valley,$112,$64
+461,CA,Eureka / Arcata / McKinleyville,$101,$74
+461,CA,Eureka / Arcata / McKinleyville,$129,$74
+461,CA,Eureka / Arcata / McKinleyville,$101,$74
+21,CA,Fresno,$103,$64
+22,CA,Los Angeles,$173,$64
+23,CA,Mammoth Lakes,$131,$74
+24,CA,Mill Valley / San Rafael / Novato,$184,$74
+24,CA,Mill Valley / San Rafael / Novato,$151,$74
+24,CA,Mill Valley / San Rafael / Novato,$184,$74
+26,CA,Monterey,$142,$74
+26,CA,Monterey,$198,$74
+26,CA,Monterey,$142,$74
+27,CA,Napa,$215,$69
+27,CA,Napa,$165,$69
+27,CA,Napa,$215,$69
+28,CA,Oakhurst,$98,$64
+28,CA,Oakhurst,$127,$64
+28,CA,Oakhurst,$98,$64
+29,CA,Oakland,$171,$69
+29,CA,Oakland,$152,$69
+29,CA,Oakland,$171,$69
+30,CA,Palm Springs,$133,$64
+30,CA,Palm Springs,$104,$64
+31,CA,Point Arena / Gualala,$116,$69
+33,CA,Sacramento,$128,$64
+34,CA,San Diego,$153,$64
+34,CA,San Diego,$167,$64
+34,CA,San Diego,$153,$64
+35,CA,San Francisco,$302,$74
+35,CA,San Francisco,$222,$74
+35,CA,San Francisco,$276,$74
+35,CA,San Francisco,$302,$74
+36,CA,San Luis Obispo,$123,$64
+37,CA,San Mateo / Foster City / Belmont,$213,$69
+37,CA,San Mateo / Foster City / Belmont,$180,$69
+37,CA,San Mateo / Foster City / Belmont,$213,$69
+38,CA,Santa Barbara,$167,$74
+38,CA,Santa Barbara,$222,$74
+38,CA,Santa Barbara,$167,$74
+39,CA,Santa Cruz,$122,$59
+39,CA,Santa Cruz,$152,$59
+39,CA,Santa Cruz,$122,$59
+40,CA,Santa Monica ,$253,$64
+40,CA,Santa Monica ,$307,$64
+40,CA,Santa Monica ,$253,$64
+41,CA,Santa Rosa,$162,$64
+41,CA,Santa Rosa,$134,$64
+41,CA,Santa Rosa,$162,$64
+42,CA,South Lake Tahoe,$112,$64
+42,CA,South Lake Tahoe,$125,$64
+42,CA,South Lake Tahoe,$154,$64
+42,CA,South Lake Tahoe,$112,$64
+43,CA,Stockton ,$107,$64
+44,CA,Sunnyvale / Palo Alto / San Jose,$218,$64
+44,CA,Sunnyvale / Palo Alto / San Jose,$228,$64
+44,CA,Sunnyvale / Palo Alto / San Jose,$218,$64
+45,CA,Tahoe City,$103,$64
+46,CA,Truckee,$126,$74
+47,CA,Visalia / Lemoore,$100,$59
+48,CA,West Sacramento / Davis,$117,$64
+49,CA,Yosemite National Park,$123,$69
+49,CA,Yosemite National Park,$111,$69
+49,CA,Yosemite National Park,$123,$69
+50,CO,Aspen,$164,$74
+50,CO,Aspen,$424,$74
+50,CO,Aspen,$181,$74
+50,CO,Aspen,$236,$74
+50,CO,Aspen,$164,$74
+52,CO,Boulder / Broomfield,$130,$59
+52,CO,Boulder / Broomfield,$153,$59
+52,CO,Boulder / Broomfield,$130,$59
+53,CO,Colorado Springs,$106,$59
+54,CO,Cortez,$93,$59
+54,CO,Cortez,$115,$59
+55,CO,Crested Butte / Gunnison,$105,$64
+55,CO,Crested Butte / Gunnison,$154,$64
+55,CO,Crested Butte / Gunnison,$119,$64
+55,CO,Crested Butte / Gunnison,$105,$64
+56,CO,Denver / Aurora,$180,$69
+427,CO,Douglas ,$127,$59
+57,CO,Durango,$105,$64
+57,CO,Durango,$160,$64
+58,CO,Fort Collins / Loveland,$109,$59
+493,CO,Grand Lake,$117,$64
+493,CO,Grand Lake,$182,$64
+493,CO,Grand Lake,$101,$64
+493,CO,Grand Lake,$117,$64
+61,CO,Montrose,$95,$64
+63,CO,Silverthorne / Breckenridge,$121,$64
+63,CO,Silverthorne / Breckenridge,$196,$64
+63,CO,Silverthorne / Breckenridge,$105,$64
+63,CO,Silverthorne / Breckenridge,$121,$64
+64,CO,Steamboat Springs,$114,$74
+64,CO,Steamboat Springs,$187,$74
+64,CO,Steamboat Springs,$102,$74
+64,CO,Steamboat Springs,$114,$74
+65,CO,Telluride,$219,$74
+65,CO,Telluride,$370,$74
+65,CO,Telluride,$219,$74
+66,CO,Vail,$140,$74
+66,CO,Vail,$377,$74
+66,CO,Vail,$149,$74
+66,CO,Vail,$192,$74
+66,CO,Vail,$140,$74
+67,CT,Bridgeport / Danbury,$130,$64
+68,CT,Cromwell / Old Saybrook,$94,$64
+69,CT,Hartford,$125,$59
+71,CT,New Haven,$107,$64
+72,CT,New London / Groton,$105,$64
+75,DC,Washington,$250,$69
+75,DC,Washington,$201,$69
+75,DC,Washington,$253,$69
+75,DC,Washington,$175,$69
+75,DC,Washington,$250,$69
+76,DE,Dover,$93,$54
+76,DE,Dover,$110,$54
+77,DE,Lewes,$95,$59
+77,DE,Lewes,$128,$59
+77,DE,Lewes,$181,$59
+77,DE,Lewes,$95,$59
+78,DE,Wilmington,$127,$54
+99,FL,Boca Raton,$136,$59
+99,FL,Boca Raton,$195,$59
+99,FL,Boca Raton,$110,$59
+80,FL,Bradenton,$102,$54
+80,FL,Bradenton,$161,$54
+80,FL,Bradenton,$102,$54
+81,FL,Cocoa Beach,$121,$64
+81,FL,Cocoa Beach,$149,$64
+81,FL,Cocoa Beach,$121,$64
+82,FL,Daytona Beach,$97,$59
+82,FL,Daytona Beach,$131,$59
+82,FL,Daytona Beach,$108,$59
+82,FL,Daytona Beach,$97,$59
+84,FL,Fort Lauderdale,$148,$64
+84,FL,Fort Lauderdale,$195,$64
+84,FL,Fort Lauderdale,$121,$64
+85,FL,Cape Coral-Fort Myers,$110,$59
+85,FL,Cape Coral-Fort Myers,$190,$59
+85,FL,Cape Coral-Fort Myers,$110,$59
+83,FL,Fort Walton Beach,$141,$64
+83,FL,Fort Walton Beach,$93,$64
+83,FL,Fort Walton Beach,$156,$64
+83,FL,Fort Walton Beach,$221,$64
+83,FL,Fort Walton Beach,$141,$64
+88,FL,Gainesville,$102,$59
+89,FL,Gulf Breeze,$93,$64
+89,FL,Gulf Breeze,$102,$64
+89,FL,Gulf Breeze,$138,$64
+89,FL,Gulf Breeze,$93,$64
+91,FL,Key West,$209,$69
+91,FL,Key West,$268,$69
+91,FL,Key West,$294,$69
+91,FL,Key West,$201,$69
+95,FL,Miami,$140,$64
+95,FL,Miami,$176,$64
+95,FL,Miami,$148,$64
+95,FL,Miami,$119,$64
+96,FL,Naples,$145,$64
+96,FL,Naples,$210,$64
+96,FL,Naples,$247,$64
+96,FL,Naples,$132,$64
+98,FL,Orlando,$129,$59
+98,FL,Orlando,$121,$59
+98,FL,Orlando,$129,$59
+100,FL,Panama City,$93,$59
+100,FL,Panama City,$116,$59
+100,FL,Panama City,$153,$59
+100,FL,Panama City,$93,$59
+101,FL,Pensacola ,$106,$59
+101,FL,Pensacola ,$124,$59
+101,FL,Pensacola ,$159,$59
+101,FL,Pensacola ,$106,$59
+102,FL,Punta Gorda,$93,$59
+102,FL,Punta Gorda,$150,$59
+102,FL,Punta Gorda,$93,$59
+103,FL,Sarasota,$103,$59
+103,FL,Sarasota,$148,$59
+103,FL,Sarasota,$103,$59
+104,FL,Sebring,$99,$54
+105,FL,St. Augustine,$121,$59
+106,FL,Stuart,$98,$59
+106,FL,Stuart,$152,$59
+106,FL,Stuart,$98,$59
+107,FL,Tallahassee,$98,$54
+107,FL,Tallahassee,$116,$54
+107,FL,Tallahassee,$98,$54
+108,FL,Tampa / St. Petersburg,$120,$54
+108,FL,Tampa / St. Petersburg,$154,$54
+108,FL,Tampa / St. Petersburg,$120,$54
+109,FL,Vero Beach,$131,$59
+109,FL,Vero Beach,$173,$59
+109,FL,Vero Beach,$131,$59
+110,GA,Athens,$101,$59
+111,GA,Atlanta,$166,$69
+111,GA,Atlanta,$148,$69
+111,GA,Atlanta,$166,$69
+413,GA,Augusta,$101,$59
+115,GA,Jekyll Island / Brunswick,$122,$64
+115,GA,Jekyll Island / Brunswick,$154,$64
+115,GA,Jekyll Island / Brunswick,$122,$64
+116,GA,Savannah,$117,$59
+116,GA,Savannah,$132,$59
+116,GA,Savannah,$117,$59
+476,IA,Dallas,$118,$54
+118,IA,Des Moines,$109,$59
+120,ID,Coeur d'Alene,$93,$59
+120,ID,Coeur d'Alene,$126,$59
+120,ID,Coeur d'Alene,$93,$59
+122,ID,Sun Valley / Ketchum,$110,$54
+122,ID,Sun Valley / Ketchum,$133,$54
+122,ID,Sun Valley / Ketchum,$110,$54
+422,IL,Bolingbrook / Romeoville / Lemont,$105,$54
+123,IL,Chicago,$226,$74
+123,IL,Chicago,$130,$74
+123,IL,Chicago,$215,$74
+123,IL,Chicago,$193,$74
+123,IL,Chicago,$226,$74
+124,IL,Oak Brook Terrace,$114,$59
+462,IL,O'Fallon / Fairview Heights / Collinsville,$130,$54
+127,IN,Bloomington ,$104,$69
+129,IN,Ft. Wayne,$100,$54
+414,IN,Hammond / Munster / Merrillville,$97,$59
+130,IN,Indianapolis / Carmel,$119,$54
+131,IN,Lafayette / West Lafayette,$103,$54
+134,IN,South Bend,$97,$59
+137,KS,Kansas City / Overland Park,$121,$64
+138,KS,Wichita,$100,$59
+139,KY,Boone,$105,$54
+436,KY,Kenton,$141,$69
+140,KY,Lexington,$109,$54
+140,KY,Lexington,$101,$54
+140,KY,Lexington,$109,$54
+141,KY,Louisville,$118,$59
+141,KY,Louisville,$138,$59
+141,KY,Louisville,$118,$59
+478,LA,Alexandria / Leesville / Natchitoches,$96,$64
+142,LA,Baton Rouge,$105,$59
+144,LA,New Orleans,$148,$64
+144,LA,New Orleans,$173,$64
+144,LA,New Orleans,$152,$64
+144,LA,New Orleans,$109,$64
+144,LA,New Orleans,$148,$64
+147,MA,Andover,$118,$59
+148,MA,Boston / Cambridge,$287,$69
+148,MA,Boston / Cambridge,$169,$69
+148,MA,Boston / Cambridge,$267,$69
+148,MA,Boston / Cambridge,$287,$69
+149,MA,Burlington / Woburn,$150,$64
+150,MA,Falmouth,$129,$64
+150,MA,Falmouth,$154,$64
+150,MA,Falmouth,$257,$64
+150,MA,Falmouth,$129,$64
+151,MA,Hyannis,$126,$64
+151,MA,Hyannis,$215,$64
+151,MA,Hyannis,$126,$64
+152,MA,Martha's Vineyard,$146,$74
+152,MA,Martha's Vineyard,$322,$74
+153,MA,Nantucket,$141,$74
+153,MA,Nantucket,$300,$74
+154,MA,Northampton,$107,$64
+155,MA,Pittsfield,$126,$64
+156,MA,Plymouth / Taunton / New Bedford,$115,$59
+157,MA,Quincy,$161,$59
+157,MA,Quincy,$136,$59
+157,MA,Quincy,$161,$59
+158,MA,Springfield,$110,$59
+160,MA,Worcester,$127,$59
+161,MD,Aberdeen / Bel Air / Belcamp,$106,$59
+162,MD,Annapolis,$130,$69
+162,MD,Annapolis,$106,$69
+162,MD,Annapolis,$130,$69
+163,MD,Baltimore City,$160,$69
+163,MD,Baltimore City,$121,$69
+163,MD,Baltimore City,$161,$69
+163,MD,Baltimore City,$140,$69
+163,MD,Baltimore City,$160,$69
+429,MD,Baltimore County,$103,$59
+164,MD,Cambridge / St. Michaels,$144,$64
+164,MD,Cambridge / St. Michaels,$103,$64
+164,MD,Cambridge / St. Michaels,$144,$64
+473,MD,Centreville,$117,$69
+165,MD,Columbia,$107,$64
+166,MD,Frederick,$98,$59
+170,MD,Ocean City,$108,$64
+170,MD,Ocean City,$239,$64
+170,MD,Ocean City,$108,$64
+171,ME,Bar Harbor,$167,$74
+171,ME,Bar Harbor,$122,$74
+171,ME,Bar Harbor,$218,$74
+171,ME,Bar Harbor,$167,$74
+172,ME,Kennebunk / Kittery / Sanford,$108,$59
+172,ME,Kennebunk / Kittery / Sanford,$93,$59
+172,ME,Kennebunk / Kittery / Sanford,$145,$59
+172,ME,Kennebunk / Kittery / Sanford,$108,$59
+173,ME,Portland,$147,$59
+173,ME,Portland,$109,$59
+173,ME,Portland,$170,$59
+173,ME,Portland,$147,$59
+174,ME,Rockport,$101,$69
+174,ME,Rockport,$133,$69
+174,ME,Rockport,$101,$69
+175,MI,Ann Arbor,$120,$59
+176,MI,Benton Harbor / St. Joseph / Stevensville,$93,$54
+176,MI,Benton Harbor / St. Joseph / Stevensville,$116,$54
+176,MI,Benton Harbor / St. Joseph / Stevensville,$93,$54
+178,MI,Detroit,$126,$54
+179,MI,East Lansing / Lansing,$103,$59
+183,MI,Grand Rapids,$113,$59
+184,MI,Holland,$111,$59
+185,MI,Kalamazoo / Battle Creek ,$100,$54
+187,MI,Mackinac Island,$93,$59
+187,MI,Mackinac Island,$119,$59
+187,MI,Mackinac Island,$93,$59
+188,MI,Midland,$113,$54
+190,MI,Muskegon,$93,$54
+190,MI,Muskegon,$122,$54
+190,MI,Muskegon,$93,$54
+192,MI,Petoskey,$108,$59
+192,MI,Petoskey,$181,$59
+192,MI,Petoskey,$108,$59
+193,MI,Pontiac / Auburn Hills ,$113,$54
+195,MI,South Haven,$93,$59
+195,MI,South Haven,$118,$59
+195,MI,South Haven,$93,$59
+196,MI,Traverse City / Leland,$107,$74
+196,MI,Traverse City / Leland,$179,$74
+196,MI,Traverse City / Leland,$107,$74
+199,MN,Duluth,$154,$64
+199,MN,Duluth,$120,$64
+199,MN,Duluth,$173,$64
+199,MN,Duluth,$154,$64
+200,MN,Eagan / Burnsville / Mendota Heights,$96,$59
+201,MN,Minneapolis / St. Paul,$149,$64
+202,MN,Rochester,$122,$64
+204,MO,Kansas City,$121,$64
+207,MO,St. Louis,$130,$54
+477,MS,Oxford,$99,$64
+477,MS,Oxford,$114,$64
+447,MS,Southaven,$108,$59
+211,MS,Starkville ,$100,$54
+215,MT,Big Sky / West Yellowstone,$94,$59
+215,MT,Big Sky / West Yellowstone,$157,$59
+212,MT,Butte,$95,$64
+488,MT,Glendive / Sidney,$94,$69
+426,MT,Helena,$99,$64
+213,MT,Missoula / Polson / Kalispell,$94,$59
+213,MT,Missoula / Polson / Kalispell,$135,$59
+213,MT,Missoula / Polson / Kalispell,$94,$59
+216,NC,Asheville ,$126,$59
+216,NC,Asheville ,$95,$59
+216,NC,Asheville ,$118,$59
+217,NC,Atlantic Beach / Morehead City,$93,$64
+217,NC,Atlantic Beach / Morehead City,$121,$64
+217,NC,Atlantic Beach / Morehead City,$93,$64
+218,NC,Chapel Hill,$118,$69
+219,NC,Charlotte,$127,$59
+221,NC,Durham,$105,$59
+464,NC,Fayetteville,$106,$54
+222,NC,Greensboro,$101,$54
+222,NC,Greensboro,$93,$54
+222,NC,Greensboro,$101,$54
+224,NC,Kill Devil Hills,$93,$64
+224,NC,Kill Devil Hills,$154,$64
+227,NC,Raleigh,$115,$59
+229,NC,Wilmington,$101,$59
+482,ND,Williston,$94,$69
+231,NE,Omaha,$109,$64
+232,NH,Concord,$102,$59
+233,NH,Conway,$130,$54
+233,NH,Conway,$116,$54
+233,NH,Conway,$158,$54
+233,NH,Conway,$130,$54
+234,NH,Durham,$104,$54
+234,NH,Durham,$121,$54
+234,NH,Durham,$104,$54
+235,NH,Laconia,$142,$69
+235,NH,Laconia,$116,$69
+235,NH,Laconia,$142,$69
+236,NH,Lebanon / Lincoln / West Lebanon,$131,$64
+237,NH,Manchester,$107,$64
+238,NH,Portsmouth,$116,$59
+238,NH,Portsmouth,$158,$59
+238,NH,Portsmouth,$116,$59
+239,NJ,Atlantic City / Ocean City / Cape May,$99,$64
+239,NJ,Atlantic City / Ocean City / Cape May,$93,$64
+239,NJ,Atlantic City / Ocean City / Cape May,$99,$64
+241,NJ,Cherry Hill / Moorestown,$103,$59
+242,NJ,Eatontown / Freehold,$106,$59
+243,NJ,Edison / Piscataway,$109,$59
+244,NJ,Flemington,$121,$64
+246,NJ,Newark,$141,$64
+247,NJ,Parsippany,$149,$59
+249,NJ,Princeton / Trenton,$129,$59
+248,NJ,Somerset,$148,$59
+250,NJ,Springfield / Cranford / New Providence,$119,$59
+251,NJ,Toms River,$109,$64
+479,NM,Carlsbad,$125,$54
+472,NM,Las Cruces,$94,$59
+254,NM,Santa Fe,$119,$64
+254,NM,Santa Fe,$97,$64
+254,NM,Santa Fe,$119,$64
+423,NM,Taos,$101,$69
+255,NV,Incline Village / Reno / Sparks,$105,$64
+255,NV,Incline Village / Reno / Sparks,$135,$64
+255,NV,Incline Village / Reno / Sparks,$105,$64
+256,NV,Las Vegas,$106,$64
+256,NV,Las Vegas,$134,$64
+256,NV,Las Vegas,$106,$64
+258,NY,Albany,$115,$59
+269,NY,Binghamton / Owego,$95,$59
+260,NY,Buffalo,$104,$64
+261,NY,Floral Park / Garden City / Great Neck,$152,$69
+262,NY,Glens Falls,$102,$64
+262,NY,Glens Falls,$167,$64
+262,NY,Glens Falls,$102,$64
+277,NY,Ithaca / Waterloo / Romulus,$122,$59
+264,NY,Kingston,$119,$69
+265,NY,Lake Placid,$126,$74
+265,NY,Lake Placid,$139,$74
+265,NY,Lake Placid,$112,$74
+265,NY,Lake Placid,$179,$74
+265,NY,Lake Placid,$126,$74
+266,NY,New York City,$291,$74
+266,NY,New York City,$164,$74
+266,NY,New York City,$253,$74
+266,NY,New York City,$230,$74
+266,NY,New York City,$291,$74
+267,NY,Niagara Falls,$93,$59
+267,NY,Niagara Falls,$125,$59
+267,NY,Niagara Falls,$93,$59
+268,NY,Nyack / Palisades,$118,$64
+270,NY,Poughkeepsie,$111,$64
+271,NY,Riverhead / Ronkonkoma / Melville,$134,$64
+272,NY,Rochester,$106,$59
+273,NY,Saratoga Springs / Schenectady,$124,$64
+273,NY,Saratoga Springs / Schenectady,$192,$64
+273,NY,Saratoga Springs / Schenectady,$124,$64
+274,NY,Syracuse / Oswego,$103,$59
+275,NY,Tarrytown / White Plains / New Rochelle,$146,$64
+276,NY,Troy ,$111,$64
+278,NY,West Point,$108,$59
+279,OH,Akron,$104,$54
+281,OH,Canton,$101,$59
+282,OH,Cincinnati,$141,$69
+283,OH,Cleveland,$141,$69
+284,OH,Columbus,$119,$59
+285,OH,Dayton / Fairborn,$101,$59
+287,OH,Hamilton,$111,$54
+291,OH,Medina / Wooster,$105,$54
+289,OH,Mentor,$106,$59
+280,OH,Sandusky / Bellevue,$102,$54
+280,OH,Sandusky / Bellevue,$120,$54
+280,OH,Sandusky / Bellevue,$102,$54
+295,OK,Oklahoma City,$95,$59
+298,OR,Beaverton,$136,$59
+299,OR,Bend,$112,$59
+299,OR,Bend,$151,$59
+299,OR,Bend,$112,$59
+300,OR,Clackamas,$123,$59
+302,OR,Eugene / Florence,$118,$59
+304,OR,Lincoln City,$99,$59
+304,OR,Lincoln City,$131,$59
+304,OR,Lincoln City,$99,$59
+305,OR,Portland,$182,$64
+305,OR,Portland,$149,$64
+305,OR,Portland,$182,$64
+306,OR,Seaside,$108,$69
+306,OR,Seaside,$175,$69
+306,OR,Seaside,$108,$69
+307,PA,Allentown / Easton / Bethlehem,$102,$59
+313,PA,Bucks,$104,$59
+309,PA,Chester / Radnor / Essington,$117,$64
+310,PA,Erie,$97,$54
+311,PA,Gettysburg,$106,$64
+311,PA,Gettysburg,$93,$64
+311,PA,Gettysburg,$106,$64
+312,PA,Harrisburg,$114,$69
+489,PA,Hershey,$133,$69
+489,PA,Hershey,$115,$69
+489,PA,Hershey,$182,$69
+489,PA,Hershey,$133,$69
+314,PA,Lancaster,$106,$59
+314,PA,Lancaster,$122,$59
+314,PA,Lancaster,$106,$59
+315,PA,Malvern / Frazer / Berwyn,$129,$59
+435,PA,Montgomery,$128,$64
+317,PA,Philadelphia,$185,$64
+317,PA,Philadelphia,$148,$64
+317,PA,Philadelphia,$202,$64
+317,PA,Philadelphia,$185,$64
+318,PA,Pittsburgh,$129,$54
+319,PA,Reading,$103,$54
+321,PA,State College ,$102,$59
+322,RI,East Greenwich / Warwick / North Kingstown,$101,$59
+323,RI,Jamestown / Middletown / Newport,$180,$59
+323,RI,Jamestown / Middletown / Newport,$114,$59
+323,RI,Jamestown / Middletown / Newport,$212,$59
+323,RI,Jamestown / Middletown / Newport,$180,$59
+325,RI,Providence / Bristol,$151,$59
+437,SC,Aiken,$96,$59
+326,SC,Charleston,$192,$69
+326,SC,Charleston,$157,$69
+326,SC,Charleston,$219,$69
+326,SC,Charleston,$177,$69
+326,SC,Charleston,$192,$69
+327,SC,Columbia,$105,$59
+329,SC,Hilton Head,$117,$64
+329,SC,Hilton Head,$158,$64
+329,SC,Hilton Head,$117,$64
+330,SC,Myrtle Beach,$93,$59
+330,SC,Myrtle Beach,$103,$59
+330,SC,Myrtle Beach,$157,$59
+330,SC,Myrtle Beach,$93,$59
+332,SD,Hot Springs,$98,$59
+332,SD,Hot Springs,$93,$59
+332,SD,Hot Springs,$133,$59
+332,SD,Hot Springs,$98,$59
+333,SD,Rapid City,$93,$59
+333,SD,Rapid City,$148,$59
+333,SD,Rapid City,$93,$59
+334,SD,Sturgis / Spearfish ,$93,$59
+334,SD,Sturgis / Spearfish ,$124,$59
+335,TN,Brentwood / Franklin,$127,$59
+336,TN,Chattanooga ,$103,$64
+338,TN,Knoxville,$98,$59
+339,TN,Memphis,$117,$59
+340,TN,Nashville,$170,$59
+340,TN,Nashville,$162,$59
+340,TN,Nashville,$170,$59
+342,TX,Arlington / Fort Worth / Grapevine,$163,$59
+343,TX,Austin,$146,$59
+343,TX,Austin,$165,$59
+343,TX,Austin,$146,$59
+486,TX,Big Spring,$97,$54
+486,TX,Big Spring,$93,$54
+486,TX,Big Spring,$97,$54
+344,TX,College Station,$107,$59
+345,TX,Corpus Christi,$101,$59
+346,TX,Dallas,$142,$64
+346,TX,Dallas,$155,$64
+346,TX,Dallas,$142,$64
+347,TX,El Paso,$98,$59
+348,TX,Galveston,$99,$64
+348,TX,Galveston,$121,$64
+348,TX,Galveston,$99,$64
+350,TX,Houston (L.B. Johnson Space Center),$121,$59
+350,TX,Houston (L.B. Johnson Space Center),$137,$59
+350,TX,Houston (L.B. Johnson Space Center),$121,$59
+471,TX,Midland,$105,$64
+492,TX,Pecos,$105,$54
+354,TX,Plano,$120,$59
+355,TX,Round Rock ,$101,$59
+356,TX,San Antonio,$124,$64
+357,TX,South Padre Island,$93,$59
+357,TX,South Padre Island,$100,$59
+357,TX,South Padre Island,$110,$59
+357,TX,South Padre Island,$93,$59
+358,TX,Waco,$102,$59
+474,UT,Moab,$168,$64
+474,UT,Moab,$93,$64
+474,UT,Moab,$168,$64
+360,UT,Park City,$130,$74
+360,UT,Park City,$254,$74
+360,UT,Park City,$130,$74
+361,UT,Provo,$100,$59
+362,UT,Salt Lake City,$117,$59
+362,UT,Salt Lake City,$124,$59
+362,UT,Salt Lake City,$117,$59
+458,VA,Abingdon,$99,$69
+459,VA,Blacksburg,$108,$59
+363,VA,Charlottesville,$128,$69
+428,VA,Loudoun,$101,$59
+365,VA,Lynchburg,$97,$59
+368,VA,Richmond,$146,$64
+368,VA,Richmond,$139,$64
+368,VA,Richmond,$146,$64
+369,VA,Roanoke,$107,$59
+371,VA,Virginia Beach,$99,$59
+371,VA,Virginia Beach,$180,$59
+371,VA,Virginia Beach,$99,$59
+372,VA,Wallops Island,$108,$64
+372,VA,Wallops Island,$205,$64
+372,VA,Wallops Island,$108,$64
+373,VA,Warrenton ,$97,$59
+374,VA,Williamsburg / York,$101,$64
+374,VA,Williamsburg / York,$108,$64
+374,VA,Williamsburg / York,$101,$64
+377,VT,Burlington / St. Albans / Middlebury,$132,$64
+377,VT,Burlington / St. Albans / Middlebury,$102,$64
+377,VT,Burlington / St. Albans / Middlebury,$132,$64
+378,VT,Manchester,$124,$69
+378,VT,Manchester,$104,$69
+378,VT,Manchester,$124,$69
+379,VT,Montpelier,$125,$74
+380,VT,Stowe ,$135,$74
+381,VT,White River Junction,$111,$69
+381,VT,White River Junction,$96,$69
+381,VT,White River Junction,$111,$69
+384,WA,Everett / Lynnwood,$112,$64
+384,WA,Everett / Lynnwood,$135,$64
+384,WA,Everett / Lynnwood,$112,$64
+385,WA,Ocean Shores,$101,$69
+385,WA,Ocean Shores,$128,$69
+385,WA,Ocean Shores,$101,$69
+386,WA,Olympia / Tumwater,$112,$69
+386,WA,Olympia / Tumwater,$128,$69
+386,WA,Olympia / Tumwater,$112,$69
+387,WA,Port Angeles / Port Townsend,$107,$74
+387,WA,Port Angeles / Port Townsend,$159,$74
+387,WA,Port Angeles / Port Townsend,$107,$74
+475,WA,Richland / Pasco,$96,$59
+389,WA,Seattle,$179,$74
+389,WA,Seattle,$244,$74
+390,WA,Spokane,$102,$64
+391,WA,Tacoma,$117,$64
+392,WA,Vancouver,$182,$64
+392,WA,Vancouver,$149,$64
+392,WA,Vancouver,$182,$64
+412,WI,Appleton,$99,$64
+393,WI,Brookfield / Racine,$104,$59
+396,WI,Madison,$122,$59
+396,WI,Madison,$107,$59
+396,WI,Madison,$122,$59
+397,WI,Milwaukee,$120,$64
+399,WI,Sheboygan,$93,$59
+399,WI,Sheboygan,$104,$59
+399,WI,Sheboygan,$93,$59
+400,WI,Sturgeon Bay,$99,$54
+400,WI,Sturgeon Bay,$93,$54
+400,WI,Sturgeon Bay,$99,$54
+401,WI,Wisconsin Dells,$100,$59
+401,WI,Wisconsin Dells,$118,$59
+401,WI,Wisconsin Dells,$100,$59
+403,WV,Charleston,$110,$54
+405,WV,Morgantown,$97,$54
+407,WV,Wheeling,$101,$54
+408,WY,Cody,$123,$64
+408,WY,Cody,$117,$64
+408,WY,Cody,$172,$64
+453,WY,Evanston / Rock Springs,$100,$59
+409,WY,Jackson / Pinedale,$129,$74
+409,WY,Jackson / Pinedale,$205,$74

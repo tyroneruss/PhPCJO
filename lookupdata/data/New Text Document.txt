@@ -1,0 +1,93 @@
+ALABAMA
+Birmingham,95.0
+Huntsville,94.0
+Mobile,86.0
+ARIZONA
+Phoenix,112.5
+Tucson,104.5
+ARKANSAS
+Fayetteville,95.0
+Little Rock,95.0
+CALIFORNIA
+Fresno,90.0
+Irvine,128.0
+Los Angeles,130.0
+Oakland,129.0
+Ontario,119.0
+Sacramento,103.5
+San Diego,125.0
+San Francisco,140.0
+San Jose,137.0
+Santa Barbara,127.0
+Santa Rosa,120.0
+Marin,120.0
+Stockton,85.0
+COLORADO
+Boulder,116.5
+Colorado Springs,95.3
+Denver,107.0
+Fort Collins,97.0
+Greeley,88.0
+Loveland,94.0
+Pueblo,82.0
+CONNECTICUT
+Hartford,116.5
+New Haven,112.0
+Stamford,131.0
+DELAWARE
+Wilmington,105.0
+DISTRICT OF COLUMBIA
+Washington,133.0
+FLORIDA
+Fort Myers,90.5
+Jacksonville,95.0
+Melbourne,90.5
+Miami,107.0
+Fort Lauderdale,107.0
+Orlando,100.0
+St Petersburg,96.5
+Tampa,98.5
+West Palm Beach,100.5
+GEORGIA
+Atlanta,103.0
+Macon,82.0
+Savannah,84.0
+HAWAII
+Honolulu,107.0
+IDAHO
+Boise,86.1
+ILLINOIS
+Chicago,123.0
+Naperville,112.0
+Rockford,85.0
+INDIANA
+Fort Wayne,83.0
+Indianapolis,96.0
+IOWA
+Cedar Rapids 94.0
+Davenport,95.0
+Des Moines,100.0
+Sioux City,84.0
+Waterloo,87.0
+Cedar Falls,87.0
+KANSAS
+Overland Park,100.5
+KENTUCKY
+Lexington,91.5
+Louisville,92.0
+LOUISIANA
+Baton Rouge,99.0
+New Orleans,99.0
+MAINE
+Portland,95.0
+MARYLAND
+Baltimore,103.0
+MASSACHUSETTS
+Boston,133.0
+Springfield,101.0
+MICHIGAN
+Ann Arbor,101.5
+Detroit,100.0
+Grand Rapids 85.5
+Kalamazoo,80.0
+Lansing,85.0

@@ -14,30 +14,21 @@
     
 <?php
 
-    require_once('../includes/database.php');  
-
-    $_SESSION['BaseSalary'] = $_POST['basesalary'];
+    $_SESSION['Salary']     = $_POST['salary'];
     $_SESSION['Pto']        = $_POST['pto'];
-    $_SESSION['SignBonus']  = $_POST['signbonus'];
+    $_SESSION['Signonus']   = $_POST['signbonus'];
     $_SESSION['Stocks']     = $_POST['stocks'];
     $_SESSION['Pension']    = $_POST['pension'];
+    $_SESSION['Relocating'] = $_POST['relocating'];
     
-    session_start();
+    echo 'Variables' . $_POST['salary'] . " " . $_POST['pto'] ;
+ 
+    if ($_POST['relocating'] == 'No'){
+       //  header('Location: ./db/insertFTofferDb.php');                         
+      }
 
-    $_SESSION['offer_count'] = 1;
-
-    $mysqli = db_connect();
-
-    /* check connection */
-    if ($mysqli->connect_errno) {
-        printf("Connect failed: %s\n", $mysqli->connect_error);
-        exit();
-    } 
-
-    $query   = "select * from location ";             
-    $result  = $mysqli->query($query);
-?>    
-
+?>
+    
 <div id="container">
    <div id="intro">
        <div id="pageHeader">
@@ -79,13 +70,6 @@
                     <td colspan="2" align="center">                    
                         <h1 id="title_h1">Job Relocation</h1>'                                   
                         <form action="" method="POST" >
-                        <?php                            
-                            if ($_POST['reimburse'] == 'No'){
-                                header('Location: ./db/insertofferDb.php');
-                              } else {
-                                echo '';                                     
-                              }
-                        ?>
                         <table border="0" width="600" style="background-color: white">
                             <tr >
                               <td colspan="3" height="20">
@@ -142,7 +126,7 @@
                      <td colspan='2' height="60" align="center" valign="top" 
                        style="font-family: Times New Roman; font-size: 20px;" >
                         <input type="button" value="BACK" 
-                        onclick="window.location.href='./createoffers_1.php'"                          
+                        onclick="window.location.href='javascript:history.back()'"                          
                         style="color: white; height: 32px; width: 135px; 
                         background-color:  DodgerBlue" />
 

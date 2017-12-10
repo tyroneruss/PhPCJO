@@ -1,9 +1,4 @@
 -- Db statements 
-INSERT INTO profile (UserID,LocationID,Age,Gender,DateOfBirth,EmploymentStatus,EduacationLevel)
-VALUES (1008,1,63,'Female','1954-10-23','Yes',3);
-
-insert into state (Name,NameAbbr) 
-select distinct(NameAbbr), name from state_old
 
 -- -----------------------------------------------------
 -- Table `cjodb`.`Location`
@@ -27,68 +22,48 @@ CREATE TABLE IF NOT EXISTS `cjodb`.`col` (
   `MiscGoodServices` VARCHAR(45) NULL DEFAULT NULL,
   PRIMARY KEY (`ColID`))
 ENGINE = InnoDB;
-ALTER TABLE location AUTO_INCREMENT=1;
+ALTER TABLE col AUTO_INCREMENT=1;
 
 -- -----------------------------------------------------
--- Table `cjodb`.`Location`
+-- Table `cjodb`.`costofliving`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `cjodb`.`location` ;
+DROP TABLE IF EXISTS `cjodb`.`costofliving` ;
 
-CREATE TABLE IF NOT EXISTS `cjodb`.`location` (
-  `LocationID` SMALLINT NOT NULL AUTO_INCREMENT,
-  `Name`  VARCHAR(64) NOT NULL,
-  PRIMARY KEY (`LocationID`))
+-- -----------------------------------------------------
+-- Table `cjodb`.`costofliving`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `cjodb`.`costofliving` (
+  `ColID` SMALLINT(6) NOT NULL AUTO_INCREMENT,
+  `City` VARCHAR(45) NOT NULL,
+  `State` VARCHAR(2) NOT NULL,
+  `StateTax` VARCHAR(3) NOT NULL,
+  `ColIndex` FLOAT NULL DEFAULT NULL,
+  `GroceryIndex` FLOAT NULL DEFAULT NULL,
+  `RestPriceIndex` FLOAT NULL DEFAULT NULL,
+  `PurchPowerIndex` FLOAT NULL DEFAULT NULL,
+  PRIMARY KEY (`ColID`))
 ENGINE = InnoDB;
-ALTER TABLE location AUTO_INCREMENT=1;
+ALTER TABLE costofliving AUTO_INCREMENT=1;
 
 -- -----------------------------------------------------
--- Table `cjodb`.`role`
+-- Table `cjodb`.`costofliving`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `cjodb`.`role` ;
-
-CREATE TABLE IF NOT EXISTS `cjodb`.`role` (
-  `RoleID` SMALLINT NOT NULL AUTO_INCREMENT,
-  `Title`  VARCHAR(64) NOT NULL,
-  PRIMARY KEY (`RoleID`))
-ENGINE = InnoDB;
+DROP TABLE IF EXISTS `cjodb`.`costofliving` ;
 
 -- -----------------------------------------------------
--- Table `cjodb`.`User`
+-- Table `cjodb`.`prodession`
+-- Defintion: Contains 
+--      Professionan Area
+--      Position Title
+--      Salary Range
+--      Salary Index
+--      Adding skills later
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `cjodb`.`user` ;
-
-CREATE TABLE IF NOT EXISTS `cjodb`.`user` (
-  `UserID` SMALLINT NOT NULL AUTO_INCREMENT,
-  `RoleID` SMALLINT NOT NULL,
-  `Username` VARCHAR(40) NOT NULL,
-  `Password` VARCHAR(30) NOT NULL,
-  `Email`    VARCHAR(80) NOT NULL,
-  `Active` SMALLINT NOT NULL,
-  UNIQUE INDEX `UserID_UNIQUE` (`UserID` ASC),
-  PRIMARY KEY (`UserID`),
-  UNIQUE INDEX `Username_UNIQUE` (`Username` ASC))
-ENGINE = InnoDB;
-ALTER TABLE user AUTO_INCREMENT=1000;
-
--- -----------------------------------------------------
--- Table `cjodb`.`profile`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `cjodb`.`profile`;
-
-CREATE TABLE IF NOT EXISTS `cjodb`.`profile` (
-  `ProfileID` SMALLINT NOT NULL AUTO_INCREMENT,
-  `UserID` SMALLINT NOT NULL,
-  `LocationID` SMALLINT NOT NULL,
-  `Firstname` VARCHAR(45) NOT NULL,
-  `Initial` VARCHAR(3) NULL,
-  `Lastname` VARCHAR(45) NOT NULL,
-  `Gender` VARCHAR(10) NULL,
-  `Employed` VARCHAR(3) NOT NULL,
-  `EduLevel` SMALLINT NOT NULL,
-  PRIMARY KEY (`ProfileID`))
-ENGINE = InnoDB;
-ALTER TABLE profile AUTO_INCREMENT=1;
-
+CREATE TABLE IF NOT EXISTS `cjodb`.`prodession` (
+  `ProfessionID` SMALLINT(6) NOT NULL AUTO_INCREMENT,
+  `Area` VARCHAR(45) NOT NULL,
+  `Positon` VARCHAR(2) NOT NULL,
+  `MinSaiary` VARCHAR(3) NOT NULL,
 -- -----------------------------------------------------
 -- Table `CJOdb`.`Offer`
 -- -----------------------------------------------------
@@ -98,19 +73,21 @@ CREATE TABLE IF NOT EXISTS `CJOdb`.`offer` (
   `OfferID` SMALLINT NOT NULL AUTO_INCREMENT,
   `UserID` SMALLINT NOT NULL,
   `ColID`  SMALLINT NOT NULL,
-  `OfferType`  SMALLINT NOT NULL,
+  `OfferType` VARCHAR(3) NOT NULL,
   `Company` VARCHAR(80) NOT NULL,
   `Position` VARCHAR(80) NOT NULL,
   `Industry` SMALLINT NOT NULL,
   `Salary` DECIMAL(10,2) NULL,
-  `Hourly` DECIMAL(5,2) NULL,
-  `BonusCommission` DECIMAL(3,2) NULL,
-  `Personaltimeoff` SMALLINT NOT NULL,
+  `Hourly` DECIMAL(10,2) NULL,
+  `Signbonus` DECIMAL(10,2) NULL,
+  `Yearendbonus` DECIMAL(3,2) NULL,
+  `Pto` SMALLINT NULL,
+  `PromotionOpt` VARCHAR(3) NULL,    
   `Pension`  DECIMAL(3,2) NULL,
   `ReimburseExp` DECIMAL(8,2) NULL,
-  `Relocate` VARCHAR(3) NOT NULL,
-  `PaidRelocate` DECIMAL(10,2) NULL,
-  `Stocks`  VARCHAR(3) NOT NULL,
+  `Relocate` VARCHAR(3) NULL,
+  `PaidRelocate` VARCHAR(3) NULL,
+  `Stocks`  VARCHAR(3) NULL,
   `Active` SMALLINT NOT NULL,
   PRIMARY KEY (`OfferID`),
   UNIQUE INDEX `OfferID_UNIQUE` (`OfferID` ASC))
@@ -186,14 +163,11 @@ CREATE TABLE IF NOT EXISTS `cjodb`.`Major` (
 ENGINE = InnoDB;
 
 
-Insert into user (LocationID,Fullname,Username,Password,Email)
-Values(1,'Tyrone Russ','tyroneruss','rhouse11','tyroneruss@outlook.com');
+Insert into user (RoleID,Username,Password,Email,Active)
+Values(2,'tyroneruss','rhouse11','tyroneruss@outlook.com',1);
 
-Insert into user (LocationID,Fullname,Username,Password,Email)
-Values(1,'Travis McKenzie','tyroneruss','rhouse11','tyronerus@outlook.com');
+Insert into user (RoleID,Username,Password,Email,Active)
+Values(1,'mchukes','mchukes','mchukes@outlook.com',1);
 
-Insert into user (LocationID,Fullname,Username,Password,Email)
-Values(1,'Mike Chukes','mchukes','mchukes','mchukes@outlook.com');
-
-Insert into user (LocationID,Fullname,Username,Password,Email)
-Values(1,'Terry Russ','truss','','attorneyruss@outlook.com');
+Insert into user (RoleID,Username,Password,Email,Active)
+Values(1,'terryruss','rhouse11','attorneyruss@outlook.com',1);
