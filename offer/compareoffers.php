@@ -42,7 +42,7 @@
             <li><a href="./createoffers.php"><b>Create Job Offers</b></a></li>
             <li><a class="active"><b>Compare Job Offers</b></a></li>
             <li><a href="./evaloffer.php"><b>Evaluate Offer</b></a></li>
-            <li><a href="./convertoffers.php"><b>Convert to Hourly Wages</b></a></li>
+            <li><a href="./converttohours.php"><b>Convert to Hourly Wages</b></a></li>
             <li><a href="./viewprintoffers.php"><b>View or Print Offer(s)</b></a></li>
         </ul>           
 
@@ -121,9 +121,9 @@
                     <br>
              
                 <tr>
-                <td colspan='4' height="60" align="center" valign="top" 
+                <td colspan='4' height="60" align="left" valign="top" 
                   style="font-family: Times New Roman; font-size: 20px;" >
-                   <br>
+                   <br>&nbsp;&nbsp;&nbsp;
                    <input type="button" value="BACK" 
                    onclick="window.location.href='javascript:history.back()'"                          
                    style="color: white; height: 32px; width: 125px; 

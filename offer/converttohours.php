@@ -12,7 +12,6 @@
             require_once('../includes/database.php');
             session_start();
         ?>
-        
     </head>
    
 <body>
@@ -43,24 +42,24 @@
             <li><a href="./createoffers.php"><b>Create Job Offers</b></a></li>
             <li><a href="./compareoffers.php"><b>Compare Job Offers</b></a></li>
             <li><a href="./evaloffer.php"><b>Evaluate Offer</b></a></li>
-            <li><a href="./converttohours.php"><b>Convert to Hourly Wages</b></a></li>
-            <li><a class="active"><b>View or Print Offer(s)</b></a></li>
+            <li><a class="active"><b>Convert to Hourly Wages</b></a></li>
+            <li><a href="./viewprintoffers.php"><b>View or Print Offer(s)</b></a></li>
         </ul>           
 
     <table width="1200"> 
         <tr> 
             <td width="20%"> 
-                <br><br><br>          
+               <br><br><br>          
                <?php include '../includes/nav_links.php'; ?>            
             </td>
-            <td width="80%" align="left"  valign="top" >    
-        <br><br>
-            <h1 id="caption_h1">View or Print Offer(s)</h1>
-            <form action="" method="POST">
-            <table border="0" id="cmpformtable">                
+            <td width="80%" align="left"  valign="top" >
+                <br><br>          
+                <h1 id="caption_h1">Convert FT Offers to Hourly Rate</h1>
+            <form action="buildMailer.php" method="POST">
+            <table border="0" id="cmpformtable" width="600">                
               <tr>
                    <td colspan="4" align="center">            
-                        <h1 id="title_h1">Select Offer(s) to View/Print</h1>  
+                       <h1 id="title_h1"><B>Fulltime Conversion to Hourly Rate</B></h1>
                    </td>
                </tr>
             <?php 
@@ -81,10 +80,7 @@
             ?>
                     <tr>
                         <td align="left" height="30" valign="center" style="color: #660000; font-family: Times New Roman; font-size: 18px">
-                            <b>Select</b>
-                        </td>
-                        <td align="left" height="30" valign="center" style="color: #660000; font-family: Times New Roman; font-size: 18px">
-                            <b>&nbsp;&nbsp;Item#</b>
+                            <b>&nbsp;&nbsp;ID#</b>
                         </td>
                         <td align="left" height="30" valign="center" style="color: #660000; font-family: Times New Roman; font-size: 18px">
                             <b>Company</b>
@@ -92,28 +88,47 @@
                         <td align="left" height="30" valign="center" style="color: #660000; font-family: Times New Roman; font-size: 18px">
                             <b>Position</b>
                         </td>
+                        <td align="right" height="30" valign="center" style="color: #660000; font-family: Times New Roman; font-size: 18px">
+                            <b>FT Salary</b>&nbsp;&nbsp;
+                        </td>
+                        <td align="left" height="30" valign="center" style="color: #660000; font-family: Times New Roman; font-size: 18px">
+                            <b>Hourly Rate</b>
+                        </td>
                    </tr>               
             <?php 
                 $i = 0;
                 while ($row = mysqli_fetch_array($result)) {
                     $i = $i + 1;
+                    // Calculate hourly rates
+                    $HourlyRate =  $row['Salary']/52/40;
+                   
             ?>
                    <tr>
-                        <td width="10%" height="27px" align="center" style="background-color: white;"> 
-                            <input type="checkbox" name="offer<?php echo $i; ?>"
-                             value="ON" style="height: 20px; width: 20px"/> 
-                        </td>
                         <td width="10%" height="27px" align="center" valign="center" 
                             style="background-color: white; font-family: Times New Roman; font-size: 18px">
                             &nbsp;&nbsp;<a href="<?php echo ''; ?>" style="color: #660000"><?php echo $i; ?></a>
                         </td>
-                        <td width="30%" height="27px" align="left" valign="center" 
+                        <td width="25%" height="27px" align="left" valign="center" 
                             style="background-color: white; font-family: Times New Roman; font-size: 18px">
                            <?php echo $row['Company']; ?>
                         </td>
-                        <td width="50%" height="27px" align="left" valign="center" 
+                        <td width="35%" height="27px" align="left" valign="center" 
                             style="background-color: white; font-family: Times New Roman; font-size: 18px">
                            <?php echo $row['Position']; ?> &nbsp;
+                        </td>
+                        <td width="15%" height="27px" align="right" valign="center" 
+                            style="background-color: white; font-family: Times New Roman; font-size: 18px">
+                           <?php 
+                                // let's print the international format for the en_US locale
+                                echo $row['Salary'];                                                   
+                           ?> &nbsp;
+                        </td>
+                        <td width="20%" height="27px" align="right" valign="center" 
+                            style="background-color: white; font-family: Times New Roman; font-size: 18px">
+                           <?php 
+                                // let's print the international format for the en_US locale
+                                echo '$' . floor($HourlyRate * 100)/100 . '/hr';                                                                            
+                           ?> &nbsp;
                         </td>
                     </tr>
                 <?php } 
@@ -122,15 +137,11 @@
                     <br>
              
                 <tr>
-                <td colspan='4' height="60" align="center" valign="top" 
+                <td colspan='4' height="60" align="left" valign="top" 
                   style="font-family: Times New Roman; font-size: 20px;" >
-                   <br>
+                   <br>&nbsp;&nbsp;&nbsp;
                    <input type="button" value="BACK" 
                    onclick="window.location.href='javascript:history.back()'"                          
-                   style="color: white; height: 32px; width: 125px; 
-                   background-color:  DodgerBlue" />
-                   
-                   <input type="submit" value="VIEW"  
                    style="color: white; height: 32px; width: 125px; 
                    background-color:  DodgerBlue" />
                    <br><br>
@@ -141,8 +152,8 @@
             </td>
         </tr>
     </table>
-    
-    </div>
+</div>     
+   
 </div>
 </body>
 </html>

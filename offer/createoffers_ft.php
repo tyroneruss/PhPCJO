@@ -27,7 +27,7 @@
 <div align="center">
     <div class="tabbable">
         <ul class="tabs">
-            <li><a href="../index/.php" 
+            <li><a href="./home.php" 
                    style="background-color: #f2f2f2; color: black" >
                     <b>Home</b>
                 </a>
@@ -35,7 +35,7 @@
             <li><a class="active" ><b>Create Job Offers</b></a></li>
             <li><a href="./compareoffers.php"><b>Compare Job Offers</b></a></li>
             <li><a href="./evaloffer.php"><b>Evaluate an Offer</b></a></li>
-            <li><a href="./convertoffers.php"><b>Convert to Hourly Wages</b></a></li>
+            <li><a href="./converttohours.php"><b>Convert to Hourly Wages</b></a></li>
             <li><a href="./viewprintoffers.php"><b>View or Print Offer(s)</b></a></li>
         </ul>              
         <table width="1200"> 

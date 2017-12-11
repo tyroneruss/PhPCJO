@@ -44,7 +44,7 @@
         <div align="center">
             <div class="tabbable">
                 <ul class="tabs">
-                    <li><a href="home.php" 
+                    <li><a href="./home.php" 
                            style="background-color: #f2f2f2; color: black" >
                             <b>Home</b>
                         </a>
@@ -177,8 +177,9 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan='2' height="40" align="center" valign="top" 
+                                <td colspan='2' height="40" align="left" valign="top" 
                                     style="font-family: Times New Roman; font-size: 20px;" >
+                                    &nbsp;&nbsp;&nbsp;
                                     <input type="button" value="BACK" 
                                            onclick="window.location.href = 'javascript:history.back()'"                          
                                            style="color: white; height: 32px; width: 135px; 

@@ -12,7 +12,6 @@
             require_once('../includes/database.php');
             session_start();
         ?>
-        
     </head>
    
 <body>
@@ -30,6 +29,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 <script>
+  
 </script>
   
 <div align="center">
@@ -43,26 +43,24 @@
             <li><a href="./createoffers.php"><b>Create Job Offers</b></a></li>
             <li><a href="./compareoffers.php"><b>Compare Job Offers</b></a></li>
             <li><a href="./evaloffer.php"><b>Evaluate Offer</b></a></li>
-            <li><a href="./converttohours.php"><b>Convert to Hourly Wages</b></a></li>
-            <li><a class="active"><b>View or Print Offer(s)</b></a></li>
+            <li><a class="active"><b>Convert to Hourly Wages</b></a></li>
+            <li><a href="./viewprintoffers.php"><b>View or Print Offer(s)</b></a></li>
         </ul>           
 
     <table width="1200"> 
         <tr> 
             <td width="20%"> 
                 <br><br><br>          
-               <?php include '../includes/nav_links.php'; ?>            
+                <?php include '../includes/nav_links.php'; ?>            
             </td>
-            <td width="80%" align="left"  valign="top" >    
-        <br><br>
-            <h1 id="caption_h1">View or Print Offer(s)</h1>
-            <form action="" method="POST">
-            <table border="0" id="cmpformtable">                
-              <tr>
-                   <td colspan="4" align="center">            
-                        <h1 id="title_h1">Select Offer(s) to View/Print</h1>  
-                   </td>
-               </tr>
+            <td width="80%" align="left"  valign="top" >
+                <br><br>     
+            <table width="650"> 
+                <tr>
+                    <td width="80%" align="left">    
+                        <h1 id="caption_h1">Converting Full Time Pay to Hourly Rate</h1>  
+                    </td>
+                </tr>
             <?php 
                           
                 $ID = $_SESSION['userID'];
@@ -99,7 +97,7 @@
                     $i = $i + 1;
             ?>
                    <tr>
-                        <td width="10%" height="27px" align="center" style="background-color: white;"> 
+                        <td width="5%" height="27px" align="center" style="background-color: white;"> 
                             <input type="checkbox" name="offer<?php echo $i; ?>"
                              value="ON" style="height: 20px; width: 20px"/> 
                         </td>
@@ -107,11 +105,11 @@
                             style="background-color: white; font-family: Times New Roman; font-size: 18px">
                             &nbsp;&nbsp;<a href="<?php echo ''; ?>" style="color: #660000"><?php echo $i; ?></a>
                         </td>
-                        <td width="30%" height="27px" align="left" valign="center" 
+                        <td width="40%" height="27px" align="left" valign="center" 
                             style="background-color: white; font-family: Times New Roman; font-size: 18px">
                            <?php echo $row['Company']; ?>
                         </td>
-                        <td width="50%" height="27px" align="left" valign="center" 
+                        <td width="40%" height="27px" align="left" valign="center" 
                             style="background-color: white; font-family: Times New Roman; font-size: 18px">
                            <?php echo $row['Position']; ?> &nbsp;
                         </td>
@@ -119,29 +117,12 @@
                 <?php } 
                     $mysqli->close();
                   ?> 
-                    <br>
-             
-                <tr>
-                <td colspan='4' height="60" align="center" valign="top" 
-                  style="font-family: Times New Roman; font-size: 20px;" >
-                   <br>
-                   <input type="button" value="BACK" 
-                   onclick="window.location.href='javascript:history.back()'"                          
-                   style="color: white; height: 32px; width: 125px; 
-                   background-color:  DodgerBlue" />
-                   
-                   <input type="submit" value="VIEW"  
-                   style="color: white; height: 32px; width: 125px; 
-                   background-color:  DodgerBlue" />
-                   <br><br>
-                </td>
-            </tr>
             </table>
-            </form>
+
             </td>
         </tr>
     </table>
-    
+        
     </div>
 </div>
 </body>
