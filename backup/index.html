@@ -9,22 +9,7 @@ and open the template in the editor.
         <script src="../js/jquery-3.2.1.min.js"></script>
     </head>
     <body>
-        <script>
-            function sendajax() {
-                
-                $.ajax({
-                    url:'process_new.php',
-                    type:'POST',
-                    data:"name=Tyrone&email=abc@gmail.com",
-                    success: function(response){
-                        $("#response").text(response);
-                    }               
-                });
-            };
-         
-        </script>
-               
-        <div id="response"> </div>
-        <input type="button" onclick="sendajax()" value="Send Ajax Request" />
+        Hello world ...
+
     </body>
 </html>

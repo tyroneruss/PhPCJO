@@ -78,6 +78,7 @@ CREATE TABLE IF NOT EXISTS `CJOdb`.`offer` (
   `Position` VARCHAR(80) NOT NULL,
   `Industry` SMALLINT NOT NULL,
   `Salary` DECIMAL(10,2) NULL,
+  `Normalworkhours` SMALLINT NOT NULL,
   `Hourly` DECIMAL(10,2) NULL,
   `Signbonus` DECIMAL(10,2) NULL,
   `Yearendbonus` DECIMAL(3,2) NULL,

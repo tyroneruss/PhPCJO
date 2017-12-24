@@ -99,7 +99,7 @@
                     $i = $i + 1;
             ?>
                    <tr>
-                        <td width="10%" height="27px" align="center" style="background-color: white;"> 
+                        <td width="10%" height="27px" align="center" style="background-color: white"> 
                             <input type="checkbox" name="offer<?php echo $i; ?>"
                              value="ON" style="height: 20px; width: 20px"/> 
                         </td>

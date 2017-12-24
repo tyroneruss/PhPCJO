@@ -48,51 +48,50 @@
                 <table width="650"> 
                     <tr>
                         <td>
-                            <br><h1 id="caption_h1">Get   Started with Comparing Offers</h1>
+                            <br><h1 id="caption_h1">Get Started Comparing Offers</h1>
                         </td>
                     </tr>
                     <tr>
                         <td  style="font-family: Times New Roman; font-size: 16px">
                             <br>
-                            <font size="4" color="darkgrey"><b>Comparing Job Offers</b></font>
+                            <font size="5" color="darkgrey"><b>Comparing Job Offers</b></font>
                             <br>             
-                               Discuss the purpose of the site and how the evaluation and comparing of offers work.  A lot 
-                               content will added here.
+                               Many candidates make the mistake of basing their decisions with too much 
+                               weight placed on base salary. This may be attributed to our emotional 
+                               attachment to numbers and compensation “milestones” (usually round numbers), 
+                               the perception of status that results from salary, and the inability of 
+                               candidates to accurately gather and calculate the details of a 
+                               comprehensive package.
                         </td>
                     </tr>
                     <tr>
-                        <td  height='50' style="font-family: Times New Roman; font-size: 16px">
+                        <td  style="font-family: Times New Roman; font-size: 16px">
                             <br><br>
-                            <font size="4" color="darkgrey"><b>ADD CONTENT</b></font>
-                            <br>              
+                            <font size="5" color="darkgrey"><b>Evaluating Job Offers</b></font>
+                            <br>             
+                               When evaluating job offers, there are so many factors that determine whether or not you’ll accept. Just think about it. Culture. Benefits. Work-life balance. Salary. Salary. Did I mention salary? 
+                               While it might sound like I’m repeating myself, I find that most people are hyper focused on a number without looking at the full picture.                         
                         </td>
                     </tr>
                     <tr>
-                        <td  height='50' style="font-family: Times New Roman; font-size: 16px">
+                        <td  style="font-family: Times New Roman; font-size: 16px">
                             <br><br>
-                            <font size="4" color="darkgrey"><b>ADD CONTENT</b></font>
-                            <br>              
+                            <font size="5" color="darkgrey"><b>Accepting a Job Offer</b></font>
+                            <br>             
+                               When accepting a job offer, there are so many factors that determine whether or not you’ll accept. Just think about it. Culture. Benefits. Work-life balance. Salary. Salary. Did I mention salary? 
+                               While it might sound like I’m repeating myself, I find that most people are hyper focused on a number without looking at the full picture.                         
                         </td>
                     </tr>
                     <tr>
-                        <td  height='50' style="font-family: Times New Roman; font-size: 16px">
+                        <td  style="font-family: Times New Roman; font-size: 16px">
                             <br><br>
-                            <font size="4" color="darkgrey"><b>ADD CONTENT</b></font>
-                            <br>              
-                        </td>
-                    </tr>
-                    <tr>
-                        <td  height='50' style="font-family: Times New Roman; font-size: 16px">
-                            <br><br>
-                            <font size="4" color="darkgrey"><b>ADD CONTENT</b></font>
-                            <br>              
-                        </td>
-                    </tr>
-                    <tr>
-                        <td  height='50' style="font-family: Times New Roman; font-size: 16px">
-                            <br><br>
-                            <font size="4" color="darkgrey"><b>ADD CONTENT</b></font>
-                            <br>              
+                            <font size="5" color="darkgrey"><b>Converting Full Time Pay to Hourly Rate</b></font>
+                            <br>             
+                            To put a value on time for offer comparison, a quick 
+                            calculation to convert salary into dollars per hour can be a telling 
+                            figure. All else being equal, that 80K offer with a 40 hours work week is 
+                            more per hour than the 100K offer at 55 hours. Estimates of work 
+                            hours may not be accurate, so multiple data sources can help.  
                         </td>
                     </tr>
                 </table>

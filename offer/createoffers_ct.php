@@ -56,23 +56,33 @@
                                 <td colspan="3" height="20">
                                 </td>
                             </tr>                             
-                            <tr>
+                            <tr height="30">
                                 <td width="10%" >
                                 </td>
-                                <td width="15%" style="font-family: Times New Roman; font-size: 15px">
-                                      Base Salary<font color="red">*</font> 
+                                <td width="25%" style="font-family: Times New Roman; font-size: 15px">
+                                      Hourly Wage<font color="red">*</font> 
                                  </td>
-                                 <td width="75%" style="font-family: Times New Roman; font-size: 15px">
-                                      <input type="text" name="salary" value="" size="7" />                                      
+                                 <td width="65%" style="font-family: Times New Roman; font-size: 15px">
+                                      <input type="text" name="salary" value="" size="7" />/Hour                                   
                                  </td>
                             </tr>
-                            <tr>
+                            <tr height="30">
                                 <td width="10%" >
                                 </td>
-                                <td width="15%" style="font-family: Times New Roman; font-size: 15px">
+                                <td width="25%" style="font-family: Times New Roman; font-size: 15px">
+                                      Length of Contract<font color="red">*</font> 
+                                 </td>
+                                 <td width="65%" style="font-family: Times New Roman; font-size: 15px">
+                                      <input type="text" name="lrncontract" value="" size="7" /> (Months)                                  
+                                 </td>
+                            </tr>
+                            <tr height="30">
+                                <td width="10%" >
+                                </td>
+                                <td width="25%" style="font-family: Times New Roman; font-size: 15px">
                                     Contract to Perm<font color="red">*</font>
                                 </td>
-                                <td colspan='75#'  weight='40%' height='30'> 
+                                <td colspan='65#'  weight='40%' height='30'> 
                                     <select name="promotion" style="width: 55px; height: 25px">
                                         <option value="No">No</option>
                                         <option value="Yes">Yes</option>
@@ -83,9 +93,26 @@
                                 <td width="10%" >
                                 </td>
                                 <td width="20%" style="font-family: Times New Roman; font-size: 15px">
-                                    Relocating<font color="red">*</font>
+                                    Normal work week<font color="red">*</font>
                                 </td>
                                 <td colspan='79#'  weight='40%' height='30'> 
+                                    <select name="normalworkhours" style="width: 55px; height: 25px" required >
+                                        <option value="40">40</option>
+                                        <option value="45">45</option>
+                                        <option value="50">50</option>
+                                        <option value="55">55</option>
+                                        <option value="60">60</option>
+                                        <option value="65">65</option>
+                                    </select> (Hours)
+                                  </td>
+                            </tr>
+                            <tr height="30">
+                                <td width="10%" >
+                                </td>
+                                <td width="25%" style="font-family: Times New Roman; font-size: 15px">
+                                    Relocating<font color="red">*</font>
+                                </td>
+                                <td colspan='65#'  weight='40%' height='30'> 
                                     <select name="relocating" style="width: 55px; height: 25px">
                                         <option value="No">No</option>
                                         <option value="Yes">Yes</option>

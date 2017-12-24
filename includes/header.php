@@ -1,4 +1,4 @@
-<!-- Header end from BasicPageHeader.tpl -->
+<!-- Header end from BasicPageHeader.tpl TM<font size="5">&#8482</font>-->
 <html>
     <head>
         <title>Compare Job Offers </title>

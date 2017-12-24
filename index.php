@@ -70,10 +70,11 @@
                             <br><br>
                             <font size="4" color="darkgrey"><b>Converting Full Time Pay to Hourly Contract Rate</b></font>
                             <br>             
-                            Multiple people asked me this week how much they should charge for an hourly 
-                            development engagement, trying to figure out what’s fair. They all know their 
-                            full time salary range, but didn’t know how to translate that into self-employed 
-                            hourly rate.   
+                            To put a <b>value on time</b> for offer comparison, a quick 
+                            calculation to convert salary into dollars per hour can be a telling 
+                            figure. All else being equal, that 80K offer with a 40 hours work week is 
+                            more per hour than the 100K offer at 55 hours. Estimates of work 
+                            hours may not be accurate, so multiple data sources can help.  
                         </td>
                     </tr>
                  </table>

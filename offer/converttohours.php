@@ -100,7 +100,8 @@
                 while ($row = mysqli_fetch_array($result)) {
                     $i = $i + 1;
                     // Calculate hourly rates
-                    $HourlyRate =  $row['Salary']/52/40;
+                    
+                    $HourlyRate =  $row['Salary']/52/$row['Normalworkhours'];
                    
             ?>
                    <tr>

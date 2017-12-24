@@ -50,7 +50,7 @@
                     <tr>                       
                         <td colspan="2" align="center">                    
                           <h1 id="title_h1">Enter Job Compensation</h1>'                                   
-                          <form action="./createoffers_2.php" method="POST" >
+                          <form action="./db/insertFTofferDb.php" method="POST" >
                           <table border="0" width="600" style="background-color: white">
                             <tr >
                                 <td colspan="3" height="20">
@@ -95,7 +95,7 @@
                                 </td>
                                 <td colspan='75#'  weight='40%' height='30'> 
                                     <input type="text" name="pto" value="" size="3" /> 
-                                    &nbsp;&nbsp;(in weeks)
+                                    &nbsp;&nbsp;(Weeks)
                                     &nbsp;&nbsp;&nbsp;&nbsp;
                                     Promotion Opportunity
                                     <select name="promotion" style="width: 55px; height: 25px">
@@ -115,6 +115,20 @@
                                         <option value="No">No</option>
                                         <option value="Yes">Yes</option>
                                     </select>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    Normal work week
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <select name="normalworkhours" style="width: 55px; height: 25px" required >
+                                        <option value="40">40</option>
+                                        <option value="45">45</option>
+                                        <option value="50">50</option>
+                                        <option value="55">55</option>
+                                        <option value="60">60</option>
+                                        <option value="65">65</option>
+                                    </select> (Hours)
                                   </td>
                             </tr>
                             <tr >
