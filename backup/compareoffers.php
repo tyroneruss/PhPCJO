@@ -55,7 +55,7 @@
             <td width="80%" align="left"  valign="top" >
                 <br><br>          
                 <h1 id="caption_h1">Compare Job Offers</h1>
-            <form action="showoffers.php" method="POST">
+            <form action="buildMailer.php" method="POST">
             <table border="0" id="cmpformtable">                
               <tr>
                    <td colspan="4" align="center">            

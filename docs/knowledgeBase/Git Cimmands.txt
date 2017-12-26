@@ -1,0 +1,5 @@
+View Git tags
+git log --tags --simplify-by-decoration --pretty="format:%ai %d"
+
+Create Git tags
+git tag -a cjo_build_1.1

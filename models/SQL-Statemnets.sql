@@ -1,18 +1,20 @@
--- Db statements 
+select OfferID,Salary,Signbonus,Yearendbonus,Pto,Medicaloffered,PromotionOpt,
+       PaidRelocate,Pension,Stocks,401k 
+from offer
+Where OfferID=1
 
--- Insert Offers
-INSERT INTO offer (UserID,ColID,OfferType,Company,Position,Industry,Salary,Hourly,Signbonus,Yearendbonus,Pto,
-                   PromotionOpt,Pension,Relocate,Stocks,Active)
-Values (2,20,'FT','Intel Corp','Lead Software Engineer',5,100000,0,0,0.00,3,'Yes',0.06,'No','No',1)
+-- Insert Offer
+INSERT INTO offer (UserID,ColID,OfferType,Company,Position,
+                    Industry,Salary,Hourly,Normalworkhours,Signbonus,
+                    Yearendbonus,Stocks,401k,Pension,Pto,
+                    Medicaloffered,PromotionOpt,ReimburseExp,Relocate,PaidRelocate,Active)
+Values (2,20,'FT','IBM Corp','Software Engineer',5,90000,0.00,40,5000,'No','Yes',5.5,'Yes',3,'No','No',0.00,'No','No',1);
 
-INSERT INTO offer (UserID,ColID,OfferType,Company,Position,Industry,Salary,Hourly,Signbonus,Yearendbonus,Pto,
-                   PromotionOpt,Pension,Relocate,Stocks,Active)
-Values (2,20,'FT','Intel Corp','Lead Software Engineer',5,90000,0,0,0.00,4,'Yes',0.06,'No','No',1)
-
-INSERT INTO offer (UserID,ColID,OfferType,Company,Position,Industry,Salary,Hourly,Signbonus,Yearendbonus,Pto,
-                   PromotionOpt,Pension,Relocate,Stocks,Active)
-Values (2,201,'FT','Intel Corp','Lead Software Engineer',5,115000,0,0,0.00,2,'No',0.00,'Yes','No',1)
-
+INSERT INTO offer (UserID,ColID,OfferType,Company,Position,
+                    Industry,Salary,Hourly,Normalworkhours,Signbonus,
+                    Yearendbonus,Stocks,401k,Pension,Pto,
+                    Medicaloffered,PromotionOpt,ReimburseExp,Relocate,PaidRelocate,Active)
+Values (2,20,'FT','Home Deopt','Lead Software Engineer',5,125000,0.00,40,15000,'Yes','Yes',5.5,'Yes',3,'Yes','No',0.00,'No','No',1)
 
 -- Insert profiles
 INSERT INTO profile (UserID,LocationID,Age,Gender,DateOfBirth,EmploymentStatus,EduacationLevel)
