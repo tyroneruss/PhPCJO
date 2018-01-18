@@ -1,0 +1,9 @@
+insert into offer (UserID,ColID,OfferType,Company,Position,Industry,Salary,Hourly,Signbonus,Pto,
+				   PromotionOpt,ReimburseExp,Relocate,PaidRelocate,Stocks,Active,Normalworkhours,401k,
+				   Medicaloffered,Pension,Yearendbonus)
+										
+1,2,263,FT,Intel Corp,Lead Software Engineer,5,110000,0,10000,3,Yes,,No,No,Yes,1,50,4,No,Yes,Yes
+2,2,263,FT,Amazon ,Software Engineer,5,90000,0,0,4,Yes,,No,No,No,1,60,6,Yes,,
+3,2,16,FT,Home Depot,Lead Software Engineer,5,115000,0,0,2,No,,Yes,No,No,1,40,3,Yes
+
+
