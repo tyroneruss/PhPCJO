@@ -12,26 +12,6 @@
     if ('$_POST') {   
         
         session_start();
-               /*session created*/
-        $OT  = $_SESSION['Offertype'];
-        $CP  = $_SESSION['Company'];
-        $PT  = $_SESSION['Position'];
-        $IN  = $_SESSION['Industry'];
-        $SA  = $_SESSION['Salary'];
-        $PTO = $_SESSION['Pto'];
-        $SB  = $_SESSION['Signbonus'];
-        $SK  = $_SESSION['Stocks'];
-        $PN  = $_SESSION['Pension']/100.00;
-        $ST  = $_SESSION['State'];
-        $CT  = $_SESSION['City'];
-        $RL  = $_SESSION['Relocating'];
-       
-        if ($RL == 'Yes') {
-            $PR  = $_POST['paidreimburse']; 
-        }  
-        else { 
-            $PR = 0.00; 
-        }
         
         //Check connection       
         $mysqli = db_connect();
@@ -40,48 +20,77 @@
             printf("Connect failed: %s\n", $mysqli->connect_error);
             exit();
         } 
-        
-        echo 'Salary: ' . $SA;
-        
-        $query = "Select * from col where State='" . $ST . "' and City='" . $CT . "'";
-
+              
+        $UserID = $_SESSION["userID"];
         $OT  = $_SESSION['Offertype'];
-        $CP  = $_SESSION['Company'];
+        $CO  = $_SESSION['Company'];
         $PT  = $_SESSION['Position'];
         $IN  = $_SESSION['Industry'];
-        $SA  = $_SESSION['Salary'];
-        $PTO = $_SESSION['Pto'];
-        $SB  = $_SESSION['Signbonus'];
-        $SK  = $_SESSION['Stocks'];
-        $PN  = $_SESSION['Pension']/100.00;
         $ST  = $_SESSION['State'];
         $CT  = $_SESSION['City'];
-        $RL  = $_SESSION['Relocating'];
         
-        $query   = "Insert into offer (UserID,ColID,OfferType,Company,Position,PersonalTimeOff,Pension,ReimburseExp,Relocate,)";
-        $query  .= " Values(" . $_SESSION["userID"]  . "," . $CityStateID . ",'" . $Firstname . "','";
-        $query  .= $Lastname . "','";
-        $query  .= $Gender . "','";
-        $query  .= $Employed . "',";
-        $query  .= $Educatelevel . ")";
-
+        $SA  = $_POST['salary'];
+        $PTO = $_POST['pto'];
+        $NWH = 40;
+        $SB  = $_POST['signbonus'];
+        $YB  = $_POST['yearendbonus'];        
+        $SK  = $_POST['stocks'];
+        $MO  = $_POST['medicaloffered'];
+        $PO  = $_POST['promotionopt'];
+        $FK  = $_POST['fouronek'];
+        $PN  = $_POST['pension'];
+        $RL  = $_POST['relocating'];
+        
+        echo 'State: ' . $ST . '<br>City: ' . $CT ;
+        $query = "Select * from col where State='" . $ST . "' and City='" . $CT . "'";
         $result = $mysqli->query($query);
         
-        if ($mysqli->query($query) === TRUE) {
+        echo 'Query: ' . $query;
+        $ColID = 0;
+        if ($result->num_rows != 0) {
            // echo $Username . " " . $CityStateID; 
-           $row = mysqli_fetch_array($result);
+            $row = mysqli_fetch_array($result);
  
-            echo 'ColID : ', $row['ColiD'];
-            $results->free();
-            
-            $mysqli->close(); 
-            // header('Location: ../listusers.php');                         
-        }
-        else {
-               echo 'Error inserting offer record into database, please try again later..';   
-               echo '<br>';
-               echo $query;             
-        }
-    }      
+            echo '<br>Found: ', $row['ColID'];
+            $ColID = $row['ColID'];
+        }         
+        
+        $strInsert   = "Insert into offer (UserID,ColID,OfferType,Company,Position,Industry,State,City,Salary,";
+        $strInsert  .= "Normalworkhours,Pto,Signbonus,Yearendbonus,Stocks,401k,Pension,";
+        $strInsert  .= "Medicaloffered,PromotionOpt,Relocate,Active)";
+        $strInsert  .= " Values(" . $UserID;
+        $strInsert  .= "," . $ColID;  
+        $strInsert  .= ",'" . $OT;  
+        $strInsert  .= "','" . $CO;  
+        $strInsert  .= "','" . $PT;  
+        $strInsert  .= "','" . $IN;  
+        $strInsert  .= "','" . $ST;  
+        $strInsert  .= "','" . $CT;  
+        $strInsert  .= "'," . $SA;  
+        $strInsert  .= "," . $NWH;  
+        $strInsert  .= "," . $PTO;  
+        $strInsert  .= "," . $SB;  
+        $strInsert  .= ",'" . $YB;  
+        $strInsert  .= "','" . $SK;  
+        $strInsert  .= "'," . $FK;  
+        $strInsert  .= ",'" . $PN;  
+        $strInsert  .= "','" . $MO;  
+        $strInsert  .= "','" . $PO;  
+        $strInsert  .= "','" . $RL;  
+        $strInsert  .= "',1)";  
+
+       // echo '<br>Insert string: ' . $strInsert;
+       if ($mysqli->query($strInsert) === TRUE) {
+          // success! 
+           $mysqli->close(); 
+           header('Location: ../compareoffers.php');                         
+       }
+       else {
+              echo 'Error inserting registration record into database, please try again..';   
+              echo '<br>';
+              echo $query;             
+       }
+
  
+    }
  

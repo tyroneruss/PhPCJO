@@ -55,7 +55,7 @@
             </td>
             <td width="80%" align="left"  valign="top" >    
         <br><br>
-            <h1 id="caption_h1">View or Print Offer(s)</h1>
+            <h1 id="caption_h1">Edit or View Offer(s)</h1>
             <form action="" method="POST">
             <table border="0" id="cmpformtable">                
               <tr>

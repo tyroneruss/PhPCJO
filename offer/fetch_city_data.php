@@ -14,7 +14,7 @@ if(isset($_POST['get_option']))
 
     $state = $_POST['get_option'];
     
-    $query   = "select City from costofliving where State='$state'";             
+    $query   = "select City from col where State='$state'";             
     $result  = $mysqli->query($query);
     
     while($row = mysqli_fetch_array($result))

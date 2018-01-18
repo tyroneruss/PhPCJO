@@ -68,7 +68,7 @@
                             <tr>                       
                                 <td colspan="2" align="center">  
                                     <h1 id="title_h1">Enter Job Infomation</h1>
-                                    <form action="./nav/checkoffertype.php" method="POST" >
+                                    <form action="./createoffers_ft.php" method="POST" >
                                         <table border="0" width="600" style="background-color: white">
                                             <tr >
                                                 <td colspan="3" height="20">
@@ -87,7 +87,7 @@
                                                     </select>
                                                 </td>
                                             </tr>
-                                            <tr height="30">
+                                            <tr  height='35'>
                                                 <td width="10%" style="font-family: Times New Roman; font-size: 14px">
                                                 </td>
                                                 <td width="20%" style="font-family: Times New Roman; font-size: 15px">
@@ -97,7 +97,7 @@
                                                     <input type="text" name="company" value="" size="41" />
                                                 </td>
                                             </tr>
-                                            <tr height="30">
+                                            <tr  height='35'>
                                                 <td width="10%" style="font-family: Times New Roman; font-size: 14px">
                                                 </td>
                                                 <td width="20%" style="font-family: Times New Roman; font-size: 15px">
@@ -107,7 +107,7 @@
                                                     <input type="text" name="position" value="" size="41" />
                                                 </td>
                                             </tr>
-                                            <tr height="30">
+                                            <tr  height='35'>
                                                 <td width="10%" >
                                                 </td>
                                                 <td width="20%" style="font-family: Times New Roman; font-size: 15px">
@@ -115,20 +115,20 @@
                                                 </td>
                                                 <td width="70%" style="font-family: Times New Roman; font-size: 15px">
                                                     <select name="industry" style="width: 306px; height: 25px">
-                                                        <option value="">--- Choose ---</option>
-                                                        <option>Telecommunications</option>
-                                                        <option>Universities and Academy</option>
-                                                        <option>Technology Companies</option>
-                                                        <option>Health IT</option>
-                                                        <option>Management & Project Management</option>
-                                                        <option>Mobile Development</option>
-                                                        <option>Network/System Design & Administration</option>
-                                                        <option>Programming/Software Engineering</option>
-                                                        <option>Security</option>
+                                                        <option value='0'>Choose one</option>
+                                                        <option value='1'>Telecommunications</option>
+                                                        <option value='2'>Universities and Academy</option>
+                                                        <option value='3'>Technology Companies</option>
+                                                        <option value='4'>Health IT</option>
+                                                        <option value='5'>Management & Project Management</option>
+                                                        <option value='6'>Mobile Development</option>
+                                                        <option value='7'>Network/System Design & Administration</option>
+                                                        <option value='8'>Programming/Software Engineering</option>
+                                                        <option value='9'>Security</option>
                                                     </select>
                                                 </td>
                                             </tr>
-                                            <tr height="30">
+                                            <tr  height='35'>
                                                 <td width="10%" >
                                                 </td>
                                                 <td width="20%" style="font-family: Times New Roman; font-size: 15px">
@@ -136,7 +136,7 @@
                                                 </td>
                                                 <td width="70%" style="font-family: Times New Roman; font-size: 15px">
                                                     <select name="state" onchange="fetch_select(this.value);" style="width: 100px; height: 25px" >
-                                                        <option>Select state</option>
+                                                        <option>Select</option>
                                                         <?php
                                                         require_once('../includes/database.php');
 
@@ -148,7 +148,7 @@
                                                             exit();
                                                         }
 
-                                                        $query = "select Distinct(State) from costofliving order by State";
+                                                        $query = "select Distinct(State) from col order by State";
                                                         $result = $mysqli->query($query);
 
                                                         while ($row = mysqli_fetch_array($result)) {
@@ -158,14 +158,14 @@
                                                     </select>
                                                 </td>
                                             </tr>
-                                            <tr height="30">
+                                            <tr  height='35'>
                                                 <td width="10%" >
                                                 </td>
                                                 <td width="20%" style="font-family: Times New Roman; font-size: 15px">
                                                     City<font color="red">*</font> 
                                                 </td>
                                                 <td width="70%" style="font-family: Times New Roman; font-size: 15px">
-                                                    <select id="new_select" name="city" style="width: 180px; height: 25px"  >
+                                                    <select id="new_select" name="city" style="width: 180px; height: 25px"  required>
                                                     </select>
                                                 </td>
                                             </tr>
