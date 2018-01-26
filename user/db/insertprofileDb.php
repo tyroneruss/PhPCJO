@@ -11,14 +11,7 @@
     if ('$_POST') {   
         session_start();
                /*session created*/
-        $Gender         = $_POST['gender'];           
-        $Firstname      = $_POST['firstname'];
-        $Lastname       = $_POST['lastname'];
-        $Employed       = $_POST['employed']; 
-        $Educatelevel   = $_POST['education']; 
-        $CityStateID    = $_POST['citystateID']; 
-            
-            
+        
         //Check connection       
         $mysqli = db_connect();
         /* check connection */
@@ -27,18 +20,72 @@
             exit();
         } 
 
-        $query   = "Insert into profile (UserID,LocationID,Firstname,Lastname,Gender,Employed,EduLevel)";
-        $query  .= " Values(" . $_SESSION["userID"]  . "," . $CityStateID . ",'" . $Firstname . "','";
+        $query  = "insert into user (RoleID,Username,Password,Email,Active) ";
+        $query .= "Values (1000";
+        $query .= ",'"  . $_SESSION['Username']; 
+        $query .= "','" . $_SESSION["Password"]; 
+        $query .= "','" . $_SESSION['Email'] . "',"; 
+        $query .= "1)"; 
+
+        if ($mysqli->query($query) === TRUE) {
+           // success!            
+           // session is[ started if you don't write this line can't use $_Session  global variable
+           $Email = $_SESSION['Email'];        
+        }
+        else {
+               echo 'Error inserting registration record into database, please try again..';   
+               echo '<br>';
+               echo $query;             
+        }
+
+        $Gender         = $_POST['gender'];           
+        $Firstname      = $_POST['firstname'];
+        $Lastname       = $_POST['lastname'];
+        $Education      = $_POST['education']; 
+        $Infield        = $_POST['infield']; 
+        $Yearsinfield   = $_POST['yearsinfield']; 
+        $Employed       = $_POST['employed']; 
+            
+        // Query for user ID
+        $query  = "SELECT * FROM user ";
+        $query .= "Where Email='" .  $Email . "'";        
+               
+        $result = $mysqli->query($query);
+        if ($result->num_rows != 0) {
+           
+            $row = $result->fetch_assoc();
+           
+            $_SESSION["userID"] = $row['UserID'];                     
+            // printf("%s - ",$userID);
+            $result->free();
+            
+        }
+        
+        // echo $_SESSION["userID"] . '<br>';
+        $query   = "Insert into profile (UserID,Firstname,Lastname,Gender,EduLevel,Infield,Yearsinfield,Employed)";
+        $query  .= " Values(" . $_SESSION["userID"] . ",'" . $Firstname . "','";
         $query  .= $Lastname . "','";
         $query  .= $Gender . "','";
-        $query  .= $Employed . "',";
-        $query  .= $Educatelevel . ")";
+        $query  .= $Education . "',";
+        $query  .= $Infield . ",";
+        $query  .= $Yearsinfield . ",'";
+        $query  .= $Employed . "')";
         
-        // echo "Gender: " . $Gender;
         if ($mysqli->query($query) === TRUE) {
            // echo $Username . " " . $CityStateID;                      
+            
+                   // Query for user ID
+            $query  = "SELECT * FROM profile ";
+            $query .= "Where UserID='" .  $_SESSION["userID"] . "'";        
+
+            $result = $mysqli->query($query);
+            if ($result->num_rows != 0) {
+
+                $row = $result->fetch_assoc();
+                $_SESSION["Firstname"] = $row['Firstname'];                     
+            }
             $mysqli->close(); 
-            header('Location: ../listusers.php');                         
+            header('Location: ../../offer/home.php');                         
         }
         else {
                echo 'Error inserting registration record into database, please try again later..';   

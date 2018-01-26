@@ -11,7 +11,7 @@
 
 <?php
     session_start();
-    $FirstName = $_SESSION["firstname"];                      
+    $FirstName = $_SESSION["Firstname"];                      
 
 ?>
 <div id="container">

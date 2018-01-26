@@ -12,15 +12,15 @@ if(isset($_POST['get_option']))
         exit();
     } 
 
-    $state = $_POST['get_option'];
+    $area = $_POST['get_option'];
     
-    $query   = "select City from col where State='$state'";             
+    $query   = "select Position from areaposition where Area='$area'";             
     $result  = $mysqli->query($query);
     
     while($row = mysqli_fetch_array($result))
     {
      // echo "<option>" .$row['City']."</option>";
-     echo "<option value='" .$row['City']. "'>" .$row['City']."</option>";
+     echo "<option value='" .$row['Position']. "'>" .$row['Position']."</option>";
     }
     exit;
  }

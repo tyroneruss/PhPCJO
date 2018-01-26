@@ -23,23 +23,49 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
         <script type="text/javascript">
+            function fetch_area_select(val)
+                {
+                    $.ajax({
+                        type: 'post',
+                        url: 'fetch_area_data.php',
 
-            function fetch_select(val)
-            {
-                $.ajax({
-                    type: 'post',
-                    url: 'fetch_city_data.php',
+                        data: {
+                            get_option: val
+                        },
 
-                    data: {
-                        get_option: val
-                    },
+                        success: function (response) {
+                            document.getElementById("area_select").innerHTML = response;
+                        }
+                    });
+                }
 
-                    success: function (response) {
-                        document.getElementById("new_select").innerHTML = response;
-                    }
-                });
-            }
+            function fetch_city_select(val)
+                {
+                    $.ajax({
+                        type: 'post',
+                        url: 'fetch_city_data.php',
+
+                        data: {
+                            get_option: val
+                        },
+
+                        success: function (response) {
+                            document.getElementById("city_select").innerHTML = response;
+                        }
+                    });
+                }
         </script>
+        <?php
+            require_once('../includes/database.php');
+
+            $mysqli = db_connect();
+
+            /* check connection */
+            if ($mysqli->connect_errno) {
+                printf("Connect failed: %s\n", $mysqli->connect_error);
+                exit();
+            }
+        ?>
 
         <div align="center">
             <div class="tabbable">
@@ -98,33 +124,34 @@
                                                 </td>
                                             </tr>
                                             <tr  height='35'>
-                                                <td width="10%" style="font-family: Times New Roman; font-size: 14px">
+                                                <td width="10%" >
                                                 </td>
                                                 <td width="20%" style="font-family: Times New Roman; font-size: 15px">
-                                                    Job Position<font color="red">*</font>
+                                                    Tech Area<font color="red">*</font> 
                                                 </td>
                                                 <td width="70%" style="font-family: Times New Roman; font-size: 15px">
-                                                    <input type="text" name="position" value="" size="41" />
+                                                    <select name="area" onchange="fetch_area_select(this.value);" style="width: 285x; height: 25px" >
+                                                        <option>Select</option>
+                                                    <?php
+
+                                                        $query = "select Distinct(Area) from areaposition order by Area";
+                                                        $result = $mysqli->query($query);
+
+                                                        while ($row = mysqli_fetch_array($result)) {
+                                                            echo "<option value'"  . $row['Area'] .  "' >" . $row['Area'] . "</option>";
+                                                        }
+                                                    ?>
+                                                    </select>
                                                 </td>
                                             </tr>
                                             <tr  height='35'>
                                                 <td width="10%" >
                                                 </td>
                                                 <td width="20%" style="font-family: Times New Roman; font-size: 15px">
-                                                    Industry<font color="red">*</font> 
+                                                    Job Position<font color="red">*</font> 
                                                 </td>
                                                 <td width="70%" style="font-family: Times New Roman; font-size: 15px">
-                                                    <select name="industry" style="width: 306px; height: 25px">
-                                                        <option value='0'>Choose one</option>
-                                                        <option value='1'>Telecommunications</option>
-                                                        <option value='2'>Universities and Academy</option>
-                                                        <option value='3'>Technology Companies</option>
-                                                        <option value='4'>Health IT</option>
-                                                        <option value='5'>Management & Project Management</option>
-                                                        <option value='6'>Mobile Development</option>
-                                                        <option value='7'>Network/System Design & Administration</option>
-                                                        <option value='8'>Programming/Software Engineering</option>
-                                                        <option value='9'>Security</option>
+                                                    <select id="area_select" name="position" style="width: 180px; height: 25px"  required>
                                                     </select>
                                                 </td>
                                             </tr>
@@ -135,26 +162,16 @@
                                                     State<font color="red">*</font> 
                                                 </td>
                                                 <td width="70%" style="font-family: Times New Roman; font-size: 15px">
-                                                    <select name="state" onchange="fetch_select(this.value);" style="width: 100px; height: 25px" >
+                                                    <select name="state" onchange="fetch_city_select(this.value);" style="width: 100px; height: 25px" >
                                                         <option>Select</option>
-                                                        <?php
-                                                        require_once('../includes/database.php');
-
-                                                        $mysqli = db_connect();
-
-                                                        /* check connection */
-                                                        if ($mysqli->connect_errno) {
-                                                            printf("Connect failed: %s\n", $mysqli->connect_error);
-                                                            exit();
-                                                        }
-
+                                                    <?php
                                                         $query = "select Distinct(State) from col order by State";
                                                         $result = $mysqli->query($query);
 
                                                         while ($row = mysqli_fetch_array($result)) {
                                                             echo "<option value'"  . $row['State'] .  "' >" . $row['State'] . "</option>";
                                                         }
-                                                        ?>
+                                                    ?>
                                                     </select>
                                                 </td>
                                             </tr>
@@ -165,7 +182,7 @@
                                                     City<font color="red">*</font> 
                                                 </td>
                                                 <td width="70%" style="font-family: Times New Roman; font-size: 15px">
-                                                    <select id="new_select" name="city" style="width: 180px; height: 25px"  required>
+                                                    <select id="city_select" name="city" style="width: 180px; height: 25px"  required>
                                                     </select>
                                                 </td>
                                             </tr>
