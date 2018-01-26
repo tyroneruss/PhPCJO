@@ -1,0 +1,30 @@
+Description ¶
+
+number pow ( number $base , number $exp )
+Returns base raised to the power of exp.
+
+Note:
+In PHP 5.6 onwards, you may prefer to use the ** operator.
+Parameters ¶
+
+base
+The base to use
+
+exp
+The exponent
+
+Return Values ¶
+
+base raised to the power of exp. If both arguments are non-negative integers and the result can be represented as an integer, the result will be returned with integer type, otherwise it will be returned as a float.
+
+Examples ¶
+
+Example #1 Some examples of pow()
+
+<?php
+
+var_dump(pow(2, 8)); // int(256)
+
+
+$FV = ($salary*0.06)*4
+echo PV_stocks = $FV/pow(1.3,48);

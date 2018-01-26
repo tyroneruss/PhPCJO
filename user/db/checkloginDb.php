@@ -39,42 +39,21 @@ and open the template in the editor.
             exit();
         } 
         
-        $query  = "SELECT * FROM user ";
+        $query  = "SELECT * FROM user u,profile p ";
         $query .= "Where Username='" .  $users_username; 
         $query .= "' and Password='" . $users_password . "'";        
                
         $result = $mysqli->query($query);
-        if ($result->num_rows != 0) {
-            
-             // printf("%d - %s",$result->num_rows, $query);
-           
+        if ($result->num_rows != 0) {            
             $row = $result->fetch_assoc();
-           
-            $_SESSION["userID"] = $row['UserID'];            
-            
-            // printf("%s - ",$userID);
-
-            $result->free();
-            
-            $query  = "SELECT * FROM profile ";
-            $query .= " Where UserID=" . $row['UserID'];
-            
-            printf($query);
-            $result = $mysqli->query($query);
-           
-            if ($result->num_rows != 0) {               
-                $row = $result->fetch_assoc();
-                $_SESSION["firstname"] = $row['Firstname'];                          
-                echo '<br>' . $_SESSION["firstname"];
-                header('Location: ../../offer/home.php'); 
-             } else {
-               $mysqli->close();  
-                header('Location: ../profile.php'); 
-             }
-             /* close connection */
-        } else {               
-                $mysqli->close();  
-                header('Location: ../login.php?message=Password or Username is invalid, please try again...'); 
+            $_SESSION["userID"] = $row['UserID'];                        
+            $_SESSION["firstname"] = $row['Firstname']; 
+            // echo $_SESSION["firstname"];
+            header('Location: ../../offer/home.php'); 
+        } 
+        else {               
+            $mysqli->close();  
+            header('Location: ../login.php?message=Password or Username is invalid, please try again...'); 
         }
    }
    

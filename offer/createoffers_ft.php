@@ -27,7 +27,7 @@
         $_SESSION['Offertype'] = $_POST['offertype'];      
         $_SESSION['Company']   = $_POST['company'];
         $_SESSION['Position']  = $_POST['position'];
-        $_SESSION['Industry']  = $_POST['industry'];
+        $_SESSION['Area']      = $_POST['area'];
         $_SESSION['State']     = $_POST['state'];
         $_SESSION['City']      = $_POST['city'];
         

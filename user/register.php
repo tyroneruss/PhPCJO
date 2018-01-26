@@ -1,7 +1,7 @@
     <?php include '../includes/header.php'; ?>
     <link rel="stylesheet" type="text/css" href="../css/userstyle.css">
 
-    <form action="./db/insertuserDb.php" method="POST">
+    <form action="./db/verifyuserDb.php" method="POST">
         <div id="wrapper"> 
             
             <div id="regform_bg" align="center">

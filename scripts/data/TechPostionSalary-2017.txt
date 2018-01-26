@@ -1,0 +1,82 @@
+Administration|Chief Information Officer (CIO)|175000|279000 |227000 
+Administration|Chief Technology Officer (CTO)|149000 |240000 |194500 
+Administration|Chief Security Officer|145250 |236750 |191000 
+Administration|Vice President of Information Technology|143250 |234250 |188750 
+Administration|Director of Technology|124500 |193500 |159000 
+Administration|Information Technology Manager|108000 |164750 |136375 
+Applications Development|Manager|107750 |167250 |137500 
+Applications Development|Project Manager|97250 |151750 |124500 
+Applications Development|Systems Analyst|84500 |125000 |104750 
+Applications Development|Applications Architect|124500 |178750 |151625 
+Applications Development|Business Systems Analyst|86250 |127000 |106625 
+Applications Development|CRM Business Analyst|89500 |132250 |110875 
+Applications Development|CRM Technical Developer|100000 |146000 |123000 
+Applications Development|Developer/Programmer Analyst|83000 |143250 |113125 
+Applications Development|ERP Business Analyst|95000 |137750 |116375 
+Applications Development|ERP Technical/Functional Analyst|100000 |146250 |123125 
+Applications Development|ERP Technical Developer|102750 |154250 |128500 
+Applications Development|Lead Applications Developer|115000 |167000 |141000 
+Applications Development|Mobile Applications Developer|118750 |182250 |150500 
+Applications Development|Technical Writer|56500 |89250 |72875 
+Consulting & Systems Integration|Director|126750 |198000 |162375 
+Consulting & Systems Integration|Practice Manager|127750 |180000 |153875 
+Consulting & Systems Integration|Project Manager/Senior Consultant|103750 |160500 |132125 
+Consulting & Systems Integration|Staff Consultant|81250 |121500 |101375 
+Consulting & Systems Integration|Senior IT Auditor|121000 |173500 |147250 
+Consulting & Systems Integration|IT Auditor|98500 |153000 |125750 
+Data/Database Administration|Big Data Engineer|135000 |196000 |165500 
+Data/Database Administration|Database Manager|122250 |177000 |149625 
+Data/Database Administration|Database Developer|108000 |161500 |134750 
+Data/Database Administration|Database Administrator|98500 |148500 |123500 
+Data/Database Administration|Data Analyst/Report Writer|77500 |118750 |98125 
+Data/Database Administration|Data Architect|131250 |184000 |157625 
+Data/Database Administration|Data Modeler|111000 |161500 |136250 
+Data/Database Administration|Data Scientist|116000 |163500 |139750 
+Data/Database Administration|Data Warehouse Manager|129000 |179000 |154000 
+Data/Database Administration|Data Warehouse Analyst|107500 |155750 |131625 
+Data/Database Administration|Business Intelligence Analyst|118000 |171750 |144875 
+Data/Database Administration|Electronic Data Interchange (EDI) Specialist|77500 |118750 |98125 
+Data/Database Administration|Portal Administrator|96000 |138750 |117375 
+Quality Assurance (Qa) & Testing|QA Engineer ? Manual|66250 |94500 |80375 
+Quality Assurance (Qa) & Testing|QA Engineer ? Automated|76750 |112750 |94750 
+Quality Assurance (Qa) & Testing|QA/Testing Manager|95750 |132000 |113875 
+Quality Assurance (Qa) & Testing|QA Associate/Analyst|67000 |102750 |84875 
+Web Development|Senior Web Developer|116250 |161500 |138875 
+Web Development|Web Developer|82750 |135500 |109125 
+Web Development|Front-End Web Developer|83250 |119500 |101375 
+Web Development|Web Administrator|70750 |111500 |91125 
+Web Development|Web Designer|70500 |118000 |94250 
+Web Development|E-Commerce Analyst|92000 |135000 |113500 
+Networking/Telecommunications|Network Architect|125000 |183000 |154000 
+Networking/Telecommunications|Network Manager|102250 |153000 |127625 
+Networking/Telecommunications|Network Engineer|99000 |146250 |122625 
+Networking/Telecommunications|Wireless Network Engineer|113250 |158000 |135625 
+Networking/Telecommunications|Network Administrator|78000 |117750 |97875 
+Networking/Telecommunications|Pre-Sales Engineer/Technical Engineer|92250 |140000 |116125 
+Networking/Telecommunications|Telecommunications Manager|90000 |130000 |110000 
+Networking/Telecommunications|Telecommunications Specialist|63000 |98000 |80500 
+Operations|Manager|68000 |99000 |83500 
+Operations|Computer Operator|36000 |50000 |43000 
+Operations|Mainframe Systems Programmer|64000 |89500 |76750 
+Security|Data Security Analyst|118250 |169000 |143625 
+Security|Systems Security Administrator|110500 |157500 |134000 
+Security|Network Security Administrator|107750 |155250 |131500 
+Security|Network Security Engineer|115500 |162500 |139000 
+Security|Information Systems Security Manager|136000 |191750 |163875 
+Software Development|Product Manager|107750 |159000 |133375 
+Software Development|Software Engineer|108250 |164500 |136375 
+Software Development|Software Developer|93000 |155000 |124000 
+Technical Services Help Desk & Technical Support|Manager|86000 |125500 |105750 
+Technical Services Help Desk & Technical Support|Desktop Support Analyst|55250 |82500 |68875 
+Technical Services Help Desk & Technical Support|Systems Administrator|69000 |112000 |90500 
+Technical Services Help Desk & Technical Support|Systems Engineer|86500 |130000 |108250 
+Technical Services Help Desk & Technical Support|Messaging Administrator|76000 |116000 |96000 
+Technical Services Help Desk & Technical Support|Help Desk Tier 3|61000 |80500 |70750 
+Technical Services Help Desk & Technical Support|Help Desk Tier 2|46250 |64000 |55125 
+Technical Services Help Desk & Technical Support|Help Desk Tier 1|36000 |51750 |43875 
+Technical Services Help Desk & Technical Support|Instructor/Trainer|57250 |92250 |74750 
+Technical Services Help Desk & Technical Support|PC Technician|37000 |53500 |45250
+Cloud Computing|Solutions Architect|80000|122600|158000
+Cloud Computing|Development Operations (DevOps) Engineer|65000|14300|98316
+Cloud Computing|Senior Systems Engineer|75000|148000|107437
+Cloud Computing|Cloud Support Engineer|57000|129000|89143

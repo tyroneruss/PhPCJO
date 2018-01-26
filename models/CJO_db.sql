@@ -1,14 +1,37 @@
--- Db statements 
+- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
 -- -----------------------------------------------------
--- Table `cjodb`.`Location`
+-- Schema mydb
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `cjodb`.`col` ;
+-- -----------------------------------------------------
+-- Schema cjodbtest
+-- -----------------------------------------------------
+
+CREATE SCHEMA IF NOT EXISTS `cjodbtest` DEFAULT CHARACTER SET utf8 ;
+USE `cjodbtest` ;
 
 -- -----------------------------------------------------
--- Table `cjodb`.`col`
+-- Table `cjodbtest`.`areaposition`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `cjodb`.`col` (
+CREATE TABLE IF NOT EXISTS `cjodbtest`.`areaposition` (
+  `AreaPositionID` SMALLINT(6) NOT NULL AUTO_INCREMENT,
+  `Area` VARCHAR(132) NOT NULL,
+  `Position` VARCHAR(80) NOT NULL,
+  `Salary_low` FLOAT NULL DEFAULT NULL,
+  `Salary_high` FLOAT NULL DEFAULT NULL,
+  `Salary_avg` FLOAT NULL DEFAULT NULL,
+  PRIMARY KEY (`AreaPositionID`))
+ENGINE = InnoDB;
+ALTER TABLE areaposition AUTO_INCREMENT=1;
+
+-- -----------------------------------------------------
+-- Table `cjodbtest`.`col`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `cjodbtest`.`col` (
   `ColID` SMALLINT(6) NOT NULL AUTO_INCREMENT,
   `City` VARCHAR(45) NOT NULL,
   `State` VARCHAR(2) NOT NULL,
@@ -25,150 +48,127 @@ ENGINE = InnoDB;
 ALTER TABLE col AUTO_INCREMENT=1;
 
 -- -----------------------------------------------------
--- Table `cjodb`.`costofliving`
+-- Table `cjodbtest`.`company`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `cjodb`.`costofliving` ;
-
--- -----------------------------------------------------
--- Table `cjodb`.`costofliving`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `cjodb`.`costofliving` (
-  `ColID` SMALLINT(6) NOT NULL AUTO_INCREMENT,
-  `City` VARCHAR(45) NOT NULL,
-  `State` VARCHAR(2) NOT NULL,
-  `StateTax` VARCHAR(3) NOT NULL,
-  `ColIndex` FLOAT NULL DEFAULT NULL,
-  `GroceryIndex` FLOAT NULL DEFAULT NULL,
-  `RestPriceIndex` FLOAT NULL DEFAULT NULL,
-  `PurchPowerIndex` FLOAT NULL DEFAULT NULL,
-  PRIMARY KEY (`ColID`))
+CREATE TABLE IF NOT EXISTS `cjodbtest`.`company` (
+  `CompanyID` SMALLINT(6) NOT NULL AUTO_INCREMENT,
+  `IndustryID` VARCHAR(80) NULL DEFAULT NULL,
+  `Company` VARCHAR(80) NOT NULL,
+  PRIMARY KEY (`CompanyID`))
 ENGINE = InnoDB;
-ALTER TABLE costofliving AUTO_INCREMENT=1;
+ALTER TABLE company AUTO_INCREMENT=1;
 
 -- -----------------------------------------------------
--- Table `cjodb`.`costofliving`
+-- Table `cjodbtest`.`major`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `cjodb`.`costofliving` ;
+CREATE TABLE IF NOT EXISTS `cjodbtest`.`major` (
+  `MajorID` INT(11) NOT NULL,
+  `MajorName` VARCHAR(80) NULL DEFAULT NULL,
+  PRIMARY KEY (`MajorID`))
+ENGINE = InnoDB;
+ALTER TABLE major AUTO_INCREMENT=1;
 
 -- -----------------------------------------------------
--- Table `cjodb`.`prodession`
--- Defintion: Contains 
---      Professionan Area
---      Position Title
---      Salary Range
---      Salary Index
---      Adding skills later
+-- Table `cjodbtest`.`offer`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `cjodb`.`prodession` (
-  `ProfessionID` SMALLINT(6) NOT NULL AUTO_INCREMENT,
-  `Area` VARCHAR(45) NOT NULL,
-  `Positon` VARCHAR(2) NOT NULL,
-  `MinSaiary` VARCHAR(3) NOT NULL,
--- -----------------------------------------------------
--- Table `CJOdb`.`Offer`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `CJOdb`.`offer` ;
-
-CREATE TABLE IF NOT EXISTS `CJOdb`.`offer` (
-  `OfferID` SMALLINT NOT NULL AUTO_INCREMENT,
-  `UserID` SMALLINT NOT NULL,
-  `ColID`  SMALLINT NOT NULL,
+CREATE TABLE IF NOT EXISTS `cjodbtest`.`offer` (
+  `OfferID` SMALLINT(6) NOT NULL AUTO_INCREMENT,
+  `UserID` SMALLINT(6) NOT NULL,
+  `ColID` SMALLINT(6) NOT NULL,
   `OfferType` VARCHAR(3) NOT NULL,
   `Company` VARCHAR(80) NOT NULL,
   `Position` VARCHAR(80) NOT NULL,
-  `Industry` SMALLINT NOT NULL,
-  `Salary` DECIMAL(10,2) NULL,
-  `Normalworkhours` SMALLINT NOT NULL,
-  `Hourly` DECIMAL(10,2) NULL,
-  `Signbonus` DECIMAL(10,2) NULL,
-  `Yearendbonus` DECIMAL(3,2) NULL,
-  `Pto` SMALLINT NULL,
-  `PromotionOpt` VARCHAR(3) NULL,    
-  `Pension`  DECIMAL(3,2) NULL,
-  `ReimburseExp` DECIMAL(8,2) NULL,
-  `Relocate` VARCHAR(3) NULL,
-  `PaidRelocate` VARCHAR(3) NULL,
-  `Stocks`  VARCHAR(3) NULL,
-  `Active` SMALLINT NOT NULL,
+  `Salary` FLOAT NULL DEFAULT NULL,
+  `Hourly` FLOAT NULL DEFAULT NULL,
+  `Normalworkhours` SMALLINT(6) NOT NULL,
+  `Signbonus` DECIMAL(10,2) NULL DEFAULT NULL,
+  `Yearendbonus` VARCHAR(3) NULL DEFAULT NULL,
+  `Stocks` VARCHAR(3) NULL DEFAULT NULL,
+  `401k` DECIMAL(5,2) NULL DEFAULT NULL,
+  `Pension` VARCHAR(3) NULL DEFAULT NULL,
+  `Pto` SMALLINT(6) NOT NULL,
+  `Medicaloffered` VARCHAR(3) NULL DEFAULT NULL,
+  `PromotionOpt` VARCHAR(3) NULL DEFAULT NULL,
+  `ReimburseExp` FLOAT NULL DEFAULT NULL,
+  `Relocate` VARCHAR(3) NULL DEFAULT NULL,
+  `PaidRelocate` VARCHAR(3) NULL DEFAULT NULL,
+  `Active` SMALLINT(6) NOT NULL,
+  `State` VARCHAR(3) NULL DEFAULT NULL,
+  `City` VARCHAR(80) NULL DEFAULT NULL,
+  `Area` VARCHAR(132) NULL DEFAULT NULL,
   PRIMARY KEY (`OfferID`),
   UNIQUE INDEX `OfferID_UNIQUE` (`OfferID` ASC))
 ENGINE = InnoDB;
 ALTER TABLE offer AUTO_INCREMENT=1;
 
 -- -----------------------------------------------------
--- Table `cjodb`.`Industry`
+-- Table `cjodbtest`.`profile`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `cjodb`.`Industry` ;
-
-CREATE TABLE IF NOT EXISTS `cjodb`.`Industry` (
-  `IndustryID` SMALLINT NOT NULL AUTO_INCREMENT,
-  `Industry` VARCHAR(80) NULL,
-  `SectorID` VARCHAR(80) NULL, PRIMARY KEY (`IndustryID`))
+CREATE TABLE IF NOT EXISTS `cjodbtest`.`profile` (
+  `ProfileID` SMALLINT(6) NOT NULL AUTO_INCREMENT,
+  `UserID` SMALLINT(6) NOT NULL,
+  `Firstname` VARCHAR(45) NOT NULL,
+  `Lastname` VARCHAR(45) NOT NULL,
+  `Gender` VARCHAR(10) NULL DEFAULT NULL,
+  `Employed` VARCHAR(3) NOT NULL,
+  `EduLevel` VARCHAR(45) NULL DEFAULT NULL,
+  `Infield` SMALLINT(6) NULL DEFAULT NULL,
+  `Yearsinfield` SMALLINT(6) NULL DEFAULT NULL,
+  PRIMARY KEY (`ProfileID`))
 ENGINE = InnoDB;
-ALTER TABLE Industry AUTO_INCREMENT=1;
+ALTER TABLE profile AUTO_INCREMENT=1;
 
 -- -----------------------------------------------------
--- Table `cjodb`.`Company`
+-- Table `cjodbtest`.`role`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `cjodb`.`Company` ;
-
-CREATE TABLE IF NOT EXISTS `cjodb`.`Company` (
-  `CompanyID` SMALLINT NOT NULL AUTO_INCREMENT,
-  `CompanyName` VARCHAR(80) NULL,
-  `IndustryID` VARCHAR(80) NULL,
-  PRIMARY KEY (`CompanyID`))
+CREATE TABLE IF NOT EXISTS `cjodbtest`.`role` (
+  `RoleID` SMALLINT(6) NOT NULL AUTO_INCREMENT,
+  `Title` VARCHAR(64) NOT NULL,
+  `Description` VARCHAR(255) NULL DEFAULT NULL,
+  PRIMARY KEY (`RoleID`))
 ENGINE = InnoDB;
-ALTER TABLE Company AUTO_INCREMENT=1;
+ALTER TABLE role AUTO_INCREMENT=1;
 
 -- -----------------------------------------------------
--- Table `cjodb`.`Skill`
+-- Table `cjodbtest`.`sector`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `cjodb`.`Skill` ;
+CREATE TABLE IF NOT EXISTS `cjodbtest`.`sector` (
+  `SectorID` INT(11) NOT NULL,
+  `SectorName` VARCHAR(80) NULL DEFAULT NULL,
+  `Damand` FLOAT NULL DEFAULT NULL,
+  PRIMARY KEY (`SectorID`))
+ENGINE = InnoDB;
+ALTER TABLE sector AUTO_INCREMENT=1;
 
-CREATE TABLE IF NOT EXISTS `cjodb`.`Skill`(
-  `SkillID` SMALLINT NOT NULL AUTO_INCREMENT,
-  `SectorID` INT NOT NULL,
+
+-- -----------------------------------------------------
+-- Table `cjodbtest`.`skill`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `cjodbtest`.`skill` (
+  `SkillID` INT(11) NOT NULL,
+  `SectorID` INT(11) NOT NULL,
   `SkillName` VARCHAR(64) NOT NULL,
-  `Sector_SectorID` INT NOT NULL,
-  `User_UserID` INT NOT NULL,
+  `Sector_SectorID` INT(11) NOT NULL,
+  `User_UserID` INT(11) NOT NULL,
   PRIMARY KEY (`SkillID`))
 ENGINE = InnoDB;
-ALTER TABLE Skill AUTO_INCREMENT=1;
+ALTER TABLE skill AUTO_INCREMENT=1;
+
 
 -- -----------------------------------------------------
--- Table `cjodb`.`Education`
+-- Table `cjodbtest`.`user`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `cjodb`.`Education` ;
-
-CREATE TABLE IF NOT EXISTS `cjodb`.`Education` (
-  `EducationID` INT NOT NULL,
-  `UserID` 
-  `EducationType` VARCHAR(45) NOT NULL,
-  `DegreeType` VARCHAR(10)NOT NULL COMMENT 'AA,AS,BA,BS,MS,PhD,JD,MS,MBA',
-  `MajorID` INT NULL,
-  `SchoolName` VARCHAR(80) NULL,
-  `SchoolRanked` INT NULL,
-  PRIMARY KEY (`EducationID`))
+CREATE TABLE IF NOT EXISTS `cjodbtest`.`user` (
+  `UserID` SMALLINT(6) NOT NULL AUTO_INCREMENT,
+  `RoleID` SMALLINT(6) NOT NULL,
+  `Username` VARCHAR(40) NOT NULL,
+  `Password` VARCHAR(30) NOT NULL,
+  `Email` VARCHAR(80) NOT NULL,
+  `Active` SMALLINT(6) NOT NULL,
+  PRIMARY KEY (`UserID`),
+  UNIQUE INDEX `UserID_UNIQUE` (`UserID` ASC),
+  UNIQUE INDEX `Username_UNIQUE` (`Username` ASC))
 ENGINE = InnoDB;
-ALTER TABLE Education AUTO_INCREMENT=1;
-
--- -----------------------------------------------------
--- Table `cjodb`.`Major`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `cjodb`.`Major` ;
-
-CREATE TABLE IF NOT EXISTS `cjodb`.`Major` (
-  `MajorID` INT NOT NULL,
-  `MajorName` VARCHAR(80) NULL,
-  PRIMARY KEY (`MajorID`))
-ENGINE = InnoDB;
+ALTER TABLE user AUTO_INCREMENT=1;
 
 
-Insert into user (RoleID,Username,Password,Email,Active)
-Values(2,'tyroneruss','rhouse11','tyroneruss@outlook.com',1);
-
-Insert into user (RoleID,Username,Password,Email,Active)
-Values(1,'mchukes','mchukes','mchukes@outlook.com',1);
-
-Insert into user (RoleID,Username,Password,Email,Active)
-Values(1,'terryruss','rhouse11','attorneyruss@outlook.com',1);

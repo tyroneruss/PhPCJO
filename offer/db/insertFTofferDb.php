@@ -25,7 +25,7 @@
         $OT  = $_SESSION['Offertype'];
         $CO  = $_SESSION['Company'];
         $PT  = $_SESSION['Position'];
-        $IN  = $_SESSION['Industry'];
+        $AR  = $_SESSION['Area'];
         $ST  = $_SESSION['State'];
         $CT  = $_SESSION['City'];
         
@@ -55,7 +55,7 @@
             $ColID = $row['ColID'];
         }         
         
-        $strInsert   = "Insert into offer (UserID,ColID,OfferType,Company,Position,Industry,State,City,Salary,";
+        $strInsert   = "Insert into offer (UserID,ColID,OfferType,Company,Position,Area,State,City,Salary,";
         $strInsert  .= "Normalworkhours,Pto,Signbonus,Yearendbonus,Stocks,401k,Pension,";
         $strInsert  .= "Medicaloffered,PromotionOpt,Relocate,Active)";
         $strInsert  .= " Values(" . $UserID;
@@ -63,7 +63,7 @@
         $strInsert  .= ",'" . $OT;  
         $strInsert  .= "','" . $CO;  
         $strInsert  .= "','" . $PT;  
-        $strInsert  .= "','" . $IN;  
+        $strInsert  .= "','" . $AR;  
         $strInsert  .= "','" . $ST;  
         $strInsert  .= "','" . $CT;  
         $strInsert  .= "'," . $SA;  

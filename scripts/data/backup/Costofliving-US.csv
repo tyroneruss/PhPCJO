@@ -1,0 +1,125 @@
+Anchorage,AK,No,101.9,109.58,88.67,130.22
+Birmingham,AL,Yes,75.32,78.05,74.72,130.74
+Huntsville,AL,Yes,66.34,70.03,63.59,132.14
+Mobile,AL,Yes,69.53,74.84,66.25,123.62
+Fayetteville,AR,Yes,79.07,88.7,67.54,80.29
+Little Rock,AR,Yes,78.2,90.26,66.91,111.23
+Phoenix,AZ,Yes,71.45,67.59,77.01,122.68
+Tucson,AZ,Yes,65.37,66.41,65.65,133.7
+Bakersfield,CA,Yes,72.08,75.73,68.96,110.66
+Berkeley,CA,Yes,93.86,109.86,81.71,87.37
+Fremont,CA,Yes,72.33,64.86,76.33,139.47
+Fresno,CA,Yes,77.15,78.07,77.2,131.93
+Irvine,CA,Yes,82.79,88.68,79,126.76
+Los Angeles,CA,Yes,82.11,82.06,84.13,118.09
+Oakland,CA,Yes,90.73,97.63,84.79,91.15
+Sacramento,CA,Yes,82.76,87.64,75.56,121.89
+San Diego,CA,Yes,79.89,83.15,78.95,129.95
+San Francisco,CA,Yes,101.94,116.73,93.57,104.4
+San Jose,CA,Yes,85.13,90.68,84.04,140.74
+Santa Barbara,CA,Yes,81.14,80.42,86.66,176.22
+Santa Rosa,CA,Yes,91.92,97.22,78.7,116.21
+Boulder,CO,Yes,85.34,90.71,79.07,130.31
+Denver,CO,Yes,81.71,84.5,79.32,129.35
+Fort Collins,CO,Yes,82.53,95.23,71.33,63.35
+Hartford,CT,Yes,83.7,86.3,86.72,101.18
+New Haven,CT,Yes,94.1,112.78,91.54,114.53
+Washington,DC,Yes,95.96,96.97,90.78,107.86
+Fort Lauderdale,FL,No,77.71,79.97,78.35,102.52
+Fort Myers,FL,No,72.08,79.19,64.03,71.17
+Gainesville,FL,No,70.31,74.31,62.58,89.78
+Jacksonville,FL,No,79.48,86.89,72.29,95.46
+Melbourne,FL,No,87.34,104.43,81.84,136.52
+Miami,FL,No,90.68,93.95,98.47,89.18
+Orlando,FL,No,81.87,89.93,77.83,117.11
+Pensacola,FL,No,70.9,75.85,64.15,116.64
+Saint Petersburg,FL,No,78.32,82.17,79.2,133.67
+Tallahassee,FL,No,74.38,86.14,59.97,89.04
+Tampa,FL,No,78.92,85.17,80.01,102.73
+West Palm Beach,FL,No,79.61,85.54,78.17,108.9
+Athens,GA,Yes,63.81,61.12,69.13,115.33
+Atlanta,GA,Yes,80.68,86.13,77.17,136.03
+Augusta,GA,Yes,75.83,83.71,65.58,100.72
+Honolulu,HI,Yes,103.32,121.83,88.49,84.93
+Des Moines,IA,Yes,77.79,92.55,65.1,84.89
+Boise,ID,Yes,66.58,67.43,67.32,108.08
+Chicago,IL,Yes,84.39,83.89,83.68,118.59
+Fort Wayne,IN,Yes,71.94,81.86,68.39,127.49
+Indianapolis,IN,Yes,80.87,86.66,76.61,85.5
+Wichita,KS,Yes,72.56,78.53,68.65,94.16
+Lexington,KY,Yes,73.01,77.85,64.7,104.85
+Louisville,KY,Yes,74.89,87.46,64.14,106.05
+New Orleans,LA,Yes,82.33,85.51,84.97,101.33
+Shreveport,LA,Yes,75.01,83.48,67.61,66.12
+Boston,MA,Yes,90.23,93.76,87.59,112.94
+Baltimore,MD,Yes,85.65,91.75,82.5,109.07
+Rockville,MD,Yes,98.81,97.2,71.68,135.58
+Portland,ME,Yes,84.53,91.22,89.26,98.86
+Ann Arbor,MI,Yes,71.41,72.37,62.74,152.98
+Detroit,MI,Yes,79.5,82.7,67.57,124.39
+Grand Rapids,MI,Yes,78.54,82.13,72.53,122.5
+Minneapolis,MN,Yes,85.38,96.04,78.89,115.28
+Saint Paul,MN,Yes,81.64,88.63,73.01,88.16
+Kansas City,MO,Yes,69.9,70.8,64.51,134.67
+Saint Louis,MO,Yes,75.57,79.36,71.65,138.13
+Springfield,MO,Yes,63.53,70.79,59.02,75
+Asheville,NC,Yes,81.19,95.78,69.44,129.28
+Charlotte,NC,Yes,76.42,80.07,75.86,99.98
+Durham,NC,Yes,74.94,82.87,65.67,150.01
+Greensboro,NC,Yes,78.98,90.06,61.02,133.43
+Raleigh,NC,Yes,75.81,87.07,71.67,137.76
+Manchester,NH,Yes,73.64,81.09,67.9,102.95
+Jersey City,NJ,Yes,80.7,81.67,78.18,140.69
+Newark,NJ,Yes,75.82,68.82,85.79,96.8
+Albuquerque,NM,Yes,69.52,72.62,68.17,123.47
+Las Vegas,NV,No,74.03,70.97,77.69,137.36
+Reno,NV,No,62.75,55.85,67.85,97.3
+Brooklyn,NY,Yes,101.06,105.51,106.84,82.64
+Buffalo,NY,Yes,76.25,76.76,74.27,93.86
+New York,NY,Yes,100,100,100,100
+Queens,NY,Yes,84.7,80.22,88.5,98.73
+Rochester,NY,Yes,74.12,80.49,73.53,121.55
+Syracuse,NY,Yes,76.96,81.82,65.68,84.89
+Akron,OH,Yes,84.18,96.39,66.97,77.07
+Cincinnati,OH,Yes,73.22,72.84,70.24,108.68
+Cleveland,OH,Yes,79.64,78,79.61,112.89
+Columbus,OH,Yes,72.48,72.85,65.5,127.65
+Dayton,OH,Yes,75.86,87.31,59.68,92.25
+Toledo,OH,Yes,70.34,65.31,59.33,122.39
+Oklahoma City,OK,Yes,67.35,72.88,61.47,127.31
+Tulsa,OK,Yes,73.08,79.06,65.4,108.64
+Eugene,OR,Yes,80.22,94.92,67.22,108.26
+Portland,OR,Yes,81.72,85.72,71.25,122.71
+Salem,OR,Yes,73.33,76.12,73.66,90.58
+Allentown,PA,Yes,83.1,90.72,70.47,93.39
+Harrisburg,PA,Yes,77.53,88.04,66.89,116.75
+Philadelphia,PA,Yes,87.74,91.14,80.92,115.92
+Pittsburgh,PA,Yes,82.25,84.36,74.44,131.51
+Charleston,SC,Yes,88.41,98.58,78.7,111.13
+Columbia,SC,Yes,74.6,84.2,69.25,73.57
+Greenville,SC,Yes,75.75,85.7,67.11,116.46
+Chattanooga,TN,Yes,72.94,80.35,65.89,116.33
+Knoxville,TN,Yes,66.87,69.13,65.7,129.1
+Memphis,TN,Yes,78.8,84.63,73.14,125.81
+Nashville,TN,Yes,78.28,83.87,74.48,116.83
+Austin,TX,No,78.12,81.79,77.67,122.65
+College Station,TX,No,66.43,75.55,59.93,100.41
+Dallas,TX,No,70.47,69.25,68.82,171.08
+Fort Worth,TX,No,73.02,75.47,67.27,138.85
+Houston,TX,No,74.95,79.6,72.1,147.15
+Plano,TX,No,78.55,78.1,66.46,149.09
+San Antonio,TX,No,64.53,64.35,64.45,151.28
+Salt Lake City,UT,Yes,70.3,70.54,71.5,137.74
+Arlington,VA,Yes,93.17,93.16,85.61,117.45
+Richmond,VA,Yes,76.27,88.48,65.84,110.98
+Virginia Beach,VA,Yes,72.88,75.53,69.37,126.81
+Burlington,VT,Yes,87.21,97.28,82.09,95.31
+Bellevue,WA,No,91.18,97.99,80.55,138.68
+Everett,WA,No,82.76,94.42,72.62,100.36
+Olympia,WA,No,84.07,92.66,73.7,171.26
+Seattle,WA,No,93.31,98.17,86.72,121.29
+Spokane,WA,No,73.72,77.5,67.93,108.18
+Tacoma,WA,No,86.78,91.42,75.32,110.13
+Vancouver,WA,No,71.41,69.54,67.33,114.44
+Madison,WI,Yes,70.79,70.54,69.64,120.06
+Milwaukee,WI,Yes,79.48,81.2,75.73,127.22
