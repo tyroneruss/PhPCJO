@@ -198,7 +198,7 @@
                                     style="font-family: Times New Roman; font-size: 20px;" >
                                     &nbsp;&nbsp;&nbsp;
                                     <input type="button" value="BACK" 
-                                           onclick="window.location.href = 'javascript:history.back()'"                          
+                                           onclick="window.location.href = 'createoffers.php'"                          
                                            style="color: white; height: 32px; width: 135px; 
                                            background-color:  DodgerBlue" />
 

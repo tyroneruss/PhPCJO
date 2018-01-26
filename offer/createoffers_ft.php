@@ -178,7 +178,7 @@
                            style="font-family: Times New Roman; font-size: 20px;" >
                             <br>
                             <input type="button" value="BACK" 
-                            onclick="window.location.href='javascript:history.back()'"                          
+                            onclick="window.location.href=''"                          
                             style="color: white; height: 32px; width: 135px; 
                             background-color:  DodgerBlue" />
 
