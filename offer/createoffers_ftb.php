@@ -1,18 +1,6 @@
-<!-- Header end from BasicPageHeader.tpl -->
+<?php 
 
-<html>
-    <head>
-        <title>CJO </title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="description" content="Compare Jobs Offers" />
-        <link rel="stylesheet" type="text/css" href="../css/style.css">
-        <link rel="stylesheet" type="text/css" href="../css/tabstyle.css">
-        <link rel="stylesheet" type="text/css" href="../css/userstyle.css">
-    </head>
-   
-<body>
-    
-<?php
+    include '../includes/header.php'; 
 
     session_start();
     

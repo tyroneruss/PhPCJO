@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>CJO </title>
+        <title>CompareJobOffers </title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="description" content="Compare Jobs Offers" />
         <link rel="stylesheet" type="text/css" href="./css/style.css">

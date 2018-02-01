@@ -47,7 +47,7 @@ and open the template in the editor.
         if ($result->num_rows != 0) {            
             $row = $result->fetch_assoc();
             $_SESSION["userID"] = $row['UserID'];                        
-            $_SESSION["firstname"] = $row['Firstname']; 
+            $_SESSION["Firstname"] = $row['Firstname']; 
             // echo $_SESSION["firstname"];
             header('Location: ../../offer/home.php'); 
         } 

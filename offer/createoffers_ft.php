@@ -1,39 +1,18 @@
-<!-- Header end from BasicPageHeader.tpl -->
+<?php 
+    include '../includes/header.php'; 
 
-<html>
-    <head>
-        <title>CJO </title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="description" content="Compare Jobs Offers" />
-        <link rel="stylesheet" type="text/css" href="../css/style.css">
-        <link rel="stylesheet" type="text/css" href="../css/tabstyle.css">
-        <link rel="stylesheet" type="text/css" href="../css/userstyle.css">
-    </head>   
-<body>
+    session_start();
 
-<div id="container">
-   <div id="intro">
-       <div id="pageHeader">
-               <div id="sitename">
-                   <h1>&nbsp;&nbsp;CompareJobOffers</h1>
-               </div>          
-       </div>
-   </div>
-</div>
-    
-<?php
-        session_start();
+    $_SESSION['Offertype'] = $_POST['offertype'];      
+    $_SESSION['Company']   = $_POST['company'];
+    $_SESSION['Position']  = $_POST['position'];
+    $_SESSION['Area']      = $_POST['area'];
+    $_SESSION['State']     = $_POST['state'];
+    $_SESSION['City']      = $_POST['city'];
 
-        $_SESSION['Offertype'] = $_POST['offertype'];      
-        $_SESSION['Company']   = $_POST['company'];
-        $_SESSION['Position']  = $_POST['position'];
-        $_SESSION['Area']      = $_POST['area'];
-        $_SESSION['State']     = $_POST['state'];
-        $_SESSION['City']      = $_POST['city'];
-        
-        if($_POST['offertype'] == 'CT') {
-            header('Location: ./createoffers_ct.php'); 
-        }
+    if($_POST['offertype'] == 'CT') {
+        header('Location: ./createoffers_ct.php'); 
+    }
 ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 

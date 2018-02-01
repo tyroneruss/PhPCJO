@@ -7,11 +7,6 @@
         <meta name="description" content="Compare Jobs Offers" />
         <link rel="stylesheet" type="text/css" href="../css/style.css">
         <link rel="stylesheet" type="text/css" href="../css/tabstyle.css">
-        <?php 
-
-            require_once('../includes/database.php');
-            session_start();
-        ?>
     </head>
    
 <body>
@@ -28,8 +23,11 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-<script>
-</script>
+        <?php 
+
+            require_once('../includes/database.php');
+            session_start();
+        ?>
   
 <div align="center">
     <div class="tabbable">

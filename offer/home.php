@@ -1,28 +1,10 @@
-<html>
-    <head>
-        <title>CJO </title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="description" content="Compare Jobs Offers" />
-        <link rel="stylesheet" type="text/css" href="../css/style.css">
-        <link rel="stylesheet" type="text/css" href="../css/tabstyle.css">
-    </head>
-   
-<body>
+<?php include '../includes/header.php'; ?>            
 
-<?php
+    <?php
     session_start();
-    $FirstName = $_SESSION["Firstname"];                      
-
-?>
-<div id="container">
-   <div id="intro">
-       <div id="pageHeader">
-               <div id="sitename">
-                   <h1>&nbsp;&nbsp;CompareJobOffers</h1>
-               </div>          
-       </div>
-   </div>
-</div>
+    $firstname = $_SESSION["Firstname"];
+?>   
+                
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
 </script>
@@ -102,7 +84,11 @@
                     <tr>
                         <td>
                             <br><br><br>
-                            <b>Welcome,<?php echo $FirstName; ?></b>
+                            <b>Welcome, 
+                            <?php
+                                echo $firstname;
+                            ?>
+                            </b>
                             <br>
                             <input id="inputbutton" onclick="window.location.href='../index.php'"  
                             type="button" value="Logout" />                          
